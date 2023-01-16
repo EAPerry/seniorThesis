@@ -52,7 +52,7 @@
 \usepackage{kpfonts} % For a better aesthetic
 
 % Document specifics
-\title{Carbon Pricing: Implications for Air Pollution \& Inequality}
+\title{Implications of Carbon Pricing for Air Pollution Disparities}
 \author{Evan Perry}
 \date{\today}
 
@@ -64,102 +64,81 @@
 \begin{document}
 
 \maketitle
-
+ 
 \renewcommand{\abstractname}{Summary}
 \begin{abstract}
-Research Question: \emph{Do carbon pricing policies affect existing inequalities in air pollution exposure?}
+\noindent Research Question: \emph{Do carbon pricing policies affect existing inequalities in air pollution exposure?}
+
+\bigskip
+Economists widely support the implementation of a carbon pricing scheme---either a carbon tax or cap-and-trade program---to mitigate the damages of climate change. Despite this broad support, the effect of carbon pricing on the distribution of outdoor air pollution and the resulting disparities in air pollution exposure between communities remains understudied. This research will concentrate on studying this concern in the context of a cap-and-trade program on California's electric power industry. Methodologically, I will expand on the work of \cite{weber2021dynamic} by (1) explicitly modeling the ``environmental justice gap'' from \cite{hernandez2023environmental}, (2) considering an open economy with the potential for the redistribution of generation outside of California, and (3) potentially employing a chemical transport model to more accurately estimate air pollution exposure.
+
+
 \end{abstract}
 
 \doublespacing
 \section*{Background \& Motivation}
 
-Climate change and ambient air pollution are interrelated, and possibly the greatest environmental threats to human welfare. 
-\textbf{NEED MORE HERE}
+Climate change threatens to dramatically alter the relationship between humanity and the environment. Decades of research have made it clear: the release of greenhouse gasses---primarily from the burning of fossil fuels---has caused the planet to warm and will continue to cause the planet to warm \citep{ipcc6_1}. Under a ``business-as-usual'' emissions scenario, \cite{carleton2022} estimate the net increase in global mortality rates attributable to climate change will be on par with current global mortality rates for all infectious diseases or all cancers by 2100. Climate change threatens to cause the extinction of unique species, with disproportionate damage to low- and middle-income countries, global declines in welfare, greater risk of extreme weather events, and the breach of climatic ``tipping points'' \citep{ipcc6_2}.
 
-Unfortunately, the combustion processes that create anthropogenic greenhouse gas emissions often create other air pollutants as well. Many of the most common ambient (outdoor) air pollutants, like particulate matter, nitrous oxides, and sulfur dioxide, are commonly released in the same reactions that generate greenhouse gas emissions. For this reason, these are also known as ``co-pollutants,''
+Unfortunately, the combustion processes that create anthropogenic greenhouse gas emissions often create other air pollutants as well. Many of the most common ambient (outdoor) air pollutants, like particulate matter, nitrous oxides, and sulfur dioxide, are commonly released in the same reactions that generate greenhouse gas emissions. For this reason, these are also known as ``co-pollutants.'' These co-pollutants present a serious threat to public health in their own right, causing a variety of cardiovascular and respiratory risks such as asthma, heart disease, stroke, and lung cancer. The World Health Organization estimates that ambient air pollution was responsible for 4.2 million premature deaths in 2019 \citep{who_factsheet}. Most of these deaths occur in low- and middle-income countries, but even in the US, \cite{lelieveld2019effects} estimate that 230,000 premature deaths occur annually due to anthropogenic ambient air pollution.
 
-Greenhouse gases 
+To reduce greenhouse gas emissions and mitigate further damages from the climate crisis, economists widely favor a carbon pricing scheme---either a carbon tax or a cap-and-trade program.\footnote{Typically, proposals for carbon pricing do not just cover carbon dioxide emissions, but a range of other common greenhouse gasses. I use carbon pricing throughout as a shorthand for what are truly greenhouse gas emissions pricing schemes.} \cite{keohane2016markets} highlight the two primary appeals of a carbon pricing scheme: (1) under a set of common assumptions, a carbon pricing scheme produces the cost-minimizing allocation of abatement, and (2) a carbon pricing scheme creates enduring incentives for research and investment in new abatement technologies. Neither of these is guaranteed with ``command-and-control'' policies.\footnote{
+	For instance, if there is substantial heterogeneity in the emissions intensity of natural gas generation, then homogenous abatement technology requirements will only achieve abatement at high costs as they do not distribute abatement preferentially on firms that have low-cost abatement technologies. A best-available technology standard, which requires all firms to adopt the best-available abatement technology, might actually give firms reason to suppress any research into new abatement technologies to avoid forcibly adopting an expensive, new abatement technology. \cite{keohane2016markets} are also careful to add several caveats to this.
+} While the first of these conditions ensures the greatest net benefit to society as a whole, it does not make any guarantees about the distribution of these benefits. The equity implications of carbon pricing schemes are generally ambiguous.  
 
+Given that equity has become a cornerstone of the contemporary public discourse on climate change, it should not be surprising that leading voices within the environmental community remain uncertain of carbon pricing's role in climate action. \cite{fischer2021green} notes that Google searches related to carbon pricing have fallen dramatically in the decade after the 2009 Waxman-Markey cap-and-trade bill and some popular Democratic presidential candidates who espoused the necessity of carbon pricing in 2016 were not nearly as vocal about carbon pricing in the 2020 election cycle. The resolution for a Green New Deal, which places social justice firmly at the center of climate policy, notably omits any mention of carbon pricing.\footnote{While there is no mention of ``carbon pricing'', ``carbon taxes'', or ``cap-and-trade'' in the resolution, the resolution does include the adoption of ``border [carbon] adjustments.'' This is some indication that the omission of carbon pricing in the resolution is a rhetorical choice more so than a policy prescription. In fact, it is commonly understood that without an accompanying carbon tax, the implementation of a border carbon adjustment would violate international trade law \citep{cosbey2019developing}.} 
 
+Ensuring an equitable energy transition requires additional research to explore how market-based policies affect the distribution of equilibrium outcomes. Many of the distributional concerns with carbon pricing have focused on the tax burden and how to reallocate tax revenue through carbon dividends. Still, there is an emerging literature that considers instead the impact of carbon pricing on the distribution of co-pollutants. Carbon pricing derives its cost-minimizing nature by allowing markets to determine where abatement occurs, but if markets force much more abatement in high-social-economic status communities than low-social-economic status communities, carbon pricing might actually exacerbate existing disparities in air pollution exposure.
 
+% While the economics profession still overwhelmingly supports carbon pricing, discourse amongst prominent climate economists has recently moved in a direction that suggests greater interest in ``command-and-control'' style policies to complement market-based policy instruments. Reasons for this shift in perspective include the apparent inability for market-based instruments alone to address the overlapping market failures involved in climate change \citep{stern2022economics} and, in certain contexts, small cost differences between market-based and command-and-control policies \citep{borenstein2022carbon}.
 
-Ambient air pollution presents a serious threat to public health in its own right, causing a variety of cardiovascular and respiratory risks such as asthma, heart disease, stroke, and lung cancer. The World Health Organization estimates that ambient air pollution was responsible for 4.2 million premature deaths in 2019 \cite{who_factsheet}. Most of these deaths occur in low and middle-income countries, but even in the US, \cite{lelieveld2019effects} estimates that 230,000 premature deaths occur annually due to anthropogenic ambient air pollution. While the effects of greenhouse gases are global and may last generations, the effects of ambient air pollution can be highly local and acute. High concentrations of ambient air pollution on a given day, cause poorer academic performance and increases in crime on those same days \citep{ebenstein2016long, bondy2020crime}.
-
-Economists widely favor a carbon pricing scheme---either a carbon tax or a cap-and-trade program. \cite{keohane2016markets} highlight the two primary appeals of a carbon pricing scheme: (1) under a set of common assumptions, a carbon pricing scheme produces the cost-minimizing allocation of abatement, and (2) a carbon pricing scheme creates enduring incentives for research and investment in new abatement technologies. Niether of these is gauranteed with ``command-and-control'' policies.\footnote{
-	For instance, if there is substantial heterogeneity in the emissions intensity of natural gas generation, then homogenous abatement technology requirements will only acheive abatement at high costs as they do not distribute abatement preferenially on firms that have low-cost abatement technologies. A best-available technology standard, which requires all firms to adopt the best-available abatement technology, might actually give firms reason to surpress any research into new abatement technologies to avoid forceably adopting an expensive, new abatement technology.\cite{keohane2016markets} are also careful to add several caveats to this.
-} However, there is generally no gaurantee that this Pigouvian strategy leads to a more favorable welfare distribution, just that 
-
-Given that equity has become a cornerstone of the contemporary public discourse on climate change, it should not be surprising that leading voices within the environmental community remain uncertain of carbon pricing's role in climate action. \cite{fischer2021green} notes that Google searches related to carbon pricing have fallen dramatically in the decade after the 2009 Waxman-Markey bill and some popular Democratic presidential candidates who esposed the necessity of carbon pricing in 2016 were not nearly as vocal about carbon pricing in the 2020 election cycle. The resolution for a Green New Deal, which places social justice firmly at the center of climate policy, notably omits any mention of carbon pricing.\footnote{While there is no mention of ``carbon pricing'', ``carbon taxes'', or ``cap-and-trade'' in the resolution, the resolution does include the adoption of ``border [carbon] adjustments.'' This is some indication that the omission of carbon pricing in the resolution is a rhetorical choice more so than a policy prescription. Border carbon adjustments often include some form of rebate to domestic emissions-intesive domestic manufacturing, and for this reason, are often quite popular amongst groups that are not usually pleased with the prospect of climate policy.} Ensuring an equitable energy transition requires understanding how market-based policies affect the distribution of equilibrium outcomes. Although many of the concerns in this context have focused on the tax burden of carbon pricing and redistribution of tax revenue through carbon dividends, an important and emerging literature concerns the redistribution of co-pollutants.
-
-% While the economics profession still overwhelming supports carbon pricing, discourse amongst prominent climate economists has recently moved in a direction that suggests greater interest in ``command-and-control'' style policies to complement market-based policy instruments. Reasons for this shift in perspective include the apparent inability for market-based instruments alone to address the overlapping market failures involved in climate change \citep{stern2022economics} and, in certain contexts, small cost differences between market-based and command-and-control policies \citep{borenstein2022carbon}.
-
-The objective of this research is to study how market-based climate policies, like a cap-and-trade program for greenhouse gases, impact inequalities in air pollution exposure. I focus on analyzing the research question in the context of California's wholesale eleticity market and the State's associated market for greenhouse gas emissions. In the remainder of this proposal, I describe the current state of the literature on the envrionmental justice implications of carbon pricing, highlight the proposed research would contribute to the literature, and discuss the methodology I anticipate using to answer the research question.
+The objective of this research is to study how market-based climate policies, like a cap-and-trade program for greenhouse gasses, impact inequalities in air pollution exposure. I focus on analyzing the research question in the context of California's wholesale electricity market and the State's associated market for greenhouse gas emissions. In the remainder of this proposal, I describe the current state of the literature on the environmental justice implications of carbon pricing, highlight how the proposed research would contribute to the literature, and discuss the methodology I anticipate using to answer the research question.
 
 
 \section*{Brief Review of Related Literature}
 
 Empirical public policy and economic research on the effect of carbon pricing schemes on the distribution of air pollution has only recently emerged. Due to data availability, much of the research so far has focused on California's cap-and-trade program. Early work developed stylized facts about the implementation of the cap-and-trade programs. \cite{cushing2018carbon} notes that even though total emissions from regulated facilities decreased in the three years after the implementation of California's cap-and-trade program, 52\% of facilities actually increased their emissions. Further, \cite{cushing2018carbon} finds that the communities with increases in co-pollutant emissions are on average poorer, less educated, and have a higher proportion of non-white residents than communities with decreases in co-pollutant emissions. A follow-up study with several more years of data finds similar results \citep{pastor2022up}. 
 
-While these two studies help establish important descriptions of environmental justice outcomes in California, as \cite{hernandez2022importance} note, these do little to speak to the actual effect of the cap-and-trade program. First, their results cannot disentangle the effects of the cap-and-trade program from contemporaneous events that may cause the redistribution of co-pollutants. Pollution intensive activities are highly responsive to macroeconomic trends, and it is entirely possible that the redistribution of co-pollutants towards environmental justice communities is a consequence of these macroeconomic trends rather than the effects of the cap-and-trade program. Second, co-pollutants are often not stagnant, but move into neighboring communities based on geography and atmospheric conditions. This means that even if the emissions of co-pollutants increases in a community, this is not sufficient information to suggest that the air pollution exposure in that community increases as well. 
+While these two studies help establish important descriptions of environmental justice outcomes in California, as \cite{hernandez2022importance} note, these do little to speak to the actual effect of the cap-and-trade program. First, their results cannot disentangle the effects of the cap-and-trade program from contemporaneous events that may cause the redistribution of co-pollutants. Pollution intensive activities are highly responsive to macroeconomic trends, and it is entirely possible that the redistribution of co-pollutants towards disadvantaged communities is a consequence of these macroeconomic trends rather than the effects of the cap-and-trade program. Second, co-pollutants are often not stagnant, but move into neighboring communities based on geography and atmospheric conditions. This means that even if the emissions of co-pollutants increases in a community, this is not sufficient information to suggest that the air pollution exposure in that community increases as well. 
 
-\cite{hernandez2023environmental} is the first study to provide credible causal measurements of the impact of the cap-and-trade program on air pollution exposure. In contrast to \cite{cushing2018carbon} and \cite{pastor2022up}, \cite{hernandez2023environmental} find evidence that California's cap-and-trade program actually reduced the difference in air pollution exposure between , by 6-10\% annually. Hernandez-Cortes and Meng address the two limitations of earlier descriptive analysis by (1) using a difference-in-differences model that makes use of the staggered implementation of the cap-and-trade program to disentangle the effects of the cap-and-trade program from other contemporaneous events, and (2) embedding the predicted facility-level co-pollutant emissions within a chemical transport model that allows them to credibly measure air pollution exposure. Although Hernandez-Cortes and Meng do find evidence the cap-and-trade program did help to reduce disparities in air pollution exposure, they are also careful to reiterate the point that market-based policies are not the proper policy instrument to address these disparities. Nonetheless, their results suggest that Californian's should not worry that the state's cap-and-trade program will exacerbate existing disparities in air pollution. 
+\cite{hernandez2023environmental} is the first study to provide credible causal measurements of the impact of the cap-and-trade program on air pollution exposure. The authors define and measure changes in the ``environmental justice gap,'' the average difference in air pollution concentrations between disadvantaged and other communities.\footnote{California designates certain census tracts as ``disadvantaged” as a part of the CalEnviroScreen.} In contrast to \cite{cushing2018carbon} and \cite{pastor2022up}, Hernández-Cortés and Meng find evidence that California's cap-and-trade program actually reduced the environmental justice gap, by 6-10\% annually. Hernández-Cortés and Meng address the two limitations of earlier descriptive analysis by (1) using a difference-in-differences model that makes use of the staggered implementation of the cap-and-trade program to disentangle the effects of the cap-and-trade program from other contemporaneous events, and (2) embedding the predicted facility-level co-pollutant emissions within a chemical transport model that allows them to accurately measure air pollution exposure. Although Hernández-Cortés and Meng find evidence the cap-and-trade program has reduced disparities in air pollution exposure, they are also careful to emphasize that a cap-and-trade is not necessarily the sufficient to reduce these disparities. Nonetheless, their results suggest that Californians need not worry that the State's cap-and-trade program will exacerbate existing disparities in air pollution exposure. 
 
 The previously mentioned literature studying the effects of carbon pricing on air pollution disparities has all focused on ex-post analysis of such policies. While retrospective research is vital to ensuring the success of California's cap-and-trade program going forward, the highly contextualized nature of the analysis makes the external validity of these results questionable. The econometric analysis cannot describe any underlying mechanisms that produce the measured causal effects, and without a clear understanding of \emph{how} California's cap-and-trade program helped to close disparities in air pollution exposure, we cannot anticipate the effects of similar policies applied elsewhere. 
 
-\cite{weber2021dynamic} offers, to my knowledge, the first and only ex-ante model that studies how carbon pricing in California affects spatial redistribution of co-pollutants. The model focuses on the State's electric power industry and follows in the spirit of related structural, industrial-organization models \citep[e.g., ~][]{gowrisankaran2022policy, abito2022role}. Although Weber focuses primarily on the total welfare effects of the redistribution of co-pollutants, her results suggest that counties with more ``disadvantaged” communities appear to also see greater reductions in co-pollutant emissions.\footnote{California designates certain census tracts as ``disadvantaged” as a part of the CalEnviroScreen.} These findings pair well with those in \cite{hernandez2023environmental}, even though \cite{weber2021dynamic} focuses on only power plants and \cite{hernandez2023environmental} focus on all regulated facilities except power plants.
+\cite{weber2021dynamic} offers, to my knowledge, the first and only ex-ante model that studies how carbon pricing in California affects spatial redistribution of co-pollutants. The model focuses on the State's electric power industry and follows in the spirit of related structural, industrial-organization models \citep[e.g.,~][]{gowrisankaran2022policy, abito2022role}. Although Weber focuses primarily on the total welfare effects of the redistribution of co-pollutants, her results suggest that counties with more ``disadvantaged” communities appear to also see greater reductions in co-pollutant emissions. These findings pair well with those in \cite{hernandez2023environmental}, although Weber focuses on only power plants and Hernández-Cortés and Meng focus on all regulated facilities except power plants.
 
-This research project will focus on extending the model and empirical techniques used in \cite{weber2021dynamic} into the context of an open economy with flexible imports and exports of electricity. Although this may seem to be an unnecessary generalization of the model, the incomplete nature of California's unilateral carbon pricing scheme opens up wider channels for co-pollutant redistribution. In context, the incompleteness of the carbon market is important as carbon pricing policies have the potential to not only redistribute co-pollutants within California, but to increase and redistribute co-pollutants outside the state as well. The case of California electricity is especially interesting as much of the electricity generation that occurs outside of the state is ``dirty” relative to California power. Weber diligently notes that the incompleteness of the carbon market is not a significant concern in California's electricity \citep{burtraw2018}. Still, the extension of the model into the context of an incomplete carbon market is valuable as this can be a substantial concern for other emissions-intensive, trade-exposed goods \citep{fowlie2022mitigating}. Consequently, this research is pertinent to a broader literature concerned with how carbon pricing and could reinforce cross-jurisdictional inequalities. 
+This research project will focus on extending the model and empirical techniques used in \cite{weber2021dynamic} into the context of an open economy with flexible imports and exports of electricity. Although this may seem to be an unnecessary generalization of the model, the incomplete nature of California's unilateral carbon pricing scheme opens up wider channels for co-pollutant redistribution. In context, the incompleteness of the carbon market is important as carbon pricing policies have the potential to not only redistribute co-pollutants within California, but to increase and redistribute co-pollutants outside the State as well. The case of California electricity is especially interesting as much of the electricity generation that occurs outside of the state is ``dirty” relative to California power. Weber diligently notes that emissions leakage is not a significant concern in California's electricity market \citep{burtraw2018}. Still, the extension of the model into the context of an incomplete carbon market is valuable as this can be a substantial concern for other emissions-intensive, trade-exposed goods \citep{fowlie2022mitigating}. Consequently, this research is pertinent to a broader literature concerned with how carbon pricing and could reinforce cross-jurisdictional inequalities. 
 
 If time and resources allow, this paper will also address a second limitation of the results in \cite{weber2021dynamic}: the modeling of air pollution exposure. Weber uses an air pollution damages model that is appropriate for studying total welfare effects, but admits that ideally the study would embed the co-pollution estimates within a chemical transport model to estimate the changes in air pollution exposure of affected communities \citep[the approach in~][]{hernandez2023environmental}. The chemical transport models necessary for this analysis are available but are computationally expensive.
 
 
 \section*{Methodology}
 
-The order of generation dispatch does not change for each
+The model will largely follow from \cite{weber2021dynamic}, but with two primary differences.\footnote{The model Weber uses is itself mostly based on the models in \cite{cullen2015} and \cite{cullen2017}.} First, my model will place equity implications at the forefront of the analysis by explicitly incorporating a measure of disparities in air pollution exposure. My measure will be similar to the ``environmental justice gap'' measure in \cite{hernandez2022importance}. Second, my model will consider an open economy. Weber's model considers a closed economy which implicitly eliminates any potential emissions leakage and cross-jurisdictional co-pollutant redistribution. 
 
-That is to say, because , the application of the carbon pricing does not actually change the order of dispatch. 
+The model in \cite{weber2021dynamic} focuses on generator-level investment and production decisions. In an initial period, each generator has the opportunity to make an investment that will improve its efficiency. The efficiency of the generator influences the marginal costs of generation both by reducing fuel costs and reducing the cost from the carbon tax. In all subsequent periods, the generator must decide whether or not it will operate. This decision is complicated by ramping costs---the extra cost incurred when operating a generator that was not operating in the previous period. Generation is sold on the wholesale electricity market, which is assumed to be competitive. Demand is completely inelastic as end-users will not observe prices in the wholesale market, but is unknown to the generators in advance. Leveraging a result from \cite{cullen2015}, Weber establishes that the solution to the dynamic problem corresponds with a cost-minimization problem. 
 
-As a result, no spatial redistrbution of co-pollutants occurs as a result of differences in generation decisions. 
+With this model, Weber establishes two channels for carbon pricing to change the spatial distribution of co-pollutants: (1) by changing the relative order of generators along the supply curve, and (2) by changing the co-pollutant intensity of generators by inducing efficiency-improving investments. While these same two channels will be present in my own version of the model, my model will also allow for the redistribution of co-pollutants attributable to the incompleteness of the carbon market.
 
-Weber notes that while \ldots, the spatial redistrbution of co-pollutants can change 
+To incorporate an open economy and allow for cross-jurisdictional redistribution, I will employ elements from other models of emissions leakage in California's electricity sector. This is closest to the model in \cite{fowlie2021border}. \cite{fowlie2009incomplete} may also be useful, although this model considers a wholesale electricity market with market power. 
 
-Because the investment costs for heat rate are heterogenous among , 
+Using the model, I will focus on characterizing the channels through which co-pollutant redistribution can occur. Different from Weber, this characterization will explicitly model disparities in air pollution exposure. This model will clarify how the carbon pricing scheme leads to the redistribution of air pollutants, and hopefully develop some guidelines that describe when we should expect carbon pricing to exacerbate existing disparities in air pollution exposure. 
 
-the 
-
-This means that the only opportunity for changes in the spatial distribution of co-pollutants---and consequently changes in air pollution exposure disparities---is through the one-time investment decision.  
-
+The data and empirical strategy should be similar to Weber's. In her paper, data come from SNL, a proprietary data product created by S\&P Global Marketplace. However, all of the data on SNL is collected from publicly available sources and are avialable elsewhere. I include the primary data sources required to calibrate and simulate the model below: 
 \begin{itemize}
-	\item \cite{fowlie2009incomplete}
+	\item \href{http://oasis.caiso.com/mrioasis/logon.do}{California Independent System Operator Open Access Same-time Information System (CAISO OASIS)}: Hourly wholesale electricity prices at pricing nodes in and around California.  
+	\item \href{https://campd.epa.gov/data/bulk-data-files}{EPA Clean Air Markets Program Data}: Hourly generation and emissions data for individual generators. 
+	\item \href{https://www.epa.gov/egrid}{Emissions \& Generation Integrated Resource Database (eGRID)}: Stable generator characteristics related to generation, greenhouse gas emissions, and criteria air pollutants.
 \end{itemize}
-
-\subsection*{Modeling \& Theory}
-
-
-
-\subsection*{Data \& Empirical Strategy}
-
-\begin{itemize}
-	\item \href{http://oasis.caiso.com/mrioasis/logon.do}{CAISO}
-	\item \href{https://campd.epa.gov/data/bulk-data-files}{EPA Clean Air Markets Program Data}
-	\item ICE???
-	\item Transmission constraints\ldots
-\end{itemize}
-
-
+I anticipate following model calibration and simulation steps similar to those that Weber uses. 
 
 \section*{Logistics}
 
-I will have a first draft of the paper done by March 3, 2023. My hope is that the faculty members on my thesis committee will have time over the month of March to provide feedback on this draft. After working through revisions with the faculty members on my committee, I anticipate having a finished draft by mid-April. I also anticipate defending my thesis in mid-April, with the exact date dependent of faculty availability. 
+I will have a first draft of the paper done by March 3, 2023. My hope is that the faculty members on my thesis committee will have time over the month of March to provide feedback on this draft. After working through revisions with the faculty members on my committee, I anticipate having a finished draft by mid-April. I also anticipate defending my thesis in mid-April, with the exact date dependent on faculty availability. I will make a habit of uploading data (to the extent possible), code, and my writing to the GitHub repository \href{https://github.com/EAPerry/seniorThesis}{linked here}. 
 
-To help 
-
-I will make a habit of uploading data (to the extent possible), code, and my writing to the GitHub repository \href{https://www.google.com/}{linked here}. 
-
-\newpage
 \section*{Thesis Outline}
 
-Attached below is a rough outline for the paper. The first two sections---``Introduction to Air Pollution: Global \& Local'' and ``Designing Climate Policy''---are written at an introductory level and provide broad context for the central research question. The third section, ``Emissions Pricing in California's Electric Power Industry,'' provides context for the specific environment I choose to model in and test empirically. The remaining sections cover the bulk of the original research and are written with a more advanced audience in mind than the previous sections. 
+Attached below is a rough outline for the paper. The first three sections are written at an introductory level and provide broad grounding for the central research question. The fourth section, ``Emissions Pricing in California's Electric Power Industry,'' provides context for the specific environment I choose to model in and test empirically. The remaining sections cover the bulk of the original research and are written with a more advanced audience in mind than the previous sections. 
 
 \begin{enumerate}
 	\item Introduction
@@ -206,34 +185,6 @@ Attached below is a rough outline for the paper. The first two sections---``Intr
 	\item Appendices (As Needed)
 \end{enumerate}
 
-\newpage
 \bibliography{References}
-
-
-% Economists have long favored these so-called ``market-based instruments'' for public policy, \ldots
-
-% More recently, many environmental advocacy groups have shyed away from market-based approaches to environmental regulation,. 
-
-% The purpose of this research project is to identify , to what extent . 
-
-% A common critique of the cost-benefit analysis is that the does not distributional concerns. 
-
-% Greenhouse gases are global air pollutants, not in the sense 
-
-% the effect 
-
-% , one . Often the same actitivies that produce GHG emissions , produce local air pollutants such as sulfur dioxide, nitrous oxides, or particulate matter. In the context of climate policy, we often refer to these as ``co-pollutants''---air pollutants that 
-
-% In practice, GHG pricing schemes rarely price these local air pollutants as well.  
-
-% The objective of this project will be to analyze if---and if so, to what extent---do GHG emissions pricing schemes re-allocate 
-
-% Importantly, the answer to this question 
-
-% If there is evidence that emissions pricing schemes have a strong potential to increase inequities in air pollution exposure, then 
-
-% If there is evidence that emissions pricing schemes have the potential to reduce inequities in air pollution exposure, then 
-
-% If there is no evidence that emissions pricing schemes have any potential to change inequities in air pollution exposure, then this provides stronger reason to believe market-based instruments 
 
 \end{document}

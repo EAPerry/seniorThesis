@@ -10,23 +10,36 @@
   coordinating environmental markets,'' {\it International Journal of
   Industrial Organization}, 2022, {\it 83}, 102843.
 
-\harvarditem[Bondy et al.]{Bondy, Roth and Sager}{2020}{bondy2020crime}
-{\bf Bondy, Malvina, Sefi Roth, and Lutz Sager}, ``Crime is in the air: The
-  contemporaneous relationship between air pollution and crime,'' {\it Journal
-  of the Association of Environmental and Resource Economists}, 2020, {\it 7}
-  (3), 555--585.
-
-\harvarditem[Borenstein and Kellogg]{Borenstein and
-  Kellogg}{2022}{borenstein2022carbon}
-{\bf Borenstein, Severin and Ryan Kellogg}, ``Carbon Pricing, Clean Electricity
-  Standards, and Clean Electricity Subsidies on the Path to Zero Emissions,''
-  {\it NBER Chapters}, 2022.
-
 \harvarditem[Burtraw et al.]{Burtraw, Cullenward, Fowlie, Sutter and
   Brown}{2022}{burtraw2018}
 {\bf Burtraw, Dallas, Danny Cullenward, Meredith Fowlie, Katelyn~Roedner
   Sutter, and Ross Brown}, ``2021 Annual Report of the Independent Emissions
   Market Advisory Committee,'' Technical Report 2022.
+
+\harvarditem[Carleton et al.]{Carleton, Jina, Delgado, Greenstone, Houser,
+  Hsiang, Hultgren, Kopp, McCusker, Nath, Rising, Rode, Seo, Viaene, Yuan and
+  Zhang}{2022}{carleton2022}
+{\bf Carleton, Tamma, Amir Jina, Michael Delgado, Michael Greenstone, Trevor
+  Houser, Solomon Hsiang, Andrew Hultgren, Robert~E Kopp, Kelly~E McCusker,
+  Ishan Nath, James Rising, Ashwin Rode, Hee~Kwon Seo, Arvid Viaene, Jiacan
+  Yuan, and Alice~Tianbo Zhang}, ``{Valuing the Global Mortality Consequences
+  of Climate Change Accounting for Adaptation Costs and Benefits*},'' {\it The
+  Quarterly Journal of Economics}, 04 2022, {\it 137} (4), 2037--2105.
+
+\harvarditem[Cosbey et al.]{Cosbey, Droege, Fischer and
+  Munnings}{2019}{cosbey2019developing}
+{\bf Cosbey, Aaron, Susanne Droege, Carolyn Fischer, and Clayton Munnings},
+  ``Developing guidance for implementing border carbon adjustments: lessons,
+  cautions, and research needs from the literature,'' {\it Review of
+  Environmental Economics and Policy}, 2019.
+
+\harvarditem[Cullen]{Cullen}{2015}{cullen2015}
+{\bf Cullen, Joseph~A}, ``Dynamic response to environmental regulation in the
+  electricity industry,'' {\it Working Paper}, 2015.
+
+\harvarditem[Cullen and Reynolds]{Cullen and Reynolds}{2017}{cullen2017}
+{\bf \bysame{} and Stanley~S Reynolds}, ``Market dynamics and investment in the
+  electricity sector,'' Technical Report, Working paper 2017.
 
 \harvarditem[Cushing et al.]{Cushing, Blaustein-Rejto, Wander, Pastor, Sadd,
   Zhu and Morello-Frosch}{2018}{cushing2018carbon}
@@ -35,18 +48,17 @@
   and environmental equity: Evidence from California's cap-and-trade program
   (2011--2015),'' {\it PLoS medicine}, 2018, {\it 15} (7), e1002604.
 
-\harvarditem[Ebenstein et al.]{Ebenstein, Lavy and
-  Roth}{2016}{ebenstein2016long}
-{\bf Ebenstein, Avraham, Victor Lavy, and Sefi Roth}, ``The long-run economic
-  consequences of high-stakes examinations: Evidence from transitory variation
-  in pollution,'' {\it American Economic Journal: Applied Economics}, 2016,
-  {\it 8} (4), 36--65.
-
 \harvarditem[Fischer and Jacobsen]{Fischer and
   Jacobsen}{2021}{fischer2021green}
 {\bf Fischer, Carolyn and Grant Jacobsen}, ``The Green New Deal and the future
   of carbon pricing,'' {\it Journal of Policy Analysis and Management}, 2021,
   {\it 40} (3), 988--995.
+
+\harvarditem[Fowlie et al.]{Fowlie, Petersen and
+  Reguant}{2021}{fowlie2021border}
+{\bf Fowlie, Meredith, Claire Petersen, and Mar Reguant}, ``Border carbon
+  adjustments when carbon intensity varies across producers: Evidence from
+  california,'' in ``AEA Papers and Proceedings,'' Vol. 111 2021, pp.~401--05.
 
 \harvarditem[Fowlie]{Fowlie}{2009}{fowlie2009incomplete}
 {\bf Fowlie, Meredith~L}, ``Incomplete environmental regulation, imperfect
@@ -65,13 +77,13 @@
   uncertainty in the market for coal electricity: The case of air toxics
   standards,'' Technical Report, National Bureau of Economic Research 2022.
 
-\harvarditem[Hernandez-Cortes and Meng]{Hernandez-Cortes and
+\harvarditem[Hernández-Cortés and Meng]{Hernández-Cortés and
   Meng}{2022}{hernandez2022importance}
-{\bf Hernandez-Cortes, Danae and Kyle~C Meng}, ``The Importance of Causality
+{\bf Hernández-Cortés, Danae and Kyle~C Meng}, ``The Importance of Causality
   and Pollution Dispersal in Quantifying Pollution Disparity Consequences:
   Reply to Pastor et al.(2022),'' {\it Open comment}, 2022.
 
-\harvarditem[Hernandez-Cortes and Meng]{Hernandez-Cortes and
+\harvarditem[Hernández-Cortés and Meng]{Hernández-Cortés and
   Meng}{2023}{hernandez2023environmental}
 {\bf \bysame{} and \bysame{}}, ``Do environmental markets cause environmental
   injustice? Evidence from California's carbon market,'' {\it Journal of Public
@@ -89,16 +101,27 @@
   removal on public health and climate,'' {\it Proceedings of the National
   Academy of Sciences}, 2019, {\it 116} (15), 7192--7197.
 
+\harvarditem[Masson-Delmotte et al.]{Masson-Delmotte, Zhai, Pirani, Connors,
+  P{\'e}an, Berger, Caud, Chen, Goldfarb, Gomis et~al.}{2021}{ipcc6_1}
+{\bf Masson-Delmotte, Val{\'e}rie, Panmao Zhai, Anna Pirani, Sarah~L Connors,
+  Clotilde P{\'e}an, Sophie Berger, Nada Caud, Y~Chen, L~Goldfarb, MI~Gomis
+  et~al.}, ``Climate change 2021: the physical science basis,'' {\it
+  Contribution of working group I to the sixth assessment report of the
+  intergovernmental panel on climate change}, 2021, {\it 2.}
+
 \harvarditem[Pastor et al.]{Pastor, Ash, Cushing, Morello-Frosch, Mu{\~n}a and
   Sadd}{2022}{pastor2022up}
 {\bf Pastor, Manuel, Michael Ash, Lara Cushing, Rachel Morello-Frosch,
   Edward-Michael Mu{\~n}a, and James Sadd}, ``Up in the Air: Revisiting Equity
   Dimensions of California's Cap-and-Trade System,'' Technical Report 2022.
 
-\harvarditem[Stern and Stiglitz]{Stern and Stiglitz}{2022}{stern2022economics}
-{\bf Stern, Nicholas and Joseph Stiglitz}, ``The economics of immense risk,
-  urgent action and radical change: towards new approaches to the economics of
-  climate change,'' {\it Journal of Economic Methodology}, 2022, pp.~1--36.
+\harvarditem[P{\"o}rtner et al.]{P{\"o}rtner, Roberts, Adams, Adler, Aldunce,
+  Ali, Begum, Betts, Kerr, Biesbroek et~al.}{2022}{ipcc6_2}
+{\bf P{\"o}rtner, Hans-Otto, Debra~C Roberts, H~Adams, C~Adler, P~Aldunce,
+  E~Ali, R~Ara Begum, R~Betts, R~Bezner Kerr, R~Biesbroek et~al.}, ``Climate
+  change 2022: Impacts, adaptation and vulnerability,'' {\it Contribution of
+  working group II to the sixth assessment report of the intergovernmental
+  panel on climate change}, 2022, pp.~37--118.
 
 \harvarditem[Weber]{Weber}{2021}{weber2021dynamic}
 {\bf Weber, Paige}, ``Dynamic responses to carbon pricing in the electricity
