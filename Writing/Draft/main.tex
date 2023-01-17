@@ -1,0 +1,111 @@
+\documentclass[letterpaper, 12pt]{article}
+
+% Math formatting necessities
+\usepackage{amsfonts,amssymb,amsmath,amsthm, mathrsfs}
+
+% Page margins
+\usepackage[left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
+
+% Adding some better options with tables
+\usepackage[flushleft]{threeparttable}
+\usepackage{array}
+%\renewcommand{\arraystretch}{1.15}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Custom colors
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{good_red}{RGB}{136, 0, 17}
+\definecolor{good_blue}{RGB}{0, 100, 125}
+\definecolor{EAPred}{RGB}{136, 0, 17}
+\definecolor{EAPblue}{RGB}{0, 100, 125}
+\definecolor{EAPviolet}{RGB}{86, 63, 70}
+\definecolor{EAPgreen}{RGB}{26, 161, 53}
+\definecolor{EAPyellow}{RGB}{242, 174, 114}
+
+% Formatting internal and external links
+\usepackage{hyperref} % If you want to see what pages we cite something
+\hypersetup{
+	colorlinks=true,
+	linkcolor= black,
+	citecolor = black,
+	urlcolor = good_blue
+	}
+\urlstyle{same}
+
+% For images and visualizations
+\usepackage{graphicx}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption, subcaption}
+\usepackage[section]{placeins}
+
+% Citation management
+\usepackage{natbib}
+
+% Other useful packages
+\usepackage{setspace} 
+\usepackage{pdflscape}
+\usepackage{enumitem}
+\usepackage{kpfonts} % For a better aesthetic
+
+% Custom commands
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\fignote}[2][0.8]{\captionsetup{width=#1\linewidth, font=footnotesize, justification=justified, singlelinecheck=false}\caption*{\textit{Note}: #2}}
+
+% Formatting requirements RE: font sizes
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\fontsize{14}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{13}{15}\bfseries}{\thesubsection}{1em}{}
+
+
+% \title{Implications of Carbon Pricing for Air Pollution Disparities}
+% \author{Evan Perry}
+% \date{March 3, 2022}
+
+\begin{document}
+
+% \maketitle
+
+\begin{titlepage}
+	\centering
+	{\fontsize{14}{14}\selectfont Implications of Carbon Pricing for Air Pollution Disparities}\\
+	\vspace{14em}
+	by\\
+	Evan Perry\\
+	\vspace{10em}
+	Submitted in Partial Fulfillment\\
+	for Graduating with Distinction\\
+	\vspace{6em}
+	Economics Department\\
+	\vspace{9em}
+	Coe College\\
+	Cedar Rapids, Iowa\\
+	April 2023
+\end{titlepage}
+
+\doublespacing
+\begin{abstract}
+	Economists widely support the implementation of a carbon pricing scheme (a carbon tax or cap-and-trade program) to mitigate the damages of climate change. Despite this broad support, the effect of carbon pricing on the distribution of outdoor air pollution and the resulting disparities in air pollution exposure between communities remains understudied. This research will concentrate on studying this concern in the context of a cap-and-trade program on California's electric power industry. Methodologically, I will expand on the work of Weber (2021) by (1) explicitly modeling the ``environmental justice gap'' from Hernandez-Cortes and Meng (2023), (2) considering an open economy with the potential for the redistribution of generation outside of California, and (3) potentially employing a chemical transport model to more accurately estimate air pollution exposure. \textbf{Description of results here.}
+\end{abstract}
+
+\newpage
+\tableofcontents
+
+\input{chapter0.tex}
+\input{chapter1.tex}
+\input{chapter2.tex}
+\input{chapter3.tex}
+\input{chapter4.tex}
+\input{chapter5.tex}
+\input{chapter6.tex}
+
+\newpage
+\bibliographystyle{aer}
+\bibliography{references}
+
+
+\end{document}

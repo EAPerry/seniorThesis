@@ -1,2 +1,5 @@
 # seniorThesis
  
+This repository contains data and code needed to replicate the contents and results of in ``Implications of Carbon Pricing for Air Pollution Disparities." The project is ongoing. A project summary is below:
+
+Economists widely support the implementation of a carbon pricing scheme---either a carbon tax or cap-and-trade program---to mitigate the damages of climate change. Despite this broad support, the effect of carbon pricing on the distribution of outdoor air pollution and the resulting disparities in air pollution exposure between communities remains understudied. This research will concentrate on studying this concern in the context of a cap-and-trade program on California's electric power industry. Methodologically, I will expand on the work of Weber (2021) by (1) explicitly modeling the ``environmental justice gap'' from Hernandez-Cortes and Meng (2023), (2) considering an open economy with the potential for the redistribution of generation outside of California, and (3) potentially employing a chemical transport model to more accurately estimate air pollution exposure.

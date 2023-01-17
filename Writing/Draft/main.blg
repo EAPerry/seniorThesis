@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: aer.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: references.bib
+Warning--empty title in marjorie_greene
+Warning--empty journal in marjorie_greene
+You've used 50 entries,
+            2984 wiz_defined-function locations,
+            942 strings with 13135 characters,
+and the built_in function-call counts, 41178 in all, are:
+= -- 6343
+> -- 2471
+< -- 664
++ -- 793
+- -- 448
+* -- 2547
+:= -- 9424
+add.period$ -- 62
+call.type$ -- 50
+change.case$ -- 350
+chr.to.int$ -- 50
+cite$ -- 52
+duplicate$ -- 564
+empty$ -- 1220
+format.name$ -- 1234
+if$ -- 10089
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 40
+newline$ -- 168
+num.names$ -- 606
+pop$ -- 775
+preamble$ -- 1
+purify$ -- 400
+quote$ -- 0
+skip$ -- 0
+stack$ -- 0
+substring$ -- 1095
+swap$ -- 179
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 196
+warning$ -- 2
+while$ -- 550
+width$ -- 0
+write$ -- 802
+(There were 2 warnings)

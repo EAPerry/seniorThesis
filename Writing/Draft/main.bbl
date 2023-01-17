@@ -1,0 +1,272 @@
+\ifx\undefined\bysame
+\newcommand{\bysame}{\leavevmode\hbox to\leftmargin{\hrulefill\,\,}}
+\fi
+\begin{thebibliography}{xx}
+
+\harvarditem[Aldy and Pizer]{Aldy and Pizer}{2015}{aldy2015competitiveness}
+{\bf Aldy, Joseph~E and William~A Pizer}, ``The competitiveness impacts of
+  climate change mitigation policies,'' {\it Journal of the Association of
+  Environmental and Resource Economists}, 2015, {\it 2} (4), 565--595.
+
+\harvarditem[Allcott and Greenstone]{Allcott and
+  Greenstone}{2012}{allcott2012there}
+{\bf Allcott, Hunt and Michael Greenstone}, ``Is there an energy efficiency
+  gap?,'' {\it Journal of Economic Perspectives}, 2012, {\it 26} (1), 3--28.
+
+\harvarditem[Arrow et al.]{Arrow, Bolin, Costanza, Dasgupta, Folke, Holling,
+  Jansson, Levin, M{\"a}ler, Perrings et~al.}{1995}{arrow1995economic}
+{\bf Arrow, Kenneth, Bert Bolin, Robert Costanza, Partha Dasgupta, Carl Folke,
+  Crawford~S Holling, Bengt-Owe Jansson, Simon Levin, Karl-G{\"o}ran M{\"a}ler,
+  Charles Perrings et~al.}, ``Economic growth, carrying capacity, and the
+  environment,'' {\it Ecological economics}, 1995, {\it 15} (2), 91--95.
+
+\harvarditem[Auffhammer]{Auffhammer}{2018}{auffhammer2018quantifying}
+{\bf Auffhammer, Maximilian}, ``Quantifying economic damages from climate
+  change,'' {\it Journal of Economic Perspectives}, 2018, {\it 32} (4), 33--52.
+
+\harvarditem[Borenstein et al.]{Borenstein, Fowlie and
+  Sallee}{2021}{borenstein2021designing}
+{\bf Borenstein, Severin, Meredith Fowlie, and James Sallee}, ``Designing
+  electricity rates for an equitable energy transition,'' {\it Energy Institute
+  at Haas working paper}, 2021, {\it 314.}
+
+\harvarditem[Branger and Quirion]{Branger and
+  Quirion}{2014}{branger2014climate}
+{\bf Branger, Fr{\'e}d{\'e}ric and Philippe Quirion}, ``Climate policy and the
+  ‘carbon haven’effect,'' {\it Wiley Interdisciplinary Reviews: Climate
+  Change}, 2014, {\it 5} (1), 53--71.
+
+\harvarditem[Buchanan]{Buchanan}{1965}{buchanan1965economic}
+{\bf Buchanan, James~M}, ``An economic theory of clubs,'' {\it Econometrica},
+  1965, {\it 32} (125), 1--14.
+
+\harvarditem[{C2ES}]{{C2ES}}{2021}{C2ES}
+{\bf {C2ES}}, ``Climate science Q\&A,'' 2021.
+\newblock \url{https://www.c2es.org/content/climate-science-qa/}.
+
+\harvarditem[{Climate Impact Lab}]{{Climate Impact
+  Lab}}{2020}{carleton2020valuing}
+{\bf {Climate Impact Lab}}, ``Valuing the global mortality consequences of
+  climate change accounting for adaptation costs and benefits,'' Technical
+  Report, National Bureau of Economic Research 2020.
+\newblock TA Carleton, AM Jina, T Micheal, M Greenstone, T Houser, SM Hsiang, A
+  Hultgren, RE Kopp, E Robert, KE McCusker, and IB Nath.
+
+\harvarditem[Coase]{Coase}{1960}{coase1960problem}
+{\bf Coase, Ronald~H}, ``The problem of social cost,'' in ``Classic papers in
+  natural resource economics,'' Springer, 1960, pp.~87--137.
+
+\harvarditem[{Congressional Record House Articles}]{{Congressional Record House
+  Articles}}{2021}{marjorie_greene}
+{\bf {Congressional Record House Articles}}, September 2021.
+
+\harvarditem[Cosbey et al.]{Cosbey, Droege, Fischer and
+  Munnings}{2020}{cosbey2020developing}
+{\bf Cosbey, Aaron, Susanne Droege, Carolyn Fischer, and Clayton Munnings},
+  ``Developing guidance for implementing border carbon adjustments: lessons,
+  cautions, and research needs from the literature,'' {\it Review of
+  Environmental Economics and Policy}, 2020.
+
+\harvarditem[Dechezlepr{\^e}tre and Sato]{Dechezlepr{\^e}tre and
+  Sato}{2020}{dechezlepretre2020impacts}
+{\bf Dechezlepr{\^e}tre, Antoine and Misato Sato}, ``The impacts of
+  environmental regulations on competitiveness,'' {\it Review of Environmental
+  Economics and Policy}, 2020.
+
+\harvarditem[{EIA}]{{EIA}}{2021}{eia_report1}
+{\bf {EIA}}, ``Electric Power Annual 2020,'' Technical Report, US Energy
+  Information Administration 2021.
+\newblock \url{https://www.eia.gov/tools/faqs/faq.php?id=427&t=3}.
+
+\harvarditem[{FERC}]{{FERC}}{2020}{ferc2020}
+{\bf {FERC}}, {\it Energy Primer: A Handbook of Energy Market Basics}, Federal
+  Energy Regulatory Commission, 2020.
+
+\harvarditem[Forster et al.]{Forster, Ramaswamy, Artaxo, Berntsen, Betts,
+  Fahey, Haywood, Lean, Lowe, Myhre et~al.}{2007}{forster2007changes}
+{\bf Forster, Piers, Venkatachalam Ramaswamy, Paulo Artaxo, Terje Berntsen,
+  Richard Betts, David~W Fahey, James Haywood, Judith Lean, David~C Lowe,
+  Gunnar Myhre et~al.}, ``Changes in atmospheric constituents and in radiative
+  forcing. Chapter 2,'' in ``Climate change 2007. The physical science basis,''
+  Cambridge University Press, 2007.
+
+\harvarditem[Fowlie et al.]{Fowlie, Petersen and
+  Reguant}{2021}{fowlie2021border}
+{\bf Fowlie, Meredith, Claire Petersen, and Mar Reguant}, ``Border carbon
+  adjustments when carbon intensity varies across producers: evidence from
+  California,'' in ``AEA Papers and Proceedings,'' Vol. 111 2021, pp.~401--05.
+
+\harvarditem[Fowlie and Reguant]{Fowlie and
+  Reguant}{2022}{fowlie2022mitigating}
+{\bf Fowlie, Meredith~L and Mar Reguant}, ``Mitigating emissions leakage in
+  incomplete carbon markets,'' {\it Journal of the Association of Environmental
+  and Resource Economists}, 2022, {\it 9} (2), 307--343.
+
+\harvarditem[Fowlie et al.]{Fowlie, Reguant and
+  Ryan}{2016}{fowlie2016measuring}
+{\bf \bysame{}, \bysame{}, and Stephen Ryan}, ``Measuring leakage risk,'' {\it
+  Report for the California Air Resources Board}, 2016.
+
+\harvarditem[Gerarden et al.]{Gerarden, Newell and
+  Stavins}{2017}{gerarden2017assessing}
+{\bf Gerarden, Todd~D, Richard~G Newell, and Robert~N Stavins}, ``Assessing the
+  energy-efficiency gap,'' {\it Journal of Economic Literature}, 2017, {\it 55}
+  (4), 1486--1525.
+
+\harvarditem[Gerlach]{Gerlach}{2011}{gerlach2011volcanic}
+{\bf Gerlach, Terry}, ``Volcanic versus anthropogenic carbon dioxide,'' {\it
+  Eos, Transactions American Geophysical Union}, 2011, {\it 92} (24), 201--202.
+
+\harvarditem[GFDL]{GFDL}{2014}{gfdl}
+{\bf GFDL}, ``Aerosols and Climate,'' 2014.
+\newblock Accessed: 2022-01-29,
+  \url{https://www.gfdl.noaa.gov/aerosols-and-climate/}.
+
+\harvarditem[{GHG Protocol}]{{GHG Protocol}}{2011}{ghg_protocol_2011}
+{\bf {GHG Protocol}}, ``Corporate Value Chain (Scope 3) Accounting and
+  Reporting Standard,'' 2011.
+
+\harvarditem[{Greenhouse Gas Protocal}]{{Greenhouse Gas
+  Protocal}}{2016}{gwp_table}
+{\bf {Greenhouse Gas Protocal}}, ``Global Warming Potential Values,'' Technical
+  Report, Greenhouse Gas Protocal 2016.
+\newblock \url{https://tinyurl.com/2p83adat}.
+
+\harvarditem[Grossman and Krueger]{Grossman and Krueger}{1991}{NBERw3914}
+{\bf Grossman, Gene~M and Alan~B Krueger}, ``Environmental Impacts of a North
+  American Free Trade Agreement,'' Working Paper 3914, National Bureau of
+  Economic Research November 1991.
+
+\harvarditem[Grossman and Krueger]{Grossman and
+  Krueger}{1995}{grossman1995economic}
+{\bf \bysame{} and \bysame{}}, ``Economic growth and the environment,'' {\it
+  The quarterly journal of economics}, 1995, {\it 110} (2), 353--377.
+
+\harvarditem[Hardin]{Hardin}{1968}{hardin1968tragedy}
+{\bf Hardin, Garrett}, ``The tragedy of the commons: the population problem has
+  no technical solution; it requires a fundamental extension in morality.,''
+  {\it science}, 1968, {\it 162} (3859), 1243--1248.
+
+\harvarditem[Hayhoe et al.]{Hayhoe, Wuebbles, Easterling, Fahey, Doherty,
+  Kossin, Sweet, Vose and Wehner}{2018}{nationalar4}
+{\bf Hayhoe, Katharine, Donald~J Wuebbles, David~R Easterling, David~W Fahey,
+  Sarah Doherty, James~P Kossin, William~V Sweet, Russell~S Vose, and Michael~F
+  Wehner}, ``Our Changing Climate,'' in David~R Reidmiller, Christopher~W
+  Avery, David~R Easterling, Kenneth~E Kunkel, Kristin~LM Lewis, Thomas~K
+  Maycock, and Bradley~C Stewart, eds., {\it Impacts, Risks, and Adaptation in
+  the United States: The Fourth National Climate Assessment, Volume II}, U.S.
+  Global Change Research Program, Washington, DC, USA, 2018.
+
+\harvarditem[Howard and Sylvan]{Howard and Sylvan}{2021}{howard2021gauging}
+{\bf Howard, Peter and Derek Sylvan}, ``Gauging economic consensus on climate
+  change,'' {\it Institute for Policy Integrity, New York University}, 2021.
+
+\harvarditem[IEA]{IEA}{2021}{ieareport}
+{\bf IEA}, ``Net Zero by 2050: A Roadmap for the Global Energy Sector,'' {\it
+  International Energy Agency, Paris}, 2021.
+
+\harvarditem[{IPCC}]{{IPCC}}{2013}{ipcc_ar5_forcing}
+{\bf {IPCC}}, ``Anthropogenic and Natural Radiative Forcing. Chapter 8,'' in
+  ``Climate Change 2013: The Physical Science Basis,'' Cambridge University
+  Press, 2013.
+\newblock Myhre, G., D. Shindell, F.-M. Bréon, W. Collins, J. Fuglestvedt, J.
+  Huang, D. Koch, J.-F. Lamarque, D. Lee, B. Mendoza, T. Nakajima, A. Robock,
+  G. Stephens, T. Takemura and H. Zhang.
+
+\harvarditem[{IPCC}]{{IPCC}}{2021}{ipcc1_summary}
+{\bf \bysame{}}, ``Summary for Policymakers,'' in ``Climate Change 2021: The
+  Physical Science Basis. Contribution of Working Group I to the Sixth
+  Assessment Report of the Intergovernmental Panel on Climate Change'' 2021.
+\newblock Masson Delmotte, V., P. Zhai, A. Pirani, S.L. Connors, C. Péan, S.
+  Berger, N. Caud, Y. Chen, L. Goldfarb, M.I. Gomis, M. Huang, K. Leitzell, E.
+  Lonnoy, J.B.R. Matthews, T.K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, and
+  B. Zhou (eds.).
+
+\harvarditem[Jackson and Rafferty]{Jackson and Rafferty}{2016}{little_ice}
+{\bf Jackson, Stephen and John Rafferty}, ``The Little Ice Age,'' {\it
+  Encyclopedia Britannica}, 2016.
+\newblock Accessed: 2022-01-29,
+  \url{https://www.britannica.com/science/Little-Ice-Age}.
+
+\harvarditem[Keohane and Olmstead]{Keohane and
+  Olmstead}{2016}{keohane2016markets}
+{\bf Keohane, Nathaniel~O and Sheila~M Olmstead}, {\it Markets and the
+  Environment}, Island Press, 2016.
+
+\harvarditem[Konschnik and Rami]{Konschnik and Rami}{2022}{rff_podcast1}
+{\bf Konschnik, Kate and Daniel Rami}, ``Untangling the Wires in Electricity
+  Market Planning, with Kate Konschnik,'' Technical Report 2022.
+
+\harvarditem[Kuznets]{Kuznets}{1955}{kuznets1955economic}
+{\bf Kuznets, Simon}, ``Economic growth and income inequality,'' {\it The
+  American economic review}, 1955, {\it 45} (1), 1--28.
+
+\harvarditem[Lambert et al.]{Lambert, Edwards, Soden and Bleicher}{2016}{csi}
+{\bf Lambert, Julie, Alana Edwards, Brian Soden, and Robert Bleicher},
+  ``Energy: The driver of climate,'' 2016.
+
+\harvarditem[Lindsey]{Lindsey}{2021}{noaa1}
+{\bf Lindsey, Rebecca}, ``Climate change: Atmospheric carbon dioxide,'' 2021.
+\newblock
+  \url{https://www.climate.gov/news-features/understanding-climate/climate-change-atmospheric-carbon-dioxide}.
+
+\harvarditem[NOAA]{NOAA}{2022}{noaa}
+{\bf NOAA}, ``Climate forcing,'' 2022.
+\newblock Accessed: 2022-01-29,
+  \url{https://www.climate.gov/maps-data/climate-data-primer/predicting-climate/climate-forcing}.
+
+\harvarditem[Nordhaus]{Nordhaus}{2019}{nordhaus2019climate}
+{\bf Nordhaus, William}, ``Climate change: The ultimate challenge for
+  economics,'' {\it American Economic Review}, 2019, {\it 109} (6), 1991--2014.
+
+\harvarditem[Ostrom]{Ostrom}{2010}{ostrom2010beyond}
+{\bf Ostrom, Elinor}, ``Beyond markets and states: polycentric governance of
+  complex economic systems,'' {\it American economic review}, 2010, {\it 100}
+  (3), 641--72.
+
+\harvarditem[Ostrom and Ostrom]{Ostrom and Ostrom}{1977}{ostrom1977public}
+{\bf Ostrom, Vincent and Elinor Ostrom}, ``Public goods and public choices,''
+  in E.~S. Savas, ed., {\it Alternatives for Delivering Public Services: Toward
+  Improved Performance}, Westview Press, 1977, pp.~7--49.
+
+\harvarditem[Ritchie and Roser]{Ritchie and
+  Roser}{2019}{owidoutdoorairpollution}
+{\bf Ritchie, Hannah and Max Roser}, ``Outdoor Air Pollution,'' {\it Our World
+  in Data}, 2019.
+\newblock https://ourworldindata.org/outdoor-air-pollution.
+
+\harvarditem[Samuelson]{Samuelson}{1954}{samuelson1954pure}
+{\bf Samuelson, Paul~A}, ``The pure theory of public expenditure,'' {\it The
+  review of economics and statistics}, 1954, {\it 36} (4), 387--389.
+
+\harvarditem[Sato and Dechezlepr{\^e}tre]{Sato and
+  Dechezlepr{\^e}tre}{2015}{sato2015asymmetric}
+{\bf Sato, Misato and Antoine Dechezlepr{\^e}tre}, ``Asymmetric industrial
+  energy prices and international trade,'' {\it Energy Economics}, 2015, {\it
+  52}, S130--S141.
+
+\harvarditem[Singh et al.]{Singh, Yadav and {Pandian E}}{2021}{SINGH202179}
+{\bf Singh, Pratichi, Deepak Yadav, and S.~{Pandian E}}, ``Link between air
+  pollution and global climate change,'' in Suruchi Singh, Pardeep Singh,
+  S.~Rangabhashiyam, and K.K. Srivastava, eds., {\it Global Climate Change},
+  Elsevier, 2021, pp.~79--108.
+
+\harvarditem[Stern]{Stern}{2004}{stern2004rise}
+{\bf Stern, David~I}, ``The rise and fall of the environmental Kuznets curve,''
+  {\it World development}, 2004, {\it 32} (8), 1419--1439.
+
+\harvarditem[{The World Bank}]{{The World Bank}}{2022}{wbank}
+{\bf {The World Bank}}, ``Carbon pricing dashboard: Overview of carbon pricing
+  initiatives,'' {\it The World Bank}, 2022.
+
+\harvarditem[USGS]{USGS}{2018}{usgs}
+{\bf USGS}, ``Volcanoes can affect climate,'' 2018.
+\newblock Accessed: 2022-01-29.
+
+\harvarditem[Winchester and Rausch]{Winchester and
+  Rausch}{2013}{winchester2013numerical}
+{\bf Winchester, Niven and Sebastian Rausch}, ``A numerical investigation of
+  the potential for negative emissions leakage,'' {\it American Economic
+  Review}, 2013, {\it 103} (3), 320--25.
+
+\end{thebibliography}
