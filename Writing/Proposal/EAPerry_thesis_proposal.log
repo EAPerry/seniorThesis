@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.3)  2 FEB 2023 09:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.3)  10 MAR 2023 10:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1006,7 +1006,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpbne.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmne.pfb>
-Output written on EAPerry_thesis_proposal.pdf (12 pages, 87550 bytes).
+Output written on EAPerry_thesis_proposal.pdf (12 pages, 87545 bytes).
 PDF statistics:
  255 PDF objects out of 1000 (max. 8388607)
  228 compressed objects within 3 object streams

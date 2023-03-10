@@ -10,24 +10,24 @@
 \contentsline {subsection}{\numberline {2.2}An Economic Motivation for Climate Policy}{47}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}The Structure \& Scope of Environmental Policy}{57}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Environmental Markets: Carbon Taxes \& Cap-and-Trade}{63}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Incomplete Carbon Markets}{68}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Ambient Air Pollution \& Electricity Generation}{82}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Primer on Ambient Air Pollution}{82}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}The Case of California: Electricity \& AB-32}{85}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Carbon Pricing \& Environmental Inequality}{87}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Research Design}{91}{subsection.3.4}%
-\contentsline {section}{\numberline {4}A Model of Emissions Pricing \& Environmental Inequality}{92}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Model Summary}{92}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Model Environment}{94}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Equilibrium Behavior in the Generation Phase}{98}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Equilibrium Behavior in the Investment Phase}{105}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Incorporating Air Pollution \& Environmental Inequality}{107}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Pathways from Carbon Pricing to Environmental Inequality}{110}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Model Application: Electricity \& Air Pollution in California}{111}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Data}{111}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Empirical Strategy}{111}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Results}{111}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Diagnostics}{111}{subsection.5.4}%
-\contentsline {section}{Conclusion}{113}{subsection.5.4}%
-\contentsline {section}{References}{114}{subsection.5.4}%
-\contentsline {section}{Appendix}{133}{subsection.5.4}%
+\contentsline {subsection}{\numberline {2.5}Incomplete Carbon Markets}{70}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Ambient Air Pollution \& Electricity Generation}{83}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Primer on Ambient Air Pollution}{83}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The Case of California: Electricity \& AB-32}{86}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Carbon Pricing \& Environmental Inequality}{88}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Research Design}{93}{subsection.3.4}%
+\contentsline {section}{\numberline {4}A Model of Emissions Pricing \& Environmental Inequality}{94}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Model Summary}{94}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Model Environment}{96}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Equilibrium Behavior in the Generation Phase}{100}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Equilibrium Behavior in the Investment Phase}{107}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Incorporating Air Pollution \& Environmental Inequality}{109}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Pathways from Carbon Pricing to Environmental Inequality}{112}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Model Application: Electricity \& Air Pollution in California}{113}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Data}{113}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Empirical Strategy}{113}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Results}{113}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Diagnostics}{113}{subsection.5.4}%
+\contentsline {section}{Conclusion}{115}{subsection.5.4}%
+\contentsline {section}{References}{116}{subsection.5.4}%
+\contentsline {section}{Appendix}{135}{subsection.5.4}%

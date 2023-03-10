@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.3)  9 MAR 2023 21:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.3)  10 MAR 2023 12:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1014,43 +1014,48 @@ LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line 3
  (c:/texlive/2022/texmf-dist/tex/latex/kpfonts/ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-Overfull \hbox (1.01994pt too wide) detected at line 23
- []\OT1/jkp/m/n/12 105
+Overfull \hbox (1.01994pt too wide) detected at line 22
+ []\OT1/jkp/m/n/12 100
  []
 
 
-Overfull \hbox (1.01994pt too wide) detected at line 24
+Overfull \hbox (1.01994pt too wide) detected at line 23
  []\OT1/jkp/m/n/12 107
  []
 
 
+Overfull \hbox (1.01994pt too wide) detected at line 24
+ []\OT1/jkp/m/n/12 109
+ []
+
+
 Overfull \hbox (1.01994pt too wide) detected at line 25
- []\OT1/jkp/m/n/12 110
+ []\OT1/jkp/m/n/12 112
  []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 ...numberline {5.1}Data}{111}{subsection.5.1}
+l.27 ...numberline {5.1}Data}{113}{subsection.5.1}
                                                   % [1]
 Overfull \hbox (1.01994pt too wide) detected at line 27
- []\OT1/jkp/m/n/12 111
+ []\OT1/jkp/m/n/12 113
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 28
- []\OT1/jkp/m/n/12 111
+ []\OT1/jkp/m/n/12 113
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 29
- []\OT1/jkp/m/n/12 111
+ []\OT1/jkp/m/n/12 113
  []
 
 
 Overfull \hbox (1.01994pt too wide) detected at line 30
- []\OT1/jkp/m/n/12 111
+ []\OT1/jkp/m/n/12 113
  []
 
 )
@@ -1058,19 +1063,19 @@ Overfull \hbox (1.01994pt too wide) detected at line 30
 \openout5 = `main.toc'.
 
  (./chapter0.tex [2] [3] [4]) (./chapter1.tex [5]
-<figures/chapter1_figures/ipcc_fig1.png, id=198, 586.44093pt x 451.6875pt>
+<figures/chapter1_figures/ipcc_fig1.png, id=197, 586.44093pt x 451.6875pt>
 File: figures/chapter1_figures/ipcc_fig1.png Graphic file (type png)
 <use figures/chapter1_figures/ipcc_fig1.png>
 Package pdftex.def Info: figures/chapter1_figures/ipcc_fig1.png  used on input line 18.
 (pdftex.def)             Requested size: 260.17465pt x 200.39034pt.
  [6] [7 <./figures/chapter1_figures/ipcc_fig1.png>] [8] [9] [10]
-<figures/chapter1_figures/co2_noaa.jpg, id=263, 1053.9375pt x 834.86906pt>
+<figures/chapter1_figures/co2_noaa.jpg, id=262, 1053.9375pt x 834.86906pt>
 File: figures/chapter1_figures/co2_noaa.jpg Graphic file (type jpg)
 <use figures/chapter1_figures/co2_noaa.jpg>
 Package pdftex.def Info: figures/chapter1_figures/co2_noaa.jpg  used on input line 49.
 (pdftex.def)             Requested size: 303.53267pt x 240.43701pt.
  [11] [12 <./figures/chapter1_figures/co2_noaa.jpg>]
-<figures/chapter1_figures/ipcc_radiative_forcing.png, id=280, 512.1534pt x 288.8391pt>
+<figures/chapter1_figures/ipcc_radiative_forcing.png, id=279, 512.1534pt x 288.8391pt>
 File: figures/chapter1_figures/ipcc_radiative_forcing.png Graphic file (type png)
 <use figures/chapter1_figures/ipcc_radiative_forcing.png>
 Package pdftex.def Info: figures/chapter1_figures/ipcc_radiative_forcing.png  used on input line 60.
@@ -1080,30 +1085,30 @@ LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 71
  (c:/texlive/2022/texmf-dist/tex/latex/kpfonts/ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
 ) [15] [16]
-<figures/chapter1_figures/ghg_stacked.pdf, id=316, 433.62pt x 216.81pt>
+<figures/chapter1_figures/ghg_stacked.pdf, id=315, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_stacked.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_stacked.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_stacked.pdf  used on input line 110.
 (pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
  [17 <./figures/chapter1_figures/ghg_stacked.pdf>]
-<figures/chapter1_figures/ghg_economic.pdf, id=331, 433.62pt x 216.81pt>
+<figures/chapter1_figures/ghg_economic.pdf, id=330, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_economic.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_economic.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_economic.pdf  used on input line 121.
 (pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
  [18 <./figures/chapter1_figures/ghg_economic.pdf>]
-<figures/chapter1_figures/ghg_inventory.pdf, id=346, 433.62pt x 216.81pt>
+<figures/chapter1_figures/ghg_inventory.pdf, id=345, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_inventory.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_inventory.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_inventory.pdf  used on input line 130.
 (pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
  [19 <./figures/chapter1_figures/ghg_inventory.pdf>] [20]
-<figures/chapter1_figures/ghg_global.pdf, id=371, 433.62pt x 216.81pt>
+<figures/chapter1_figures/ghg_global.pdf, id=370, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_global.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_global.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_global.pdf  used on input line 174.
 (pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
-<figures/chapter1_figures/ghg_cap.pdf, id=375, 433.62pt x 216.81pt>
+<figures/chapter1_figures/ghg_cap.pdf, id=374, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_cap.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_cap.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_cap.pdf  used on input line 185.
@@ -1114,7 +1119,7 @@ Overfull \hbox (4.78752pt too wide) in paragraph at lines 229--232
  []
 
 [26] [27] [28] [29]
-<figures/chapter1_figures/cil_mortal.png, id=521, 540.51938pt x 395.22656pt>
+<figures/chapter1_figures/cil_mortal.png, id=520, 540.51938pt x 395.22656pt>
 File: figures/chapter1_figures/cil_mortal.png Graphic file (type png)
 <use figures/chapter1_figures/cil_mortal.png>
 Package pdftex.def Info: figures/chapter1_figures/cil_mortal.png  used on input line 243.
@@ -1154,75 +1159,74 @@ Overfull \hbox (7.13876pt too wide) in paragraph at lines 301--302
 []\OT1/jkp/m/n/12 In sit-u-a-tions where en-force-ment is in-cred-i-bly costly, it may be more cost-effective
  []
 
-[63] [64] [65] [66] [67] [68] [69]
-Overfull \hbox (6.2512pt too wide) in paragraph at lines 411--412
+[63] [64] [65] [66] [67] [68]
+<figures/chapter3_figures/cap_programs.pdf, id=942, 433.62pt x 252.945pt>
+File: figures/chapter3_figures/cap_programs.pdf Graphic file (type pdf)
+<use figures/chapter3_figures/cap_programs.pdf>
+Package pdftex.def Info: figures/chapter3_figures/cap_programs.pdf  used on input line 389.
+(pdftex.def)             Requested size: 433.62001pt x 252.95595pt.
+ [69] [70 <./figures/chapter3_figures/cap_programs.pdf>] [71]
+Overfull \hbox (6.2512pt too wide) in paragraph at lines 437--438
 [][] 
  []
 
-<figures/chapter2_figures/ekc.pdf, id=954, 216.81pt x 216.81pt>
+<figures/chapter2_figures/ekc.pdf, id=988, 216.81pt x 216.81pt>
 File: figures/chapter2_figures/ekc.pdf Graphic file (type pdf)
 <use figures/chapter2_figures/ekc.pdf>
-Package pdftex.def Info: figures/chapter2_figures/ekc.pdf  used on input line 416.
+Package pdftex.def Info: figures/chapter2_figures/ekc.pdf  used on input line 442.
 (pdftex.def)             Requested size: 187.32089pt x 187.32964pt.
-[70] [71 <./figures/chapter2_figures/ekc.pdf>] [72] [73] [74] [75] [76] [77] [78]
-<figures/chapter2_figures/ghg_scope.png, id=1060, 545.03625pt x 357.58594pt>
-File: figures/chapter2_figures/ghg_scope.png Graphic file (type png)
-<use figures/chapter2_figures/ghg_scope.png>
-Package pdftex.def Info: figures/chapter2_figures/ghg_scope.png  used on input line 549.
-(pdftex.def)             Requested size: 346.89732pt x 227.58835pt.
- [79 <./figures/chapter2_figures/ghg_scope.png>] [80]) (./chapter3.tex [81] [82] [83] [84]
-<figures/chapter3_figures/WECC_map.pdf, id=1144, 361.35pt x 289.08pt>
+[72] [73 <./figures/chapter2_figures/ekc.pdf>] [74] [75] [76] [77] [78] [79] [80] [81]) (./chapter3.tex [82] [83] [84] [85]
+<figures/chapter3_figures/WECC_map.pdf, id=1165, 361.35pt x 289.08pt>
 File: figures/chapter3_figures/WECC_map.pdf Graphic file (type pdf)
 <use figures/chapter3_figures/WECC_map.pdf>
-Package pdftex.def Info: figures/chapter3_figures/WECC_map.pdf  used on input line 78.
+Package pdftex.def Info: figures/chapter3_figures/WECC_map.pdf  used on input line 76.
 (pdftex.def)             Requested size: 346.89732pt x 277.51805pt.
-<figures/chapter3_figures/allowance_prices.pdf, id=1147, 433.62pt x 216.81pt>
+<figures/chapter3_figures/allowance_prices.pdf, id=1168, 433.62pt x 216.81pt>
 File: figures/chapter3_figures/allowance_prices.pdf Graphic file (type pdf)
 <use figures/chapter3_figures/allowance_prices.pdf>
-Package pdftex.def Info: figures/chapter3_figures/allowance_prices.pdf  used on input line 86.
+Package pdftex.def Info: figures/chapter3_figures/allowance_prices.pdf  used on input line 84.
 (pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
- [85 <./figures/chapter3_figures/WECC_map.pdf>]
-Overfull \hbox (106.79413pt too wide) in paragraph at lines 114--115
+ [86 <./figures/chapter3_figures/WECC_map.pdf>]
+Overfull \hbox (106.79413pt too wide) in paragraph at lines 112--113
 [][][]$\OT1/jkp/m/n/12 https : / / ww2 . arb . ca . gov / our-[]work / programs / cap-[]and-[]trade-[]program / cap-[]and-[]trade-[]regulation$[][] 
  []
 
-[86 <./figures/chapter3_figures/allowance_prices.pdf>] [87] [88]
-<figures/chapter3_figures/cap_programs.pdf, id=1217, 433.62pt x 252.945pt>
-File: figures/chapter3_figures/cap_programs.pdf Graphic file (type pdf)
-<use figures/chapter3_figures/cap_programs.pdf>
-Package pdftex.def Info: figures/chapter3_figures/cap_programs.pdf  used on input line 160.
-(pdftex.def)             Requested size: 433.62001pt x 252.95595pt.
- [89 <./figures/chapter3_figures/cap_programs.pdf>]
-Overfull \hbox (107.53812pt too wide) in paragraph at lines 181--182
-[][][]$\OT1/jkp/m/n/12 https : / / grist . org / climate / the-[]biggest-[]^^Lght-[]over-[]cap-[]and-[]trade-[]isnt-[]about-[]what-[]you-[]think-[]it-[]is/$[][] 
+[87 <./figures/chapter3_figures/allowance_prices.pdf>] [88] [89]
+Overfull \hbox (6.26555pt too wide) in paragraph at lines 160--161
+\OT1/jkp/m/n/12 ex-actly that: re-dis-tributed air pol-lu-tion to-wards dis-ad-van-taged com-mu-ni-ties. [][][]Cush-
  []
 
-) (./chapter4.tex [90] [91] [92] [93] [94] [95] [96]
+[90] [91]
+Overfull \hbox (5.69pt too wide) in paragraph at lines 174--175
+\OT1/jkp/m/n/12 the spirit of re-lated struc-tural, industrial-organization mod-els (e.g.,  [][][]Gowrisankaran
+ []
+
+[92]) (./chapter4.tex [93] [94] [95] [96] [97] [98]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 47.
  (c:/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109]
+) [99] [100] [101] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111]
 Overfull \hbox (3.49023pt too wide) in paragraph at lines 236--237
 \OT1/jkp/m/n/12 rate im-prove-ment dif-fer-ences $\OMS/jkp/m/n/12 !$ \OT1/jkp/m/n/12 marginal cost dif-fer-ences $\OMS/jkp/m/n/12 !$ \OT1/jkp/m/n/12 re-order-ing along
  []
 
-) (./chapter5.tex [110]
-<figures/chapter5_figures/EI_region_violin.pdf, id=1442, 433.62pt x 252.945pt>
+) (./chapter5.tex [112]
+<figures/chapter5_figures/EI_region_violin.pdf, id=1451, 433.62pt x 252.945pt>
 File: figures/chapter5_figures/EI_region_violin.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/EI_region_violin.pdf>
 Package pdftex.def Info: figures/chapter5_figures/EI_region_violin.pdf  used on input line 10.
 (pdftex.def)             Requested size: 433.62001pt x 252.95595pt.
-<figures/chapter5_figures/local_poll_EI.pdf, id=1443, 433.62pt x 252.945pt>
+<figures/chapter5_figures/local_poll_EI.pdf, id=1452, 433.62pt x 252.945pt>
 File: figures/chapter5_figures/local_poll_EI.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/local_poll_EI.pdf>
 Package pdftex.def Info: figures/chapter5_figures/local_poll_EI.pdf  used on input line 14.
 (pdftex.def)             Requested size: 433.62001pt x 252.95595pt.
-<figures/chapter5_figures/regional_gens.pdf, id=1444, 505.89pt x 289.08pt>
+<figures/chapter5_figures/regional_gens.pdf, id=1453, 505.89pt x 289.08pt>
 File: figures/chapter5_figures/regional_gens.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/regional_gens.pdf>
 Package pdftex.def Info: figures/chapter5_figures/regional_gens.pdf  used on input line 18.
 (pdftex.def)             Requested size: 433.62001pt x 247.7879pt.
-) (./chapter6.tex [111] [112 <./figures/chapter5_figures/EI_region_violin.pdf> <./figures/chapter5_figures/local_poll_EI.pdf>]) [113 <./figures/chapter5_figures/regional_gens.pdf>] (./main.bbl (./main.brf)
+) (./chapter6.tex [113] [114 <./figures/chapter5_figures/EI_region_violin.pdf> <./figures/chapter5_figures/local_poll_EI.pdf>]) [115 <./figures/chapter5_figures/regional_gens.pdf>] (./main.bbl (./main.brf)
 \tf@brf=\write6
 \openout6 = `main.brf'.
 
@@ -1236,43 +1240,43 @@ Underfull \hbox (badness 4556) in paragraph at lines 45--45
 []\OT1/jkp/b/n/12 Auffhammer, Max-i-m-il-ian\OT1/jkp/m/n/12 , ``Quan-ti-fy-ing eco-nomic dam-ages from cli-mate
  []
 
-[114] [115] [116] [117] [118] [119] [120]
-Underfull \hbox (badness 1082) in paragraph at lines 373--373
+[116] [117] [118] [119] [120] [121] [122]
+Underfull \hbox (badness 1082) in paragraph at lines 372--372
 []\OT1/jkp/b/n/12 Goldsmith-Pinkham, Paul, Matthew Gustafson, Ryan Lewis, and Michael
  []
 
-[121] [122] [123] [124] [125] [126] [127] [128]
-Underfull \hbox (badness 1303) in paragraph at lines 725--725
+[123] [124] [125] [126] [127] [128] [129]
+Underfull \hbox (badness 1303) in paragraph at lines 720--720
 []\OT1/jkp/b/n/12 Ralimanana, H[]el[]ene, Al-li-son Per-rigo, Rhian Smith, James Bor-rell, S^^\ren
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 725--725
+Underfull \hbox (badness 1430) in paragraph at lines 720--720
 \OT1/jkp/b/n/12 Fau-rby, Mamy Tiana Ra-jaonah, Tian-jana-hary Ran-dri-amboavonjy, Maria
  []
 
-
-Underfull \hbox (badness 1968) in paragraph at lines 757--757
+[130]
+Underfull \hbox (badness 1968) in paragraph at lines 752--752
 \OT1/jkp/m/it/12 in Data\OT1/jkp/m/n/12 , 2020.  https://ourworldindata.org/co2-and-other-greenhouse-gas-
  []
 
-[129]
-Underfull \hbox (badness 1205) in paragraph at lines 798--798
+[131]
+Underfull \hbox (badness 1205) in paragraph at lines 793--793
 []\OT1/jkp/b/n/12 Sweet, William, Robert Kopp, Christo-pher Weaver, Jayan-tha Obey-sek-era,
  []
 
-[130] [131]) (./chapter7.tex [132]
+[132] [133]) (./chapter7.tex [134]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 9.
 See the caption package documentation for explanation.
 
-<figures/chapter1_figures/climate_model_accuracy.png, id=1755, 1459.70343pt x 963.6pt>
+<figures/chapter1_figures/climate_model_accuracy.png, id=1766, 1459.70343pt x 963.6pt>
 File: figures/chapter1_figures/climate_model_accuracy.png Graphic file (type png)
 <use figures/chapter1_figures/climate_model_accuracy.png>
 Package pdftex.def Info: figures/chapter1_figures/climate_model_accuracy.png  used on input line 11.
 (pdftex.def)             Requested size: 303.53267pt x 200.36232pt.
-[133 <./figures/chapter1_figures/climate_model_accuracy.png>]
+[135 <./figures/chapter1_figures/climate_model_accuracy.png>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 22.
@@ -1283,7 +1287,7 @@ Overfull \hbox (24.67035pt too wide) in alignment at lines 24--96
  [] [] [] [] 
  []
 
-[134] [135] [136]
+[136] [137] [138]
 LaTeX Font Info:    Trying to load font information for OT1+jkptt on input line 97.
  (c:/texlive/2022/texmf-dist/tex/latex/kpfonts/ot1jkptt.fd
 File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
@@ -1293,7 +1297,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 104.
 See the caption package documentation for explanation.
 
-[137]) [138] (./main.aux)
+[139]) [140] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.43996pt have occurred.
@@ -1301,16 +1305,22 @@ LaTeX Font Warning: Size substitutions with differences
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 183DCD34EA417E079B90378AC358B41A;6955.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: B01295C1BF12983C7189AC7CCA1E4B3F;12337.
+(rerunfilecheck)             Checksum: 759A89EA7EEA041D6D7EB23499CEBA04;12400.
  ) 
 Here is how much of TeX's memory you used:
- 36804 strings out of 476093
- 832188 string characters out of 5795578
+ 36784 strings out of 476093
+ 831498 string characters out of 5795578
  1906787 words of memory out of 5000000
- 56110 multiletter control sequences out of 15000+600000
+ 56090 multiletter control sequences out of 15000+600000
  583419 words of font info for 205 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,22n,91p,2656b,851s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,22n,91p,2656b,850s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.31} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.30} has been referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{Hfootnote.29} has been referenced but does not exist, replaced by a fixed one
 
@@ -1399,10 +1409,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpbne.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpexa.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmia.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmne.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpsyb.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpsyc.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on main.pdf (139 pages, 3155355 bytes).
+Output written on main.pdf (141 pages, 2954384 bytes).
 PDF statistics:
- 1960 PDF objects out of 2073 (max. 8388607)
- 1734 compressed objects within 18 object streams
- 404 named destinations out of 1000 (max. 500000)
- 351 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1971 PDF objects out of 2073 (max. 8388607)
+ 1747 compressed objects within 18 object streams
+ 405 named destinations out of 1000 (max. 500000)
+ 346 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -121,11 +121,16 @@
   and ozone,'' {\it Journal of Environmental Economics and Management}, 2019,
   {\it 98}, 102267.
 
+\harvarditem[Burtraw and Hayes]{Burtraw and Hayes}{2022}{burtraw2022_rff}
+{\bf Burtraw, Dallas and Kristin Hayes}, ``Prospects for the California
+  Emissions Market, with Dallas Burtraw,'' {\it Resources Radio}, 2022, {\it
+  169.}
+
 \harvarditem[Burtraw et al.]{Burtraw, Cullenward, Fowlie, Sutter and
   Brown}{2022}{burtraw2018}
-{\bf Burtraw, Dallas, Danny Cullenward, Meredith Fowlie, Katelyn Sutter, and
-  Ross Brown}, ``2021 Annual Report of the Independent Emissions Market
-  Advisory Committee,'' {\it California Environmental Protection Agency}, 2022.
+{\bf \bysame{}, Danny Cullenward, Meredith Fowlie, Katelyn Sutter, and Ross
+  Brown}, ``2021 Annual Report of the Independent Emissions Market Advisory
+  Committee,'' {\it California Environmental Protection Agency}, 2022.
 
 \harvarditem[Bushnell et al.]{Bushnell, Holland, Hughes and
   Knittel}{2017}{bushnell2017strategic}
@@ -138,9 +143,14 @@
 {\bf {C2ES}}, ``US State Carbon Pricing Policies,'' {\it Center for Climate and
   Energy Solutions}, 2023.
 
-\harvarditem[{CARB}]{{CARB}}{2023}{carb_prices}
+\harvarditem[{CARB}]{{CARB}}{2023a}{carb_prices}
 {\bf {CARB}}, ``Cap-and-Trade Program Data Dashboard,'' {\it California Air
   Resources Board, California Environmental Protection Agency}, 2023.
+
+\harvarditem[{CARB}]{{CARB}}{2023b}{carb_FAQ}
+{\bf \bysame{}}, ``FAQ Cap-and-Trade Program,'' {\it California Air Resources
+  Board, California Environmental Protection Agency}, 2023.
+\newblock Accessed: 2023-03-10.
 
 \harvarditem[Carleton et al.]{Carleton, Jina, Delgado, Greenstone, Houser,
   Hsiang, Hultgren, Kopp, McCusker, Nath, Rising, Rode, Kwon~Seo, Viaene, Yuan
@@ -196,14 +206,6 @@
   ``Natural disasters as creative destruction? Evidence from developing
   countries,'' {\it Economic Inquiry}, 2008, {\it 46} (2), 214--226.
 
-\harvarditem[Cullen]{Cullen}{2015}{cullen2015}
-{\bf Cullen, Joseph}, ``Dynamic response to environmental regulation in the
-  electricity industry,'' {\it Working Paper}, 2015.
-
-\harvarditem[Cullen and Reynolds]{Cullen and Reynolds}{2017}{cullen2017}
-{\bf \bysame{} and Stanley Reynolds}, ``Market dynamics and investment in the
-  electricity sector,'' {\it Working paper}, 2017.
-
 \harvarditem[Currie et al.]{Currie, Hanushek, Kahn, Neidell and
   Rivkin}{2009}{currie2009does}
 {\bf Currie, Janet, Eric~A Hanushek, E~Megan Kahn, Matthew Neidell, and
@@ -229,6 +231,13 @@
   Sadd, Allen Zhu, and Rachel Morello-Frosch}, ``Carbon trading, co-pollutants,
   and environmental equity: Evidence from California's cap-and-trade program
   (2011--2015),'' {\it PLoS medicine}, 2018, {\it 15} (7), e1002604.
+
+\harvarditem[Cushing et al.]{Cushing, Wander, Morello-Frosch, Pastor, Zhu and
+  Sadd}{2016}{cushing2016preliminary}
+{\bf \bysame{}, Madeline Wander, Rachel Morello-Frosch, Manuel Pastor, Allen
+  Zhu, and James Sadd}, ``A preliminary environmental equity assessment of
+  California's cap-and-trade program,'' {\it Report. Program for Environmental
+  and Regional Equity, University of Southern California Dornsife}, 2016.
 
 \harvarditem[Davidson]{Davidson}{2022}{davidson2022china}
 {\bf Davidson, Helen}, ``China drought causes Yangtze to dry up, sparking
@@ -302,12 +311,6 @@
   cause, and magnitude of animal mass mortality events,'' {\it Proceedings of
   the National Academy of Sciences}, 2015, {\it 112} (4), 1083--1088.
 
-\harvarditem[Fischer and Jacobsen]{Fischer and
-  Jacobsen}{2021}{fischer2021green}
-{\bf Fischer, Carolyn and Grant Jacobsen}, ``The Green New Deal and the future
-  of carbon pricing,'' {\it Journal of Policy Analysis and Management}, 2021,
-  {\it 40} (3), 988--995.
-
 \harvarditem[Fonken et al.]{Fonken, Xu, Weil, Chen, Sun, Rajagopalan and
   Nelson}{2011}{fonken2011air}
 {\bf Fonken, Laura~K, Xiaohua Xu, Zachary~M Weil, Guohua Chen, Qinghua Sun,
@@ -361,10 +364,6 @@
 \harvarditem[GFDL]{GFDL}{2014}{gfdl}
 {\bf GFDL}, ``Aerosols and Climate,'' 2014.
 
-\harvarditem[{GHG Protocol}]{{GHG Protocol}}{2011}{ghg_protocol_2011}
-{\bf {GHG Protocol}}, ``Corporate Value Chain (Scope 3) Accounting and
-  Reporting Standard,'' Technical Report, GHG 2011.
-
 \harvarditem[Goldsmith-Pinkham et al.]{Goldsmith-Pinkham, Gustafson, Lewis and
   Schwert}{2019}{goldsmith2019sea}
 {\bf Goldsmith-Pinkham, Paul, Matthew Gustafson, Ryan Lewis, and Michael
@@ -381,6 +380,10 @@
 {\bf Gowrisankaran, Gautam, Ashley Langer, and Wendan Zhang}, ``Policy
   uncertainty in the market for coal electricity: The case of air toxics
   standards,'' {\it National Bureau of Economic Research}, 2022.
+
+\harvarditem[Green]{Green}{2021}{green2021does}
+{\bf Green, Jessica}, ``Does carbon pricing reduce emissions? A review of
+  ex-post analyses,'' {\it Environmental Research Letters}, 2021, p.~043004.
 
 \harvarditem[Grossman and Krueger]{Grossman and Krueger}{1991}{NBERw3914}
 {\bf Grossman, Gene and Alan Krueger}, ``Environmental impacts of a North
@@ -422,23 +425,11 @@
   and Kunkel, Kenneth E and Lewis, Kristin LM and Maycock, Thomas K and
   Stewart, Bradley C.
 
-\harvarditem[Hernández-Cortés]{Hernández-Cortés}{2022}{hernandez2022distributional}
-{\bf Hernández-Cortés, Danae}, ``The Distributional Consequences of
-  Incomplete Regulation,'' {\it Working Paper}, 2022.
-
-\harvarditem[Hernández-Cortés and Rosas-L{\'o}pez]{Hernández-Cortés and
-  Rosas-L{\'o}pez}{2021}{hernandez2021environmental}
-{\bf \bysame{} and Erick Rosas-L{\'o}pez}, ``The Environmental Justice
-  Dimension of the Mexican Emissions Trading System,'' in ``Towards an
-  Emissions Trading System in Mexico: Rationale, Design and Connections with
-  the Global Climate Agenda: Outlook on the first ETS in Latin-America and
-  Exploration of the Way Forward,'' Springer, 2021, pp.~243--263.
-
 \harvarditem[Hernández-Cortés and Meng]{Hernández-Cortés and
   Meng}{2022}{hernandez2022importance}
-{\bf \bysame{} and Kyle Meng}, ``The Importance of Causality and Pollution
-  Dispersal in Quantifying Pollution Disparity Consequences: Reply to Pastor et
-  al.(2022),'' {\it Open comment}, 2022.
+{\bf Hernández-Cortés, Danae and Kyle Meng}, ``The Importance of Causality
+  and Pollution Dispersal in Quantifying Pollution Disparity Consequences:
+  Reply to Pastor et al.(2022),'' {\it Open comment}, 2022.
 
 \harvarditem[Hernández-Cortés and Meng]{Hernández-Cortés and
   Meng}{2023}{hernandez2023environmental}
@@ -541,6 +532,10 @@
 {\bf Jenkins, Lisa~Martine, Robert Alvarez, and Sarah~Marie Jordaan},
   ``Unmanaged climate risks to spent fuel from US nuclear power plants: The
   case of sea-level rise,'' {\it Energy Policy}, 2020, {\it 137.}
+
+\harvarditem[Johnson]{Johnson}{2020}{johnson2020cap}
+{\bf Johnson, Nathanael}, ``Cap and Trade-Offs: Did California's landmark
+  legislation help or hurt the state's most vulnerable?,'' {\it Grist}, 2020.
 
 \harvarditem[Keohane and Olmstead]{Keohane and
   Olmstead}{2016}{keohane2016markets}
@@ -795,13 +790,6 @@
   Radley Horton, Robert Thieler, and Chris Zervas}, ``Global and regional sea
   level rise scenarios for the United States,'' Technical Report, National
   Ocean Service at NOAA 2022.
-
-\harvarditem[Tanaka et al.]{Tanaka, Teshima and
-  Verhoogen}{2022}{tanaka2022north}
-{\bf Tanaka, Shinsuke, Kensuke Teshima, and Eric Verhoogen}, ``North-South
-  displacement effects of environmental regulation: The case of battery
-  recycling,'' {\it American Economic Review: Insights}, 2022, {\it 4} (3),
-  271--88.
 
 \harvarditem[Thaler and Rosen]{Thaler and Rosen}{1976}{thaler1976value}
 {\bf Thaler, Richard and Sherwin Rosen}, ``The value of saving a life: evidence
