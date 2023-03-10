@@ -1,20 +1,240 @@
 \newpage
-\section{Leakage \& BCAs in the California Power Industry}
+\section{Ambient Air Pollution \& Electricity Generation}
 
-\subsection{A Perfectly Competitive Model of Leakage}
+The previous two chapters have focused on preparing a broad base of knowledge on climate economics---the first chapter by reviewing the physical science of climate change and the second chapter by reviewing the economics of climate policy design. This chapter continues to build background, but focuses instead on providing context specific to the modeling and empirical work done in the two chapters that follow it. 
 
-Here we consider a perfectly competitive model of emissions leakage in the Western Interconnection based largely off of \cite{fowlie2021border}. We begin constructing a model where there is no emissions pricing scheme and then impose an emissions tax. Alongside the emissions tax, we consider different possible border carbon adjustments with the potential to reduce leakage. 
+To motivate these proceeding chapters, this chapter begins by discussing ambient air pollution with particular emphasis on the impacts of ambient air pollution and air pollution disparities. As alluded to earlier, the ultimate goal is to model and simulate these air pollution disparities that result from the implementation of a carbon tax on the electric power industry in California. Keeping this in mind, the discussion on air pollution is followed by an overview of wholesale electricity markets and Assembly Bill 32 (AB-32), the California statute that creates an emissions trading program across the state. Finally, I review the body of literature immediately adjacent to this research. The related literature serves both to establish what we already know about the implications of carbon pricing for environmental inequality and to motivate the specific goals of the research in this paper. This chapter concludes by describing the overall research design that unfolds in the next two chapters. The description of this design is outlines both the research design choices I make in these later chapters and the motivation for these design choices. 
 
-This is not a model of residential electric power markets. Residential electric power prices involve complicated tier systems, connection charges, and many additional fees that distort the true price. In addition to discouraging electrification \citep[see][]{borenstein2021designing}, these structures make simulating these markets impractical in this analysis. Instead, we model the wholesale day-ahead electricity market. 
+\subsection{Primer on Ambient Air Pollution}
 
-The Federal Energy Regulatory Commission's \emph{Energy Primer} \citep{ferc2020} describes how power grid operators and power plants decide what generation will take place. Power grid operators have the goal of ensuring reliable power supply at the least cost. This process plays out in two stages. In the first stage, operators prepare for forecasted demand by committing generators a day before. This is the day-ahead market, where power plants sell their generation in anticipation for the next day. In the second stage, operators make adjustments in real-time by calling on additional generators to either turn on or off through a process called Automatic Generation Control. Grid operators determine whether or not to increase generation by measuring the frequency (cycles/second) of the AC power lines. In the US, operators aim for a frequency of 60 Hz, so a frequency above or below 60 Hz means that the too much or too little generation respectively. 
+\noindent Introduction
+\begin{itemize}
+    \item What is ambient air pollution? 
+    \item What are the most common air pollutants?
+\end{itemize}
 
-The structure of these day-ahead markets varies considerably across the country. One important factor in identifying the structure of these markets is the existence of a Regional Transmission Operator (RTO) or an Independent System Operator (ISO). RTOs and ISOs are essentially two different names for the same entity.\footnote{\cite{rff_podcast1} says ``At one point, FERC---the Federal Energy Regulatory Commission---made a distinction between these entities. It's a distinction without a difference at this point."} These entities are non-profit organizations that have the primary responsibility of operating markets for electric power
-across many generators (the power plants, i.e. the sellers of electricity) and load-serving organizations (utilities, large industrial users, i.e. the buyers of electricity). \cite{ferc2020} gives an excellent description of how these day-ahead markets operate under an RTO or ISO.
+Ambient air pollution exposure comes with many negative consequences, but the most striking of these is the effect of ambient air pollution on human health and mortality. 
+
+\textbf{TALK ABOUT THE MECHANISMS}
+
+The World Health Organization (WHO) estimates that ambient air pollution caused over 4.2 million premature deaths in 2019, making ambient air pollution one of the leading global health stressors \citep{who_factsheet}. Around the world, 99\% of people live in environments that do not meet the WHO's air quality guidelines. Understandably, the vast majority (89\%) of these premature deaths are in low- and middle-income countries, but ambient air pollution remains a serious health threat even in wealthy nations, including the US. \cite{lelieveld2019effects} uses atmospheric models alongside a global exposure mortality model---a model that maps air pollutant concentrations into mortalities---to study excess mortalities attributable to anthropogenic air pollution emissions. They find that ambient air pollutants from anthropogenic sources (primarily the burning od fossil fuels) result in 230,000 excess deaths annually in the US.\footnote{
+    The 95\% confidence interval around these estimates is 184,000--276,000 excess deaths---a wide interval, but an interval where even the minimum of the interval warrants serious concern.
+} 
+
+Apart from the devastating effects of air pollution on human health, the other primary effect of air pollution exposure is reduced cognitive performance and decision making. \cite{fonken2011air} find physical changes in the brains of mice who have been exposed to fine particulate matter at concentrations and durations comparable to Beijing. Namely, they find that neurons in the hippocampus---an area of the brain devoted to memory and learning---have shorter and less dense dendrites. These dendrites are responsible for receiving signals from other neurons, and the reduced length and density of these neurons is correlated with poorer memory \citep{weir2012smog}.Additionally, the mice exposed to particulate matter display depressive-like symptoms, giving up earlier in forced swimming tests and eating less. 
+
+These physiological findings in mice correspond with a wealth of evidence on the effects of air pollution on human learning and cognition. \cite{aguilar2022air} provides the best review of these effects and their implications for human capital formation and labor economics more broadly. 
+
+\noindent Education/Human Capital Development \& Labor Implications
+\begin{itemize}
+    \item \cite{zhang2018impact}
+    \item \cite{currie2014we}
+    \item \cite{aguilar2022air}
+    \item \cite{currie2009does}
+    \item \cite{ebenstein2016long}
+    \item \cite{chang2016particulate}
+\end{itemize}
+
+
+
+
+\noindent Crime
+\begin{itemize}
+    \item \cite{bondy2020crime}
+    \item \cite{burkhardt2019effect}
+\end{itemize}
+
+\noindent Happiness
+\begin{itemize}
+    \item \cite{zheng2019air}
+\end{itemize}
+
+Together, the many effects of air pollution add to the popular 
+
+
+
+
+
+
+\noindent Justice/Inequality/Distributional perspectives
+\begin{itemize}
+    \item \cite{colmer2020disparities}
+    \item \cite{hernandez2022decomposing}
+    \item \cite{currie2023caused}
+    \item \cite{banzhaf2019environmental}
+    \item \cite{voorheis2017air}
+\end{itemize}
+
+
+
+
+
+
+\subsection{The Case of California: Electricity \& AB-32}
+
+\begin{figure}
+    \centering
+    \caption{Western Interconnection Subregions}
+    \includegraphics[width=0.8\textwidth]{figures/chapter3_figures/WECC_map.pdf}
+    \fignote[1]{Figure displays the subregions of the Western Interconnection. These subregions are a unit of geography set by the North American Electric Reliability Council (NERC). NERC determines these regions based off of the connections/boundaries between balancing authorities, the administrative unit of the US power grid. These regions are the California-Mexico Power Area (CAMX), the Northwest Power Pool Area (NWPP), the Rocky Mountain Power Area (RMPA), and the Arizona-New Mexico-Southern Nevada Power Area (AZNM). The EPA reports data for each of the four NERC regions, but the EIA only provides electricity demand data for the NWPP and RMPA together. These two subregions are treated as one throughout the paper, and future chapters will model just the three regional markets displayed: the California market, the Southwest market, and the Northwest market. Shapefiles for the regions come from \cite{HIFLD_nerc}.
+    }
+\end{figure}
+
+\begin{figure}
+    \centering
+    \caption{California Emissions Allowance Price}
+    \includegraphics[width=\textwidth]{figures/chapter3_figures/allowance_prices.pdf}
+    \fignote[1]{Figure displays the auction price and price floor for emissions allowances in California from Q4 2015 through Q4 2022. Each emissions allowance covers one tonne of CO$_2$e emissions. Data on emissions allowances come from the California Air Resources Board, \cite{carb_prices}.}
+\end{figure}
+
+
+\noindent Wholesale electricity markets: How they work and their ``competitiveness"
+\begin{itemize}
+    \item \cite{ferc2020}
+\end{itemize}
+
+\noindent Short history of CAISO
+\begin{itemize}
+    \item \cite{sweeney2013california}
+    \item \cite{knittel2005empirical}
+    \item \cite{borenstein2000diagnosing}
+    \item \cite{borenstein2015us}
+\end{itemize}
+
+\noindent Leakage
+\begin{itemize}
+    \item \cite{burtraw2018}
+    \item \cite{fowlie2009incomplete}
+    \item \cite{fowlie2021border}
+\end{itemize}
+
+\noindent Effect of AB-32 on Electricity
+\begin{itemize}
+    \item \url{https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program/cap-and-trade-
+    regulation}
+\end{itemize}
+
+\subsection{Carbon Pricing \& Environmental Inequality}
+
+Carbon pricing initiatives 
+
+
+Economists 
+
+Recall from Chapter 2 that 
+
+In what is likely the greatest display of consensus on climate policy from the economics discipline, 
+
+The economics displicine 
+
+A consensus statement originally published in the Wall Street Journal in 2019 makes this point plainly. The statement titled ``Economists' Statement on Carbon Dividends" makes 
+
+
+
+The original signatories include 28 Nobel Laureates, 4 former Chairs of the Federal Reserve, and 15 former Chairs of the Council of Economic Advisors. Since its initial release, the statement has earned the signature of thousands of other economists.\footnote{Rick Eichhorn.}
+
+The statement's first policy recommendation in its entirety reads:
 \begin{quote}
-In day-ahead markets, the schedules for supply and usage of energy are compiled hours ahead of the beginning of the operating day. The RTO/ISO then runs a computerized market model that matches buyers and sellers throughout the market footprint for each hour throughout the day. The model then evaluates the bids and offers of the participants, based on the power flows needed to move the electricity throughout the grid from generators to consumers. Additionally, the model must account for changing system capabilities that occur, based on weather and equipment outages, plus the rules and procedures that are used to ensure system reliability. The market rules dictate that generators submit supply offers and that loads submit demand bids to the RTO/ISO by a deadline that is typically in the morning of the day-ahead scheduling. Typically, 95 percent of all load is scheduled in the day-ahead market and the rest is scheduled in real-time.
+    ``A carbon tax offers the most cost-effective lever to reduce carbon emissions at the scale and speed that is necessary. By correcting a well-known market failure, a carbon tax will send a powerful price signal that harnesses the invisible hand of the marketplace to steer economic actors towards a low-carbon future." 
 \end{quote}
-This means that the wholesale day-ahead market has many of the characteristic features of a competitive market. The good bought and sold is homogeneous, and buyers have little ability to differentiate between  sellers. There are thousands of power plants selling power in any RTO/ISO and dozens of utilities and industrial costumers buying it. Moreover RTOs/ISOs dispatch additional generating units based on their marginal costs, which is suggestive that supply in the market is allocated competitively. Given this market structure, it seems most sensible to model this market as perfectly competitive. 
+
+It is also relevant to note that the signing economists address how the revenue generated from the carbon price should be distributed---a potentially major equality concern. The statement's fifth and final policy recommendation reads: 
+\begin{quote}
+    ``To maximize the fairness and political viability of a rising carbon tax, all the revenue should be returned directly to U.S. citizens through equal lump-sum rebates. The majority of American families, including the most vulnerable, will benefit financially by receiving more in `carbon dividends' than they pay in increased energy prices."
+\end{quote}
+Together the policy recommendations in the statement provide a brief but clear strategy for reducing greenhouse gas emissions in a manner that is both efficient and progressive in the sense that tax revenue would flow towards those at the bottom end of the income distribution. 
+
+It is also worth noting that although it seems unlikely that the US would implement a nationwide carbon pricing program anytime in the relevant future, this has not always been the case. The Clean Air Act amendments of 1990---legislation championed by then President George H.W. Bush---established a nationwide cap-and-trade program on sulfur dioxide emissions through the Acid Rain Program. The broad bipartisan support of the legislation and overall success of the Acid Rain Program is at a minimum suggestive that similar policy for greenhouse gases might have been politically feasible. The prospects for such a policy became palpable when the House of Representatives passed the American Clean Energy and Security Act of 2009, more commonly known as the Waxman-Markey bill. The Waxman-Markey bill called for a nationwide cap-and-trade program for greenhouse gas emissions highly analogous to the Acid Rain Program's cap-and-trade program on sulfur dioxide emissions. \cite{meng2017using} reviews data from the online trading exchange ``Intrade," which ran a contract allowing investors to, in essence,  bet on whether or not the Waxman-Markey bill would be signed into law and the US would have a nationwide cap-and-trade program for greenhouse gas emissions. These data suggest that one point investors perceived the probability that the US would adopt a cap-and-trade program on greenhouse gases by the end of 2010 at 55\%. Ultimately the bill failed in the Senate, gaining some support from Republicans, but never enough to overcome the filibuster. It remains the only legislation that would price greenhouse gas emissions to pass a chamber of Congress. 
+
+Today, a nationwide cap-and-trade program for greenhouse gas emissions in the US is generally understood to be politically infeasible. Still, several state and city governments across the country have taken up these policies as a part of their decarbonization strategy. Figure \ref{cap_states} displays the states with some form of carbon pricing. Currently, there at are thirteen states with carbon pricing programs, the most recent being Washington state which began its cap-and-trade program at the beginning of 2023. These states are among some of the most populous in the country, and the nearly a third (32.4\%) of the US population lives in a state with some form of carbon pricing. 
+% However, as Figure \ref{cap_states} shows, most of these states have programs that only cover emissions from electric power generation. These states on the East Coast all belong to the Regional Greenhouse Gas Initiative, an emissions trading scheme that applies only to fossil fuel powerplants in participating states. The cap-and-trade programs in California, Washington, and Quebec are all connected through the Western Climate Initiative, another market where participants can purchase emissions allowances. Unlike programs on the East coast, California and Washington's programs cover emissions outside of 
+
+
+
+
+
+
+\begin{figure}
+    \centering
+    \caption{Statewide Carbon Pricing in the US\label{cap_states}}
+    \includegraphics[width = \textwidth]{figures/chapter3_figures/cap_programs.pdf}
+    \vspace*{-1.8cm}
+    \fignote[1]{
+        Figure displays statewide carbon pricing policies as of January 1, 2023 for the contiguous 48 states. Economy-wide cap-and-trade programs price emission from electricity, as well as other sectors, like industrial processes and transportation fuel distributors. Electricity-only cap-and-trade programs only pricing emissions from the electric power industry. Together, there are thritheen states with carbon tax or cap-and-trade programs at the state level in the US. The remaining 37 states do not have carbon pricing programs. Records from \cite{c2es_map}.
+    }
+\end{figure}
+
+
+Today, 
+
+
+
+
+Economists \emph{love} carbon pricing, others are less keen (distributional reasons)
+\begin{itemize}
+    \item \cite{fischer2021green}
+    \item \cite{meng2017using}
+    \item \cite{borenstein2022carbon}
+\end{itemize}
+
+\begin{itemize}
+    \item \url{https://grist.org/climate/the-biggest-fight-over-cap-and-trade-isnt-about-what-you-think-it-is/}
+    \item \url{https://ww2.arb.ca.gov/resources/documents/faq-cap-and-trade-program}
+\end{itemize}
+
+
+\noindent Descriptive analyses---a grain of salt needed
+\begin{itemize}
+    \item \cite{cushing2018carbon}
+    \item \cite{pastor2022up}
+\end{itemize}
+
+\noindent The problems with descriptive analyses
+\begin{itemize}
+    \item \cite{hernandez2022importance}
+\end{itemize}
+
+\noindent Causal analysis
+\begin{itemize}
+    \item \cite{hernandez2023environmental}
+    \item \cite{hernandez2021environmental}
+\end{itemize}
+
+\noindent The IO approach
+\begin{itemize}
+    \item \cite{weber2021dynamic}
+    \item \cite{gowrisankaran2022policy}
+    \item \cite{abito2022role}
+    \item \cite{cullen2017}
+    \item \cite{cullen2015}
+\end{itemize}
+
+\noindent Distributional considerations with incomplete regulation
+\begin{itemize}
+    \item \cite{hernandez2022distributional}
+    \item \cite{tanaka2022north}
+\end{itemize}
+
+
+\subsection{Research Design}
+
+
+
+
+% \subsection{A Perfectly Competitive Model of Leakage}
+
+% Here we consider a perfectly competitive model of emissions leakage in the Western Interconnection based largely off of \cite{fowlie2021border}. We begin constructing a model where there is no emissions pricing scheme and then impose an emissions tax. Alongside the emissions tax, we consider different possible border carbon adjustments with the potential to reduce leakage. 
+
+% This is not a model of residential electric power markets. Residential electric power prices involve complicated tier systems, connection charges, and many additional fees that distort the true price. In addition to discouraging electrification \citep[see][]{borenstein2021designing}, these structures make simulating these markets impractical in this analysis. Instead, we model the wholesale day-ahead electricity market. 
+
+% The Federal Energy Regulatory Commission's \emph{Energy Primer} \citep{ferc2020} describes how power grid operators and power plants decide what generation will take place. Power grid operators have the goal of ensuring reliable power supply at the least cost. This process plays out in two stages. In the first stage, operators prepare for forecasted demand by committing generators a day before. This is the day-ahead market, where power plants sell their generation in anticipation for the next day. In the second stage, operators make adjustments in real-time by calling on additional generators to either turn on or off through a process called Automatic Generation Control. Grid operators determine whether or not to increase generation by measuring the frequency (cycles/second) of the AC power lines. In the US, operators aim for a frequency of 60 Hz, so a frequency above or below 60 Hz means that the too much or too little generation respectively. 
+
+% The structure of these day-ahead markets varies considerably across the country. One important factor in identifying the structure of these markets is the existence of a Regional Transmission Operator (RTO) or an Independent System Operator (ISO). RTOs and ISOs are essentially two different names for the same entity.\footnote{\cite{rff_podcast1} says ``At one point, FERC---the Federal Energy Regulatory Commission---made a distinction between these entities. It's a distinction without a difference at this point."} These entities are non-profit organizations that have the primary responsibility of operating markets for electric power
+% across many generators (the power plants, i.e. the sellers of electricity) and load-serving organizations (utilities, large industrial users, i.e. the buyers of electricity). \cite{ferc2020} gives an excellent description of how these day-ahead markets operate under an RTO or ISO.
+% \begin{quote}
+% In day-ahead markets, the schedules for supply and usage of energy are compiled hours ahead of the beginning of the operating day. The RTO/ISO then runs a computerized market model that matches buyers and sellers throughout the market footprint for each hour throughout the day. The model then evaluates the bids and offers of the participants, based on the power flows needed to move the electricity throughout the grid from generators to consumers. Additionally, the model must account for changing system capabilities that occur, based on weather and equipment outages, plus the rules and procedures that are used to ensure system reliability. The market rules dictate that generators submit supply offers and that loads submit demand bids to the RTO/ISO by a deadline that is typically in the morning of the day-ahead scheduling. Typically, 95 percent of all load is scheduled in the day-ahead market and the rest is scheduled in real-time.
+% \end{quote}
+% This means that the wholesale day-ahead market has many of the characteristic features of a competitive market. The good bought and sold is homogeneous, and buyers have little ability to differentiate between  sellers. There are thousands of power plants selling power in any RTO/ISO and dozens of utilities and industrial costumers buying it. Moreover RTOs/ISOs dispatch additional generating units based on their marginal costs, which is suggestive that supply in the market is allocated competitively. Given this market structure, it seems most sensible to model this market as perfectly competitive. 
 
 % \subsubsection*{The General Model}
 

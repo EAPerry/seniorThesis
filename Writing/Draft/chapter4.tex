@@ -1,3 +1,278 @@
 ~
 \newpage
-\section{Chapter 4}
+\section{A Model of Emissions Pricing \& Environmental Inequality}
+
+\subsection{Model Summary}
+
+The purpose of this chapter is to build an economic model of electric power generation that connects carbon pricing to the distribution of air pollution. I do this by expanding on the model in \cite{weber2021dynamic}. 
+
+The model follows a set of generators spread across several regions as they decide whether or not to invest in efficiency improvements and whether or not to operate in each hour. These generators in the model are all fossil fuel generators---either coal, natural gas, or oil---meaning that we consider the generation of renewable and nuclear to largely be determined outside of the model. Generators operate on wholesale electricity markets, which we assume are competitive. The chapter describes the profit-maximizing investment and operating decisions for each generator, and then uses these decisions to model the associated change in air pollution exposure for disadvantaged and non-disadvantaged communities. The model explicitly incorporates a measure we call the \emph{Environmental Inequality Gap} that is analogous to the \emph{Environmental Justice Gap} in \cite{hernandez2023environmental} and is defined as the difference in the average air pollution concentration between disadvantaged and non-disadvantaged communities associated with electric power generation.  
+
+Many of the fundamentals of the model come from \cite{weber2021dynamic}, though the model in this chapter and Weber's model differ in several substantive dimensions. First, this model generalizes the geographic scope of Weber's model such that it includes other regions which do not face the same carbon price. This modeling decision allows us to consider the environmental implications of unilateral carbon pricing schemes and the incompleteness of these regulations. Second, this model explicitly measures disparities in air pollution concentrations between disadvantaged and non-disadvantaged communities. By incorporating these disparities into the model, we are able to better characterize the contextual factors that might allow carbon pricing to widen disparities. Third, this model omits several of the more intricate details of generation, namely the ramping costs that generators incur when turning ``on'' and ``off.''
+
+On the whole, this model is more computational than analytical in the sense that it does not yield a clear relationship between the carbon price and environmental inequality in the absence of data. Given the complexities in both the dispersion of air pollution and the distribution of generators across low- and high-SES communities, a purely analytical model would likely abstract too far away from the context to be instructive. Although, this chapter does not produce a clear analytical solution, the model still provides some intuition that connects the policy context to the effect of carbon pricing on the distribution of air pollution. 
+
+The model highlights two channels through which carbon pricing could potentially exacerbate environmental inequalities. First, the model suggests that if generators in and around disadvantaged communities have lower investment costs relative to the generators in and around non-disadvantaged communities, then carbon pricing has the potential to redistribute the air pollution burden towards disadvantaged communities (the \emph{investment channel}). Second, the model suggest that if generators in and around disadvantaged communities are relatively less regulated (i.e., a lower average carbon tax) than generators in and around non-disadvantaged communities, then again, carbon pricing has the potential to redistribute the air pollution burden towards disadvantaged communities (the \emph{leakage channel}). 
+
+% That sentence
+% Reordering generation along the supply curve is a prerequisite for the spatial reallocation of generation that could ultimately affect the relative pollution burden of disadvantaged and non-disadvantaged communities.
+
+The remainder of the chapter proceeds by first establishing key features of each generator setting up the model environment they exist in. With the necessary context and nomenclature built, we then describe the behavior of equilibrium outcomes of generators in the generation phase, followed by the the behavior of equilibrium outcomes of generators in the initial investment phase. The final sections pull these generator-level decisions back to model air pollution disparities and characterize the pathways through which air pollution disparities could be widened by carbon pricing. For easy reference throughout, Table \ref{notation} in Appendix A.4 contains a full glossary of all the mathematical notation that appears in the model.
+
+
+\subsection{Model Environment}
+
+Suppose there are $N$ generators in a set of generators $\mathcal{N} = \{1, \ldots, N\}$ spread across $R$ contiguous regions. Let $\mathcal{N}_r$ denote the set of generators in region $r$ such that the set of all $\mathcal{N}_r$ forms a partition of $\mathcal{N}$.\footnote{Formally, $\bigcup_{r\in \mathcal{R}} \mathcal{N}_r = \mathcal{N}$ and there does not exist a generator $i$ and distinct regions $a$ and $b$ such that $i \in \mathcal{N}_a$ and $i \in \mathcal{N}_b$.} Each generator has a primary fuel, $f_i$ where $f_i \in \{\text{Coal},~ \text{Natural Gas},~ \text{Oil}\}$. All generators operate within the hourly wholesale market for electricity, where generators sell electricity to utilities, distributors, and commodity traders. The model considers the implications of decisions made in the wholesale electricity market in the short- and medium-run. 
+
+Assume that hourly demand in the wholesale market for electricity is perfectly inelastic. This assumption is primarily motivated by the lack of dynamic pricing for end users. Demand in the wholesale market is derived from the retail market for electricity, where distributors (e.g., utilities) purchase generation in the wholesale market to sell to end users. Because end users pay a price for electricity that they observe only at the end of the month, they cannot respond to variation in prices over a single hour. Distributors ultimately must purchase just enough electricity to cover the demand of end users for each hour, meaning that the buyers in the wholesale market for electricity are not able to respond to hourly price changes. Over longer spans of time, we can reasonably expect that end users will eventually respond to wholesale electricity prices passed through by distributors, but difficulties substituting away from electricity will mean that this response will be muted. For instance, \cite{burke2018price} find that US end users do respond to prices in the retail market for electricity, with a price elasticity of electricity demand of $-0.1$ within the year, implying a highly inelastic demand in the short-run though not perfectly inelastic. 
+
+Each region has a distinct market with its own price, although these regional markets are integrated to an extent. Maximum transmission constraints restrict the volume of electricity that any one region can import or export to a neighboring region.
+
+The model sequence begins with an initial investment phase, followed by a generation phase. The investment phase takes place prior to the first period, and is an opportunity for generators to make efficiency improvements. These efficiency improvements come through the generator's \emph{heat rate}---the amount of heat energy input measured in British thermal units (BTUs) required to generate one kilowatt-hour (kWh) of electricity. Assuming that generators use fuels with an unchanging fuel content, the heat rate measures how efficiently a generator can convert fossil fuels into electricity. A generator with a high heat rate will require more fuel inputs to produce the same amount of electricity as a generator with a low heat rate, meaning more efficient generators will have lower heat rates. In practice, heat rate improvements primarily involve the installation of new equipment, though additional training and maintenance work can reduce the heat rate of a generator as well \citep{eia_heatrate}. 
+
+Let $\rho_i^0$ denote the initial heat rate of generator $i$. Each generator $i$ faces a discrete set of investment options $\mathcal{J}$, where $0 \in \mathcal{J}$ and represents the decision not to invest in any heat rate improvements. Then given $i$'s chosen investment $j_i$, its heat rate throughout the generation phase is
+\begin{equation}
+    \rho_i = \rho_i^0 (1 + \tilde{\delta}) - j_i
+\end{equation}
+where $\rho_i$ is generator $i$'s heat rate and $\tilde{\delta} \in (0, 1)$ is an exogenous depreciation rate that models reductions in efficiency (i.e., increases in the heat rate) over time. Reducing the heat rate comes at a cost that varies from generator to generator. Let $\Gamma$ be the investment cost function, mapping generator $i$'s potential heat rate reductions $j_i$ to costs, through the specification 
+\begin{equation}
+    \Gamma (j_i, v_i) = \gamma j_i^{1/\alpha} + v_i.
+\end{equation}
+In this cost function, $\gamma > 0$ and $\alpha > 0$ are fixed parameters that are common to all generators, while $v_i$ is an exogenously determined stochastic shock to investment costs unique to generator $i$. Note that $\gamma$ determines the scale of investment costs and $\alpha$ determines whether or not the marginal cost of investment is increasing or decreasing in the investment level $j$.\footnote{To see this, note that if $j$ were a continuous variable, then $\frac{d^2\Gamma}{dj^2} = \gamma \left(\frac{1}{\alpha}\right) \left( \frac{1}{\alpha} -1\right) j^{(1/\alpha) - 2}$. This implies that the marginal cost of investment is strictly increasing if and only if $\alpha < 1$, the marginal cost of investment is strictly decreasing if and only if $\alpha > 1$, and the marginal cost of investment is constant if and only if $\alpha = 1$.} 
+
+During the investment phase, generators cannot directly observe the future demand of electricity and instead must form expectations about future electricity demand. First assume that all generators have identical expectations for future electricity demand. Let $Q_t^e$ denote the $R$-dimensional vector with the expected quantity demanded of electricity in each region in period $t$. For the sake of simplicity, assume that the common expectations of future electricity demand in all regions match the actual quantity of electricity demanded in each region. 
+
+After the investment phase is the generation phase. In this phase, each generator decides whether or not to produce electricity in each period. In practice, the production of an individual generator is usually tightly distributed around just a few discrete levels, with the most common level near the generator's nameplate capacity---the maximum rated generation level. \textbf{APPENDIX WITH SOME OBSERVATIONAL EVIDENCE OF THIS.} To simplify the model, assume that each generator $i$ makes a discrete choice $a_{it}$ of whether or not to generate power in the period. Connected to this decision, each generator must choose what regional wholesale market to sell its electricity in. Let $a_{it}$ come from the set $\{0, 1, \ldots, R\}$, such that $a_{it} = 0$ indicates that generator $i$ does not operate in period $t$, and $a_{it} = r$ indicates that generator $i$ operates and sells its generation to a distributor in region $r$ at time $t$. Assume that if a generator chooses to operate, that it always operates at its full capacity such that generator $i$'s production in period $t$ for a distributor in region $r$,  $q_{itr}$, is
+\begin{equation}
+    q_{itr} = \overline{q}_i \cdot \mathds{1}(r = a_{it})
+\end{equation}
+where $\overline{q}_i$ is generator $i$'s nameplate capacity and $\mathds{1}(r = a_{it})$ is an indicator function that evaluates to one when $r = a_{it}$ and zero otherwise. Reinterpreting the generator's operating decision within this production function, $a_{it} = 0$ implies that there is no region $r$ such that $q_{itr} > 0$ and $a_{it} \neq 0$ implies that there is exactly one region $r$ such that $q_{itr} = \overline{q}_i$. 
+
+To produce an additional kilowatt-hour of electricity, each generator $i$ incurs a constant regionally dependent marginal cost $mc_{ir}$. Generator $i$'s marginal cost when operating in region $r$ is
+\begin{equation}
+    mc_{ir} = \rho_i(u_{f_i} + e_{f_i} \tau_r) = \underbrace{\rho_i u_{f_i}}_{\text{Fuel Cost}} + \underbrace{\rho_i e_{f_i} \tau_r}_{\text{Emissions Cost}}
+\end{equation}
+where $u_{f_i}$ is the unit cost of fuel $f_i$ in dollars per BTU, $e_{f_i}$ is the greenhouse gas emissions intensity of fuel $f_i$ in tonnes CO$_2$e per BTU, and $\tau_r$ is the tax on greenhouse gas emissions in region $r$ in dollars per tonne CO$_2$e.\footnote{This specification follows from the unit conversions:
+    $$\frac{\$}{\text{kWh}} = \frac{\text{BTU}}{\text{kWh}}\left( \frac{\$}{\text{BTU}} + \frac{\text{CO}_2\text{e}}{\text{BTU}} \frac{\$}{\text{CO}_2\text{e}}\right).$$
+}
+This specification of the marginal cost clearly displays the two motivations for heat rate improvements. Investing to reduce the heat rate both lowers fuel costs and lowers the costs incurred through emissions pricing, provided that $\tau_r > 0$. 
+
+Given generator $i$'s production process and marginal costs, we can define the period profits of generator $i$, as
+\begin{equation}\label{per_pi}
+    \pi_{it} = \sum_{r = 1}^R q_{itr} (P_{tr} - mc_{ir})
+\end{equation}
+where $\pi_{it}$ is generator $i$'s profit in period $t$ and $P_{tr}$ is the wholesale price of electricity in region $r$ in period $t$. Because we have assumed the wholesale market for electricity is perfectly competitive, each generator $i$ takes $P_{tr}$ as given. Then generators can change their profits in period $t$ through their marginal costs (the investment channel) or their generation (the operating channel).
+
+
+\subsection{Equilibrium Behavior in the Generation Phase}
+
+Now we turn our attention to the individual behavior of an arbitrary generator and the corresponding aggregate behavior of all generators through equilibria in regional wholesale markets for electricity. In the spirit of backward induction, we proceed by first considering what takes place during the generation phase for given investment decisions and then move to consider equilibrium behavior in the investment phase with the equilibrium generation outcomes known for each level of investment.
+
+Throughout the generation phase, each generator's goal is to maximize its profits in each period.\footnote{Note that this is not usually the case. Typically we would instead make it the goal of each generator to maximize the discounted sum of its future profits in the generation phase. However, in this case, future payoff streams are not dependent on operating decisions in the current period. There is no strategic link between periods in the generation phase, so maximizing the discounted sum of its future profits corresponds with maximizing profits in each period.} A generator accomplishes this by choosing whether or not to operate in each period, and if it does operate, what regional wholesale electricity market to sell its electricity on. Let $a_{it}^*$ denote the equilibrium operating decision of generator $i$ at time $t$, where
+\begin{equation}\label{a_star}
+    a_{it}^* = \arg\max_{a_{it}} \biggl\{ \sum_{r=1}^R ~~\underbrace{\overline{q}_i \1(r = a_{it})}_{q_{itr}} \underbrace{(P_{tr} - mc_{ir})}_\text{$\pi$ per unit} \biggr\}.
+\end{equation}
+Equation \eqref{a_star} states that the equilibrium operating decision for any generator will maximize profits earned in the current period, using the expanded version of $i$'s period profits from equation \eqref{per_pi}. Note that this is a deterministic decision function, as we assume wholesale electricity markets operate competitively, such that any individual generator will take $P_{tr}$ as given. 
+
+Ultimately, the model is not focused on the equilibrium operating decision for any individual generator, but is instead focused on the equilibrium operating decision of all generators. Let $a_t$ denote the profile (or vector) of operating decisions for all $N$ generators at time $t$. The equilibrium profile of operating decisions $a_t^*$ contains the individually profit maximizing decisions of each generators given the decisions of all other generators such that $a_t^* = (a_{1t}^*, a_{2t}^*, \ldots, a_{Nt}^*)$. This profile of operating decisions defines an equilibrium in period $t$ of the generation phase. Solving for this equilibrium is difficult in its current form, both analytically and numerically. With $N$ generators, finding the equilibrium in the problem's current formation would require simultaneously solving each of the $N$ optimization problems implied by equation \eqref{a_star}, subject to a set of constraints. 
+
+To simplify the characterization of the equilibrium profile of operating decisions, we leverage the assumed perfectly competitive nature of the regional wholesale electricity markets. It is a well-known result across economics that, in perfectly competitive markets, the equilibrium that emerges from individual  profit maximizing firms corresponds with the cost-minimizing behavior of the entire market. Recall from Chapter 2 that this is the primary appeal of emissions pricing schemes---creating a perfectly competitive market for emissions allowances leads to the cost-minimizing levels of abatement. Though in this context there is the added challenge of transmission constraints across regions, for now, we take it on faith (and some familiar intuition) that the cost-minimizing profile of operating decisions corresponds is the same as $a_t^*$. By making use of this correspondence, we can optimize over one objective function (total costs) rather than optimizing over $N$ objective functions (generator-level profits). 
+
+It follows then that the equilibrium profile of operating decisions in period $t$ is
+\begin{equation}\label{EQ1}
+    a_t^* = \arg\min_{a_t \in \mathbb{Z}_{R + 1}^N} \sum_{i = 1}^N \sum_{r = 1}^R mc_{ir} q_{itr}.
+\end{equation}
+In this equation, we sum over all the total costs $mc_{ir} q_{itr}$ each generator incurs for generation in any region---yielding the total costs for generation in period $t$. The notation around the minimization $a_t \in \mathbb{Z}_{R + 1}^N$, indicates that the profile of operating decisions comes from an $N$-dimensional vector space over the integers modulo $R +1$. That is, the all operating profiles take the form $a = (a_{1}, a_2, \ldots, a_N)$ where $a_i \in \{0, 1, \ldots, R\}$ for all $i$, 1 to $N$. This also illustrates that even though each generator has a discrete choice set, the number of potential solutions can easily become quite large, specifically $(R + 1)^N$. Beyond this, equation \eqref{EQ1} is hardly functional. Note that although the optimization occurs over the set of possible operating profiles, nothing in the total cost function in equation \eqref{EQ1} is an explicit function of $a_{t}$. 
+
+To make the equilibrium objective function optimization operational---such that we can ``plug in'' the two relevant decision profiles, $a_t$ and $j$---we opt for a matrix specification of total costs. Let $C(a_t \mid j)$ denote the total generation costs incurred in period $t$ that correspond with the profile of operating decisions $a_t$ given the profile of investment decisions $j = (j_1, j_2, \ldots, j_N)$. The matrix form of the total cost function in equation \eqref{EQ1} is the trace of a marginal cost matrix and the transpose of a generation matrix:\footnote{The trace of a matrix $A$, denoted $\text{tr}(A)$, is the sum of the entries along the main diagonal of $A$.} 
+\begin{equation}\label{C_matrix}
+    C (a_t \mid j) = \text{tr}\biggl[ \overbrace{\text{MC}(j)}^{N \times R} \times \overbrace{G(a_t)'}^{R \times N} \biggr] \\
+\end{equation}
+where $\text{MC}(j)$ is a matrix of the marginal costs such that $\text{MC}(j)_{(i,r)} = mc_{ir}$ and $G(a_t)$ is a matrix of generation decisions such that $G(a_t)_{(i,r)} = q_{itr} = \overline{q}_i \cdot \1(a_{it} = r)$.\footnote{For a matrix $A$, we denote the element in the $i$th row and $r$th column as $A_{(i,r)}$.} That is, the total generation costs in period $t$ are given by
+\[
+    \text{tr}\left( 
+        \begin{bmatrix}
+            mc_{11} & mc_{12} & \cdots & mc_{1R} \\
+            mc_{21} & \ddots & & \vdots \\
+            \vdots & & \ddots & \vdots \\
+            mc_{N1} & \cdots & \cdots  & mc_{NR} 
+        \end{bmatrix} \times \begin{bmatrix}
+            \overline{q}_1 \1(a_{1t} = 1) & \overline{q}_1 \1(a_{1t} = 2) & \cdots & \overline{q}_1 \1(a_{1t} = R) \\
+            \overline{q}_2 \1(a_{2t} = 1) & \ddots & & \vdots \\
+            \vdots & & \ddots & \vdots \\
+            \overline{q}_N  \1(a_{Nt} = 1) & \cdots & \cdots  & \overline{q}_N  \1(a_{Nt} = R) 
+        \end{bmatrix}'
+    \right).
+\]
+In the resulting $N \times N$ matrix product, the element in row $m$ and column $n$ is the dot product of generator $m$'s marginal cost vector with generator $n$'s generation vector, or the sum of costs that would result if generator $m$ produced electricity with the marginal costs of generator $n$. Off diagonal elements in this matrix are not meaningful, but entries along the main diagonal represent the total costs of each generator in period $t$. The trace of the matrix then sums the period $t$ costs for each generator to give the total costs of all generators.
+% &= \text{tr}\biggl[ \underbrace{\text{diag}(\rho^0 - j) \times U}_\text{Marginal Costs} \times \underbrace{(D_{\overline{q}} \times \1(a_t))'}_\text{Generation} \biggr]
+
+Although the marginal cost matrix and the generation matrix in equation \eqref{C_matrix} are in fact functions of the decision profiles $j$ and $a_t$ respectively, the previous forms are not clear how these decision profiles are translated into the matrices that we use to compute total costs. For clarity, we specify the marginal cost matrix as a function of the investment profile as
+\begin{equation}
+    MC(j) = D_{\rho^0 - j} \times U
+\end{equation}
+where $\rho^0$ is the $N$-dimensional vector of heat rates in the absence of investment such that the $i$th element of $\rho^0$ is $\rho_i^0(1 + \tilde{\delta})$, $j$ is the given $N$-dimensional profile of investment decisions, $D_{\rho^0 - j}$ is the $N\times N$ diagonalized matrix that corresponds with the heat rates given by $\rho^0 - j$, and $U$ is the $N\times R$ unit cost matrix such that $U_{(i,r)} = u_{f_i} + e_{f_i}\tau_r$ (the cost per BTU). Similarly, define the generation matrix as the product of the two matrices
+\begin{equation}
+    G(a_t) = D_{\overline{q}} \times \1(a_t)
+\end{equation}
+where $\overline{q}$ is the $N$-dimensional vector of each generator's nameplate capacity and $D_{\overline{q}}$ is the diagonalized matrix that corresponds with $\overline{q}$. In a slight abuse of notation, let $\1(a_t)$ denote the $N\times R$ matrix of operating decisions such that $\1(a_t)_{(i,r)} = \1(a_{it} = r)$. Together, this specification of total costs in period $t$ using the marginal cost and generation matrix make the optimization presented in equation \eqref{EQ1} much more functional by allowing us to compute total costs by simply substituting in $a_t$ and $j$, the two relevant decision vectors at time $t$. 
+
+As alluded to earlier, this optimization comes with several constraints. First and most obvious is the requirement that each of the $R$ wholesale electricity markets must clear. That is, for all $r \in \{1, \ldots, R\}$ at time $t$
+\begin{equation}
+    \sum_{i =1}^N q_{itr} \geq Q_{tr}. 
+\end{equation}
+That is, the generators must produce at least as much power for each region as demanded by distributors on the wholesale market for electricity. Because generation will always have a positive marginal cost, then this constraint will always hold. The wholesale markets will not produce a surplus of electricity.
+% \textbf{THE TRANSMISSION CONSTRAINT SITUATION\ldots}
+% \begin{equation}
+%     \left(\sum_{i \in \mathcal{N}_A} q_{itB}\right) + \left(\sum_{i \in \mathcal{N}_B} q_{itA} \right) \leq \text{TG}_{AB}
+% \end{equation}
+
+Less obvious, but important nonetheless, are the transmission constraints. Empirically, we see that wholesale electricity prices are often close to each other within regions, but quite different between regions. Incorporating regional transmission constraints allows the model to capture these price differences between regions. These transmission constraints are also a salient aspect of the interregional electricity exchanges, and because this model considers how these interregional electricity exchanges lead to the redistribution of local air pollution, they are also a salient aspect of this model. More so than any other part of the model though, modeling the transmission constraints relies on intuition specific to power grid operation. To do so, we use the approach used by \cite{bushnell2017strategic} and more recently by \cite{fowlie2021border}. This approach starts by defining a ``swing hub,'' a reference point for transmission activity. Let the first region $r= 1$ be the swing hub. Between the regions there exist a set of transmission lines $\mathcal{L}$ that allow power to move from one region to another. A transmission line $\ell$ runs between exactly two region, say $a$ and $b$, where the order of these regions is not important. For instance, there is not one transmission line that runs from region $a$ to region $b$ and another line that runs from region $b$ to region $a$, but a single transmission line between $a$ and $b$. Each line $\ell$ has a maximum capacity denoted $\text{Cap}_\ell$ measured in kilowatts. 
+
+The transmission constraints constrain interregional electricity exchanges by limiting the net electricity exports. Let $y_{tr}$ denote the net electricity exports from region $r$ in period $t$. All these net exports are relative to the swing hub, region $r =1$, such that we assume any exports from region $r \neq 1$ eventually flow to region $r = 1$. For this reason, we do not define $y_{tr}$ for the swing hub. The net electricity exports (also known as marginal power injections) for all $r \neq 1$ in period $t$ are
+\begin{equation}
+    y_{tr} = \biggl(\underbrace{\sum_{i \in \mathcal{N}_r} \overline{q}_i \cdot \1(a_{it} \neq 0, a_{it} \neq r)}_{\text{Total Exports}}  \biggr) - \biggl( \underbrace{\sum_{i\not\in \mathcal{N}_r} \overline{q}_i \cdot \1(a_{it} = r)}_{\text{Total Imports}} \biggr).
+\end{equation}
+When a generator produces electricity, the flow of this electricity is governed by the transmission lines it is connected to. This means that interregional electricity exchanges are not fully controlled in the sense that generator $i$ cannot truly produce electricity that will go directly to another region $r$, but that generator $i$ can produce more electricity which will then allow region $r$ to pull more electricity from the grid generator $i$ is on. These flows are governed by power transfer distribution factors, a constant that measures the change in real power along a transmission line attributable to a marginal power injection in one region. Let $PTDF_{r\ell}$ denote the power transfer distribution factor for region $r$ along transmission line $\ell$. 
+
+Each transmission constraint is associated with a particular transmission line between two regions. Then each transmission line $\ell$ in $\mathcal{L}$, faces the constraint
+\begin{equation}
+    - \text{Cap}_\ell \leq \sum_{r=2}^R PTDF_{r\ell} \cdot y_{tr} \leq \text{Cap}_\ell.
+\end{equation}
+Note that we sum over the changes in real power $PTDF_{r\ell} \cdot y_{tr}$ for all regions except the region of the swing node, $r= 1$. If this sum included the swing hub, then the sum would always evaluate to zero as the sum of net exports across all regions must be zero. Implicitly, this groups all regions into two groups: the region with the swing hub ($r = 1$) and the regions without the swing hub ($r \neq 1$). The constraint makes sure that transmission lines will not be overwhelmed by a large volume of electricity imports or electricity exports by either of these two groups. 
+
+With the total cost function in period $t$ defined and the constraints set, we can now fully describe the equilibrium outcomes in period $t$. 
+In equilibrium, 
+\begin{align}
+\begin{split} \label{C_star}
+    C^*(j\mid Q_{t}) = &\min_{a_t}  \left\{ C(a_t\mid j)\right\} \\
+    &\text{s.t.} ~~\begin{cases}
+        \quad \displaystyle\sum_{i=1}^N q_{itr} \geq Q_{tr}, \forall r \in \{1, \ldots, R\}\\
+        \quad - \text{Cap}_\ell \leq \displaystyle\sum_{r=2}^R PTDF_{r\ell} \cdot y_{tr} \leq \text{Cap}_\ell, \forall \ell \in \mathcal{L}\\
+    \end{cases}
+\end{split}
+\end{align}
+where $C^*(j\mid Q_{t})$ denotes the total cost of generation in equilibrium with investment profile $j$ and given the period regional quantities demanded $Q_t$. Note that the state variable $Q_t$ is fixed, but $j$ is still endogenous. By solving for equilibrium costs in an arbitrary period of the generation phase as just a function of $j$, we can now directly consider the future costs associated with investment decisions made prior to the first period.
+
+% This preceding optimization describes the equilibrium operating decisions made in an arbitrary period during the generation phase. Ultimately though, generators do not make their investment decision based on costs incurred in a single period but on the costs accumulated over the full set of periods under consideration. Total generation costs across the generation stage are given by
+% \begin{equation}
+%     C^*(j \mid Q^e) = \min_a \left\{ \sum_{t = 0}^T \delta^t C(a_t \mid j) \right\}
+% \end{equation}
+% where the generation phase spans $T + 1$ periods and $\delta \in (0,1)$ is the (hourly) discount rate. Note first that total costs incurred over the generation phase are purely a function of the profile of investment decisions, $j$.
+
+
+\subsection{Equilibrium Behavior in the Investment Phase}
+
+Just as we began with the objective of an individual generator in the generation phase, here we begin with the objective of an individual generator in the investment phase. The goal of a generator $i$ in the investment phase is to choose the investment $j_i$ that will maximize its profits over both the investment and generation phases:
+\begin{equation}
+    j_i^* = \arg\max_{j_i \in \mathcal{J}} \biggl\{ \underbrace{\left(\sum_{t = 0}^T \delta^t \pi_i (a_{it}^*, j_i\mid Q_t^e) \right)}_{\substack{\text{Discounted Sum}\\ \text{of Future Profits}}} - \underbrace{\Gamma(j_i, v_i)}_{\substack{\text{Investment}\\ \text{Costs}}} \biggr\}
+\end{equation}
+Here we assume that generators only consider a finite generation period lasting $T$ periods and use an hourly discount factor $\delta \in (0, 1)$. The lifetime profits for a generator are the discounted sum of future profits from generation less the cost of investment.\footnote{Technically this is the expected sum of discounted future profits as the generator still only knows future demand in expectation, but this is a minor detail as we have assumed that all generators will have expectations of regional demand in time $t$ that perfectly match the actual regional demand in time $t$.} Generator $i$'s profits in any period of the generation stage are a function of both is investment decision $j_i$ and its operating decision $a_{it}$. However, equation \eqref{a_star} allows us to implicitly write $a_{it}^*$ as a function of the investment decision, so lifetime profits are in effect just a function of $j_i$. 
+
+Again though, we are not particularly interested in the investment decision of just a single generator but the investment decisions of all generators. Previously we leveraged the equivalence of the operating decisions that maximize individual generators' profits and operating decisions that minimize total costs, all in an arbitrary period of the generation phase. This equivalence comes from the perfectly competitive nature of the wholesale electricity markets. To solve for equilibrium behavior in the investment phase, assume analogously that investment is efficient such that the profile of investment decisions will minimize the sum of all (expected) lifetime costs for generators. That is, the equilibrium investment profile $j^*$ is
+\begin{equation}
+    j^* = \arg\min_{j \in \mathcal{J}^N} \biggl\{ 
+    \underbrace{\Gamma (j \mid v)}_{\substack{\text{Investment}\\ \text{Phase Costs}}} + \underbrace{\sum_{t=0}^T \delta^t C^*(j\mid Q_t^e)}_{\text{Generation Phase Costs}}  \biggr\}
+\end{equation}
+where, in a slight abuse of notation, we let $\Gamma (j\mid v)$ be the sum of investment costs for all generators.\footnote{
+    As before, we can use a matrix form for $\Gamma (j\mid v)$ so we can compute the sum directly from the investment profile. Let $\Gamma(j\mid v) = \left(\gamma j^{1/\alpha} + v\right)\cdot \textbf{1}$, where $j^{1/\alpha}$ is the vector of investment decisions where each element has been raised to the $1/\alpha$ power and $v$ is the vector of investment cost shocks.
+} This equation describes the equilibrium investment decisions of all generators. Given the efficient investment profile, we can identify the corresponding equilibrium profiles of operating and generation decisions through the arguments that solve equation \eqref{C_star}.
+
+% Given the investment decisions of all generators, the equilibrium outcome in each period of the will minimize the total costs of all generators. 
+
+% That is, given $j_i$ for all $i \in \mathcal{N}$, the equilibrium 
+
+% Let $a_t$ denote the operating profile of generators in period $t$ such that $a_t = (a_{1t}, a_{2t}, \ldots, a_{Nt})$. Given the profile of investment decisions $j = (j_1, j_2, \ldots, j_N)$, the period $t$ equilibrium operating profile $a_t^*$ is such that 
+% \begin{equation} 
+%     a_t^* = \arg\min_{a_t \in \mathbb{Z}_{R + 1}^N} ~~\sum_{i = 1}^N \sum_{r = 1}^R mc_i q_{itr}
+% \end{equation}
+
+
+% Here, $mc_i$ is implicitly a function of the investment profile $j$ and $q_{itr}$ is implicitly a function of operating profile $a_t$. 
+
+% \subsubsection{Treatment of Clean Fuel Generators}
+
+% \subsubsection{Border Carbon Adjustments}
+
+% \subsection{Measuring Emissions Leakage}
+
+\subsection{Incorporating Air Pollution \& Environmental Inequality}
+
+Thus far, the model has focused exclusively on the investment and operating decisions of electric power generators in response to a carbon pricing scheme. In this section, we build on this model to develop a measure we call the \emph{environmental inequality gap}. This measure is analogous to the environmental justice gap in \cite{hernandez2023environmental}. To develop this measure, we start by classifying communities as either ``disadvantaged'' or ``non-disadvantaged.'' Then, using the generation predictions from the previous part of the model, we describe a generic mapping that translates generator-level air pollution into concentrations of air pollutants in nearby communities. The resulting model allows us to connect carbon pricing to disparities in air pollution. 
+
+Divide each of the $R$ regions into subregions or communities, such that there are $M$ communities where $M > R$. Each community is labelled as either ``disadvantaged'' or ``non-disadvantaged.'' This is clearly a crude dichotomization of the many dimensions of inequality, but it is dichotomization that both simplifies the model and allows for an easier application to the data. I discuss in greater detail what criteria qualify a community for disadvantaged-status in a later section. Define an $M$-dimensional vector $d$ such that $d_m = 1$ if subregion $m$ has the label ``disadvantaged'' and let $d_m = 0$ otherwise. Each generator belongs to exactly one subregion such that the subregions form a partition on the set of generators. Denote the subregion that generator $i$ belongs to $m_i$.
+
+Consider an arbitrary air pollutant $w$. In this context, $w$ could be any air pollutant from a power generator, mostly likely NO$_2$ or SO$_2$, but for now we use $w$ to denote a generic air pollutant of interest. Following \cite{weber2021dynamic}, assume that heat rate improvements do not affect on emissions of local air pollutants, such that each generator $i$ has a fixed emissions intensity for local air pollutants. Assume generator $i$ releases $e_i^w$ pounds of $w$ per kilowatt-hour. Let $w_{it}$ denote generator $i$'s emissions of pollutant $w$ in period $t$. Given the equilibrium generation of $i$ in period $t$, then $i$'s equilibrium emissions of $w$ in period $t$ is just $w_{it}^* = e_i^w q_{it}^*$. Equilibrium emissions of $w$ follow directly from equilibrium generation. 
+
+The environmental inequality gap does not measure disparities in emissions but disparities in concentrations of local air pollutants. To help translate air pollutant emissions into air pollution concentrations, let $\phi_w (w_{it}\mid i, t)$ be a function that maps the emissions of air pollutant $w$ from generator $i$ at time $t$ to an $M$-dimensional vector containing the corresponding changes in the concentration of air pollutant $w$ in each of the $M$ subregions, given plant $i$ (its location) and the period $t$. For now, we remain agnostic about the functional form of $\phi_w$. Ideally $\phi_w$ would be a function defined by a chemical air transport model, which uses meterological data to simulate the trajectories of particle emissions in the atmosphere and the resulting changes in the concentration of air pollutants. However these models are computational in nature more so than functional, and computationally intensive at that. 
+
+Let $\Phi_w^1(T)$ denote the average change in the concentration of pollutant $w$ for disadvantaged communities after $T$ periods. We specify this function with the following equation:
+    \begin{equation} \label{Phi_w_1}
+        \Phi_w^1(T) ~~ = \underbrace{\left(\frac{1}{d \cdot \textbf{1}}\right)}_{\frac{1}{\text{\# Disadvantaged}}} \overbrace{d ~~ \cdot ~~\underbrace{\sum_{t = 1}^T \sum_{i=1}^N \phi_w(w_{it}\mid i, t)}_{\text{Total $\Delta \phi_w$ for all communities}}}^\text{Total $\Delta \phi_w$ for disadvantaged communities}
+    \end{equation} 
+The far right side of the formula calculates the total change in the concentration of $w$ by summing the contributions to changes in $w$ from all generators in all periods. The result of this summation is an $M$-dimensional vector of the total change in the concentration of $w$ after $T$ periods in each of the $M$ communities. Taking the dot product of this vector with $d$, the vector that indicates a community's disadvantaged status, yields the sum of the changes in the concentration of $w$ across all disadvantaged communities. The dot product $d \cdot \textbf{1}$ evaluates to the number of disadvantaged communities, so dividing the sum of $w$ concentration changes across all disadvantaged communities by the number of disadvantaged communities produces the average change in the $w$ concentration across disadvantaged communities. 
+
+Now let $\Phi_W^0(T)$ denote the average change in the concentration of pollutant $w$ for non-disadvantaged subregions after $T$ periods. This uses the analogous specification:
+\begin{equation} \label{Phi_w_0}
+    \Phi_w^0(T) ~~ = \underbrace{\left(\frac{1}{(\textbf{1} - d) \cdot \textbf{1}}\right)}_{\frac{1}{\text{\# Non-disadvantaged}}} \overbrace{\left(\textbf{1} - d\right) \cdot \underbrace{\sum_{t = 1}^T \sum_{i=1}^N \phi_w(w_{it}\mid i, t)}_{\text{Total $\Delta \phi_w$ for all subregions}} }^\text{Total $\Delta \phi_w$ for non-disadvantaged subregions}
+\end{equation}
+The only difference between the specification in equation \eqref{Phi_w_1} and the specification in equation \eqref{Phi_w_0}, is that the latter replaces all instances of $d$ with $\textbf{1} - d$, swapping the indicator to represent non-disadvantaged communities. 
+
+The Environmental Inequality Gap, hereafter the EI Gap, is the difference in the average concentration of local air pollutant $w$ in disadvantaged communities and non-disadvantaged communities. Denote the environmental inequality gap for air pollutant $w$ after $T$ periods with $\text{EIGap}_w(T)$. The specification for the EI Gap follows closely from equations \eqref{Phi_w_1} and \eqref{Phi_w_0}:
+\begin{align}
+    \text{EIGap}_w(T) &= \Phi_w^1(T) - \Phi_w^0(T) \\
+        &= \underbrace{\left[
+            \left(\frac{1}{d \cdot \textbf{1}}\right) d - \left(\frac{1}{(\textbf{1} - d) \cdot \textbf{1}}\right) \left(\textbf{1} - d\right)
+        \right]}_{\substack{\text{Subregion weights}\\ M\times 1 }} ~~ \cdot \underbrace{\sum_{t = 1}^T \sum_{i=1}^N \Phi_w(w_{it}\mid i, t)}_{\substack{\text{Total $\Delta \phi_w$ for all subregions}\\ M \times 1}}
+\end{align}
+The factored version of this equation shows that we can write the EI Gap as the dot product of community-level weights and the vector of the total changes in $w$ concentrations. 
+
+
+\subsection{Pathways from Carbon Pricing to Environmental Inequality}
+
+\begin{itemize}
+    \item Homogenous regulation investment differences: Investment cost disparities $\rightarrow$ heat rate improvement differences $\rightarrow$ marginal cost differences $\rightarrow$ reordering along the supply curve $\rightarrow$ disparities in generation $\rightarrow$ disparities in air pollution $\rightarrow$ EI Gap
+    \item Direct generation effect of regulation: Regulation ($\tau$) differences $\rightarrow$ marginal cost differences $\rightarrow$ reordering along the supply curve $\rightarrow$ disparities in generation $\rightarrow$ disparities in air pollution $\rightarrow$ EI Gap
+    \item Indirect investment effect of regulation: Regulation ($\tau$) differences $\rightarrow$ heat rate improvement differences $\rightarrow$ marginal cost differences $\rightarrow$ reordering along the supply curve $\rightarrow$ disparities in generation $\rightarrow$ disparities in air pollution $\rightarrow$ EI Gap
+\end{itemize}
+
+Cool flow chart made in TikZ with this all laid out and all the equations and that kind of jazz
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \newpage
+% \subsubsection*{Investment Phase}
+
+% Generators have to decide how much to invest in efficiency improvements (heat rate). 
+% $$\rho = \rho' (1 + \widetilde{\delta}) - j_i$$
+
+% \subsubsection*{Generation Phase}
+
+% Generators have to decide whether or not to operate in a given hour, and if so, what market to sell their power on.
+% \begin{itemize}
+%     \item Operating decision: $a_{it} = \{0, 1, \ldots, R\}$
+%     \item Generation: $q_{itr} = \overline{q}_i \cdot \mathds{1}(r = a_{it})$
+%     \item Marginal Cost: $mc_i = \rho (u_f + e_f \tau_r)$
+%     \item Per Period Profits: $\pi_{itr} = \sum_{r = 1}^{R} q_{itr}(P_{tr} - mc_i)$
+%     \item State variables: $s_{it} = \{ \eta_{t}, h_t, \rho, c\}$
+%     \item Bilateral transmission constraints: $\sum_{i \in \mathcal{N}_A} q_{itB} + \sum_{i \in \mathcal{N}_B} q_{itA} \leq T_{AB}$
+% \end{itemize}
+
+% Generators compete in a perfectly competitive market, such that individual generators do not have any perceptible amount of market power. Goal for each generator is to maximize lifetime profits. Given the investment decision, this is:
+% $$V_i(\eta_{t}, h_t, \rho, c) = \max_{a_{it} \in \{0, \ldots, R\}} \left\{ \sum_{t = 0}^\infty \delta^t \mathbb{E}\left[ \pi_{itr} \mid \eta_{t}, h_t, \rho, c\right] \right\}$$
+
+% The investment decision is made such that $\max_{\rho_i} \left\{ V_i(\eta_{t}, h_t, \rho, c)\right\}$.
+
+%Without the transmission constraints, this should just be pretty much one big cost minimization problem, but things will get more complicated\ldots still think they will be doable though

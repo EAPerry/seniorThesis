@@ -8,25 +8,32 @@
 
 % Adding some better options with tables
 \usepackage[flushleft]{threeparttable}
+\usepackage{longtable}
 \usepackage{array}
 %\renewcommand{\arraystretch}{1.15}
 \newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
+\setcounter{tocdepth}{2}
+
 % Custom colors
 \usepackage[dvipsnames]{xcolor}
 
 \definecolor{good_red}{RGB}{136, 0, 17}
 \definecolor{good_blue}{RGB}{0, 100, 125}
-\definecolor{EAPred}{RGB}{136, 0, 17}
-\definecolor{EAPblue}{RGB}{0, 100, 125}
-\definecolor{EAPviolet}{RGB}{86, 63, 70}
-\definecolor{EAPgreen}{RGB}{26, 161, 53}
-\definecolor{EAPyellow}{RGB}{242, 174, 114}
+
+\definecolor{color1}{RGB}{0, 143, 248}
+\definecolor{color2}{RGB}{151, 165, 52}
+\definecolor{color3}{RGB}{231, 105, 20}
+\definecolor{color4}{RGB}{205, 182, 50}
+\definecolor{color5}{RGB}{25, 102, 137}
+\definecolor{color6}{RGB}{211, 186, 112}
+\definecolor{color7}{RGB}{226, 126, 88}
+
 
 % Formatting internal and external links
-\usepackage{hyperref} % If you want to see what pages we cite something
+\usepackage[backref = page]{hyperref} % If you want to see what pages we cite something
 \hypersetup{
 	colorlinks=true,
 	linkcolor= black,
@@ -50,11 +57,13 @@
 \usepackage{pdflscape}
 \usepackage{enumitem}
 \usepackage{kpfonts} % For a better aesthetic
+\usepackage{dsfont}
 
 % Custom commands
 \newcommand{\cmark}{\ding{51}}
 \newcommand{\xmark}{\ding{55}}
 \newcommand{\fignote}[2][0.8]{\captionsetup{width=#1\linewidth, font=footnotesize, justification=justified, singlelinecheck=false}\caption*{\textit{Note}: #2}}
+\newcommand{\1}{\mathds{1}}
 
 % Formatting requirements RE: font sizes
 \usepackage{titlesec}
@@ -72,7 +81,8 @@
 
 \begin{titlepage}
 	\centering
-	{\fontsize{14}{14}\selectfont Implications of Carbon Pricing for Air Pollution Disparities}\\
+	{\fontsize{14}{14}\selectfont The Implications of Carbon Pricing for Environmental
+	Inequality}\\
 	\vspace{14em}
 	by\\
 	Evan Perry\\
@@ -80,17 +90,16 @@
 	Submitted in Partial Fulfillment\\
 	for Graduating with Distinction\\
 	\vspace{6em}
-	Economics Department\\
+	The Stead Family Department of Business Administration \& Economics\\
 	\vspace{9em}
 	Coe College\\
-	Cedar Rapids, Iowa\\
+	Cedar Rapids, IA\\
 	April 2023
 \end{titlepage}
 
 \doublespacing
-\begin{abstract}
-	Economists widely support the implementation of a carbon pricing scheme (a carbon tax or cap-and-trade program) to mitigate the damages of climate change. Despite this broad support, the effect of carbon pricing on the distribution of outdoor air pollution and the resulting disparities in air pollution exposure between communities remains understudied. This research will concentrate on studying this concern in the context of a cap-and-trade program on California's electric power industry. Methodologically, I will expand on the work of Weber (2021) by (1) explicitly modeling the ``environmental justice gap'' from Hernandez-Cortes and Meng (2023), (2) considering an open economy with the potential for the redistribution of generation outside of California, and (3) potentially employing a chemical transport model to more accurately estimate air pollution exposure. \textbf{Description of results here.}
-\end{abstract}
+
+
 
 \newpage
 \tableofcontents
@@ -105,7 +114,11 @@
 
 \newpage
 \bibliographystyle{aer}
+\addcontentsline{toc}{section}{References}
 \bibliography{references}
+
+
+\input{chapter7.tex}
 
 
 \end{document}
