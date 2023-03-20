@@ -3,7 +3,7 @@
 \section*{Appendix}
 \addcontentsline{toc}{section}{Appendix}
 
-\subsection*{A.1\quad Background an Climate Change \& Ambient Air Pollution}
+\subsection*{A.1\quad Appendix to Chapter 1: An Introduction to Climate Change}
 
 \begin{minipage}{\textwidth}
     \captionof{figure}{Contemporary Climate Models are Highly Accurate \label{cmip6_accuracy}}
@@ -14,7 +14,44 @@
 \end{minipage}
 
 \newpage
-\subsection*{A.4\quad A Model of Emissions Pricing \& Environmental Inequality}
+\subsection*{A.2\quad Appendix to Chapter 2: Designing Climate Policy}
+
+\subsubsection*{The Environmental Kuznets Curve}
+
+The contemporary literature on the relationship between economic standard of living and environmental decay begins with Simon Kuznets, and his work related not to the environment, but inequality. \cite{kuznets1955economic} laid out a empirical relationship between economic development and inequality. Kuznets findings suggest that income inequality rises as countries move from low-income to middle-income, and income inequality falls as countries move from middle-income to high-income. Diagrammatically, this creates an inverted U-shaped path called the Kuznets Curve with GDP per capita on the horizontal axis and measures of inequality (usually the income ratio between the top quintile and bottom quintile of earners) on the vertical axis. Realizing that economic development and environmental degradation follow a similar relationship, \cite{NBERw3914} were the first to formulate the \emph{Environmental} Kuznets Curve (EKC) in an analysis of NAFTA. While the model was not the primary focus of the original paper, it later led to its own published paper, \cite{grossman1995economic} and is now a standard in environmental economics. 
+
+Figure \ref{EKC} displays the Environmental Kuznets Curve. The EKC hypothesizes that low-income economies will have relatively high environmental quality, as these economies may be more agrarian or pastoral. Countries often move from low-income to middle-income through industrialization, and as countries industrialize, their environmental degradation increases. Eventually though, economic development requires countries to move away from manufacturing and into higher human capital industries. When this happens, sectors dependent on high human capital (e.g., finance, engineering, education) tend to be less harsh on the environment. Past the turning point, economic development will decrease environmental degradation. 
+
+\begin{figure}
+\centering
+\begin{minipage}{0.48 \textwidth}
+\caption{The EKC \label{EKC}}
+\begin{tikzpicture}[scale = 0.6]
+\draw[thick, <->] (0,10) -- (0,0) -- (10,0);
+\draw[thick, color1]  [domain = 1:9] plot (\x, {8.5 - .5*(\x - 5)^2});
+\node [below right] at (7,0) {GDP/Capita};
+\node[rotate=90, above] at (0,7) {Environmental Degradation};
+\draw[dashed] (5,0) -- (5,9.5) node[right]{\footnotesize Turning Point};
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\centering 
+\caption{Application of the  EKC}
+\includegraphics[width=0.9\textwidth]{figures/chapter2_figures/ekc.pdf}
+\end{minipage}
+Data from \cite{owidoutdoorairpollution} 
+%https://ourworldindata.org/outdoor-air-pollution#outdoor-air-pollution-tends-to-rise-with-industrialization-before-falling
+\end{figure}
+
+Despite its quick adoption in the discipline and its continued use, the EKC has largely been discredited \citep{stern2004rise}. \cite{arrow1995economic} importantly note that the usual form of the EKC does not allow for any feedback between the environment and development, implicitly assuming that pollution and other forms of environmental degradation do not hinder economic development. 
+
+\newpage
+\subsection*{A.3\quad Appendix to Chapter 3: Ambient Air Pollution \& Electricity Generation}
+
+
+
+\newpage
+\subsection*{A.4\quad Appendix to Chapter 4: A Model of Emissions Pricing \& Environmental Inequality}
 
 \begin{center}
     \singlespacing
@@ -132,7 +169,5 @@
     \end{longtable}
 \end{center}
 
-Still missing:
-\begin{itemize}
-    \item Investment stuff\ldots
-\end{itemize}
+\newpage
+\subsection*{A.5\quad Appendix to Chapter 5: Carbon Pricing \& Air Pollution Disparities in California}

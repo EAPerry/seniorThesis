@@ -39,6 +39,10 @@
   Perrings, and David Pimentel}, ``Economic growth, carrying capacity, and the
   environment,'' {\it Ecological Economics}, 1995, {\it 15} (2), 91--95.
 
+\harvarditem[Astor]{Astor}{2022}{astor2022airline}
+{\bf Astor, Maggie}, ``Do airline climate offsets really work? Here's the good
+  news, and the bad,'' {\it New York Times}, 2022.
+
 \harvarditem[Auffhammer]{Auffhammer}{2018}{auffhammer2018quantifying}
 {\bf Auffhammer, Maximilian}, ``Quantifying economic damages from climate
   change,'' {\it Journal of Economic Perspectives}, 2018, {\it 32} (4), 33--52.
@@ -52,6 +56,13 @@
 {\bf Banzhaf, Spencer, Lala Ma, and Christopher Timmins}, ``Environmental
   justice: The economics of race, place, and pollution,'' {\it Journal of
   Economic Perspectives}, 2019, {\it 33} (1), 185--208.
+
+\harvarditem[Bielli et al.]{Bielli, Alfaro-Shigueto, Doherty, Godley, Ortiz,
+  Pasara, Wang and Mangel}{2020}{bielli2020illuminating}
+{\bf Bielli, Alessandra, J~Alfaro-Shigueto, PD~Doherty, BJ~Godley, C~Ortiz,
+  A~Pasara, JH~Wang, and JC~Mangel}, ``An illuminating idea to reduce bycatch
+  in the Peruvian small-scale gillnet fishery,'' {\it Biological Conservation},
+  2020, {\it 241}, 108277.
 
 \harvarditem[Bjørke and Ahmed]{Bjørke and Ahmed}{2011}{SINGH202179}
 {\bf Bjørke, Sven and Mohammed Ahmed}, ``Radiative forcing,'' in ``The
@@ -143,14 +154,39 @@
 {\bf {C2ES}}, ``US State Carbon Pricing Policies,'' {\it Center for Climate and
   Energy Solutions}, 2023.
 
+\harvarditem[{CARB}]{{CARB}}{2018}{carb_comp_2018}
+{\bf {CARB}}, ``100\% of companies in cap-and-trade program meet 2015-2017
+  compliance requirements,'' {\it Press Release: California Air Resources
+  Board, California Environmental Protection Agency}, 2018.
+
+\harvarditem[{CARB}]{{CARB}}{2021}{carb_comp_2021}
+{\bf \bysame{}}, ``100\% of companies in cap-and-trade program meet 2020
+  compliance obligations,'' {\it Press Release: California Air Resources Board,
+  California Environmental Protection Agency}, 2021.
+
 \harvarditem[{CARB}]{{CARB}}{2023a}{carb_prices}
-{\bf {CARB}}, ``Cap-and-Trade Program Data Dashboard,'' {\it California Air
+{\bf \bysame{}}, ``Cap-and-Trade Program Data Dashboard,'' {\it California Air
   Resources Board, California Environmental Protection Agency}, 2023.
 
-\harvarditem[{CARB}]{{CARB}}{2023b}{carb_FAQ}
+\harvarditem[{CARB}]{{CARB}}{2023b}{carb_offsets}
+{\bf \bysame{}}, ``Compliance Offset Program,'' {\it California Air Resources
+  Board, California Environmental Protection Agency}, 2023.
+\newblock Accessed: 2023-03-10.
+
+\harvarditem[{CARB}]{{CARB}}{2023c}{carb_offsets_about}
+{\bf \bysame{}}, ``Compliance Offset Program: About,'' {\it California Air
+  Resources Board, California Environmental Protection Agency}, 2023.
+\newblock Accessed: 2023-03-10.
+
+\harvarditem[{CARB}]{{CARB}}{2023d}{carb_FAQ}
 {\bf \bysame{}}, ``FAQ Cap-and-Trade Program,'' {\it California Air Resources
   Board, California Environmental Protection Agency}, 2023.
 \newblock Accessed: 2023-03-10.
+
+\harvarditem[Carbone and Rivers]{Carbone and Rivers}{2017}{carbone2017impacts}
+{\bf Carbone, Jared and Nicholas Rivers}, ``The impacts of unilateral climate
+  policy on competitiveness: evidence from computable general equilibrium
+  models,'' {\it Review of Environmental Economics and Policy}, 2017.
 
 \harvarditem[Carleton et al.]{Carleton, Jina, Delgado, Greenstone, Houser,
   Hsiang, Hultgren, Kopp, McCusker, Nath, Rising, Rode, Kwon~Seo, Viaene, Yuan
@@ -206,6 +242,11 @@
   ``Natural disasters as creative destruction? Evidence from developing
   countries,'' {\it Economic Inquiry}, 2008, {\it 46} (2), 214--226.
 
+\harvarditem[Cullenward and Wara]{Cullenward and
+  Wara}{2014}{cullenward2014carbon}
+{\bf Cullenward, Danny and Michael Wara}, ``Carbon markets: Effective
+  policy?,'' {\it Science}, 2014, {\it 344} (6191), 1460--1460.
+
 \harvarditem[Currie et al.]{Currie, Hanushek, Kahn, Neidell and
   Rivkin}{2009}{currie2009does}
 {\bf Currie, Janet, Eric~A Hanushek, E~Megan Kahn, Matthew Neidell, and
@@ -256,6 +297,13 @@
   the US,'' {\it American Economic Journal: Applied Economics}, 2011, {\it 3}
   (4), 152--85.
 
+\harvarditem[Dray et al.]{Dray, Sch{\"a}fer, Grobler, Falter, Allroggen,
+  Stettler and Barrett}{2022}{dray2022cost}
+{\bf Dray, Lynnette, Andreas Sch{\"a}fer, Carla Grobler, Christoph Falter,
+  Florian Allroggen, Marc Stettler, and Steven Barrett}, ``Cost and emissions
+  pathways towards net-zero climate impacts in aviation,'' {\it Nature Climate
+  Change}, 2022, {\it 12} (10), 956--962.
+
 \harvarditem[Druckenmiller]{Druckenmiller}{2020}{druckenmiller2020tree}
 {\bf Druckenmiller, Hannah}, ``Estimating an Economic and Social Value of
   Forests: Evidence from Tree Mortality in the American West,'' {\it Working
@@ -299,6 +347,12 @@
 {\bf \bysame{}}, ``Greenhouse Gas Emissions from a Typical Passenger Vehicle,''
   {\it US Envrionmental Protection Agency}, 2022.
 
+\harvarditem[{European Commission}]{{European
+  Commission}}{2023}{eu_ets_overview}
+{\bf {European Commission}}, ``EU Emissions trading system (EU ETS),'' {\it The
+  European Union: Climate Action}, 2023.
+\newblock Accessed: 2023-03-01.
+
 \harvarditem[{FERC}]{{FERC}}{2020}{ferc2020}
 {\bf {FERC}}, {\it Energy Primer: A Handbook of Energy Market Basics}, Federal
   Energy Regulatory Commission, 2020.
@@ -331,8 +385,13 @@
   Economic Policy}, 2009, {\it 1} (2), 72--112.
 
 \harvarditem[Fowlie and Reguant]{Fowlie and
+  Reguant}{2018}{fowlie2018challenges}
+{\bf \bysame{} and Mar Reguant}, ``Challenges in the measurement of leakage
+  risk,'' in ``AEA Papers and Proceedings,'' Vol. 108 2018, pp.~124--29.
+
+\harvarditem[Fowlie and Reguant]{Fowlie and
   Reguant}{2022}{fowlie2022mitigating}
-{\bf \bysame{} and Mar Reguant}, ``Mitigating emissions leakage in incomplete
+{\bf \bysame{} and \bysame{}}, ``Mitigating emissions leakage in incomplete
   carbon markets,'' {\it Journal of the Association of Environmental and
   Resource Economists}, 2022, {\it 9} (2), 307--343.
 
@@ -346,10 +405,6 @@
   Ryan}{2016}{fowlie2016measuring}
 {\bf \bysame{}, Mar Reguant, and Stephen Ryan}, ``Measuring leakage risk,''
   {\it Report for the California Air Resources Board}, 2016.
-
-\harvarditem[Fudenberg and Tirole]{Fudenberg and
-  Tirole}{1991}{fudenberg1991game}
-{\bf Fudenberg, Drew and Jean Tirole}, {\it Game theory}, MIT press, 1991.
 
 \harvarditem[Gerarden et al.]{Gerarden, Newell and
   Stavins}{2017}{gerarden2017assessing}
@@ -478,6 +533,10 @@
   stochastic demographic analysis,'' {\it Ecology}, 2010, {\it 91} (10),
   2883--2897.
 
+\harvarditem[{ICAP}]{{ICAP}}{2022}{icap_report}
+{\bf {ICAP}}, ``Emissions Trading Worldwide: Status Report 2022,'' {\it Berlin:
+  International Carbon Action Partnership}, 2022.
+
 \harvarditem[IEA]{IEA}{2021}{ieareport}
 {\bf IEA}, ``Net zero by 2050: A roadmap for the global energy sector,'' {\it
   International Energy Agency, Paris}, 2021.
@@ -591,6 +650,10 @@
 {\bf \bysame{} and Luann Dahlman}, ``Climate change: Global temperature,''
   Technical Report, NOAA 2023.
 
+\harvarditem[Lloyd]{Lloyd}{1833}{lloyd1833two}
+{\bf Lloyd, William~Forster}, {\it Two lectures on the checks to population},
+  JH Parker, 1833.
+
 \harvarditem[Lobell et al.]{Lobell, Schlenker and
   Costa-Roberts}{2011}{lobell2011climate}
 {\bf Lobell, David, Wolfram Schlenker, and Justin Costa-Roberts}, ``Climate
@@ -603,6 +666,12 @@
   Donald Ort}, ``Food for thought: lower-than-expected crop yield stimulation
   with rising CO2 concentrations,'' {\it Science}, 2006, {\it 312} (5782),
   1918--1921.
+
+\harvarditem[Manzagol and Nakolan]{Manzagol and
+  Nakolan}{2022}{manzagol2022global}
+{\bf Manzagol, O~Nilay and Kevin Nakolan}, ``Global allowance prices for CO2
+  emissions increased by over 40\% in 2021,'' {\it Energy Information Agency:
+  Today in Energy}, 2022.
 
 \harvarditem[Mekonnen and Hoekstra]{Mekonnen and
   Hoekstra}{2016}{mekonnen2016four}
@@ -703,6 +772,11 @@
   Dimensions of California's Cap-and-Trade System,'' {\it USC Dornsife Equity
   Research Institute}, 2022.
 
+\harvarditem[Porter and Linde]{Porter and Linde}{1995}{porter1995toward}
+{\bf Porter, Michael~E and Claas van~der Linde}, ``Toward a new conception of
+  the environment-competitiveness relationship,'' {\it Journal of economic
+  perspectives}, 1995, {\it 9} (4), 97--118.
+
 \harvarditem[Prest et al.]{Prest, Rennert, Newell and
   Wingenroth}{2022}{sccdatatool}
 {\bf Prest, Brian, Kevin Rennert, Richard Newell, and Jordan Wingenroth},
@@ -771,6 +845,12 @@
   energy prices and international trade,'' {\it Energy Economics}, 2015, {\it
   52}, S130--S141.
 
+\harvarditem[Schmalensee and Stavins]{Schmalensee and
+  Stavins}{2017}{schmalensee2017lessons}
+{\bf Schmalensee, Richard and Robert Stavins}, ``Lessons learned from three
+  decades of experience with cap and trade,'' {\it Review of Environmental
+  Economics and Policy}, 2017.
+
 \harvarditem[Slocum]{Slocum}{2004}{slocum2004polar}
 {\bf Slocum, Rachel}, ``Polar bears and energy-efficient lightbulbs: strategies
   to bring climate change home,'' {\it Environment and Planning D: Society and
@@ -784,6 +864,10 @@
 \harvarditem[Stern]{Stern}{2004}{stern2004rise}
 {\bf Stern, David}, ``The rise and fall of the environmental Kuznets curve,''
   {\it World development}, 2004, {\it 32} (8), 1419--1439.
+
+\harvarditem[Storrow]{Storrow}{2022}{storrow2022price}
+{\bf Storrow, Benjamin}, ``Price hike marks new era for Calif. cap and trade,''
+  {\it ClimateWire}, 2022.
 
 \harvarditem[Sweeney]{Sweeney}{2013}{sweeney2013california}
 {\bf Sweeney, James}, {\it The California electricity crisis}, Hoover Press,
@@ -801,9 +885,9 @@
   from the labor market,'' in ``Household production and consumption,'' NBER,
   1976, pp.~265--302.
 
-\harvarditem[{The World Bank}]{{The World Bank}}{2022}{wbank}
+\harvarditem[{The World Bank}]{{The World Bank}}{2023}{wbank}
 {\bf {The World Bank}}, ``Carbon pricing dashboard: Overview of carbon pricing
-  initiatives,'' {\it The World Bank}, 2022.
+  initiatives,'' {\it The World Bank}, 2023.
 
 \harvarditem[Till et al.]{Till, Rypel, Bray and Fey}{2019}{till2019fish}
 {\bf Till, Aaron, Andrew Rypel, Andrew Bray, and Samuel Fey}, ``Fish die-offs
@@ -832,6 +916,13 @@
 {\bf Weir, Kirsten}, ``Smog in our brains: researchers are identifying
   startling connections between air pollution and decreased cognition and
   well-being,'' {\it Monitor On Psychology}, 2012.
+
+\harvarditem[West et al.]{West, B{\"o}rner, Sills and
+  Kontoleon}{2020}{west2020overstated}
+{\bf West, Thales, Jan B{\"o}rner, Erin Sills, and Andreas Kontoleon},
+  ``Overstated carbon emission reductions from voluntary REDD+ projects in the
+  Brazilian Amazon,'' {\it Proceedings of the National Academy of Sciences},
+  2020, {\it 117} (39), 24188--24194.
 
 \harvarditem[{WHO}]{{WHO}}{2022}{who_factsheet}
 {\bf {WHO}}, ``Ambient (outdoor) Air Pollution Factsheet,'' {\it World Health

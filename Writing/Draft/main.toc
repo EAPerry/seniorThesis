@@ -6,28 +6,30 @@
 \contentsline {subsubsection}{\numberline {1.3.1}Representative Key Risks}{20}{subsubsection.1.3.1}%
 \contentsline {subsubsection}{\numberline {1.3.2}Integrated Assessment Models \& the Social Cost of Carbon }{30}{subsubsection.1.3.2}%
 \contentsline {section}{\numberline {2}Designing Climate Policy}{37}{section.2}%
-\contentsline {subsection}{\numberline {2.1}A Case for Economic Analysis in Climate Policy Design}{37}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}An Economic Motivation for Climate Policy}{43}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The Structure \& Scope of Environmental Policy}{51}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Environmental Markets: Carbon Taxes \& Cap-and-Trade}{56}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Incomplete Carbon Markets}{62}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Ambient Air Pollution \& Electricity Generation}{73}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Primer on Ambient Air Pollution}{73}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}The Case of California: Electricity \& AB-32}{75}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Carbon Pricing \& Environmental Inequality}{77}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Research Design}{82}{subsection.3.4}%
-\contentsline {section}{\numberline {4}A Model of Emissions Pricing \& Environmental Inequality}{83}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Model Summary}{83}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Model Environment}{85}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Equilibrium Behavior in the Generation Phase}{88}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Equilibrium Behavior in the Investment Phase}{94}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Incorporating Air Pollution \& Environmental Inequality}{95}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Pathways from Carbon Pricing to Environmental Inequality}{98}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Model Application: Electricity \& Air Pollution in California}{99}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Data}{99}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Empirical Strategy}{99}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Results}{99}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Diagnostics}{99}{subsection.5.4}%
-\contentsline {section}{Conclusion}{101}{subsection.5.4}%
-\contentsline {section}{References}{102}{subsection.5.4}%
-\contentsline {section}{Appendix}{118}{subsection.5.4}%
+\contentsline {subsection}{\numberline {2.1}A Case for Economic Analysis in Climate Policy Design }{37}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}An Economic Motivation for Climate Policy }{43}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The Structure \& Scope of Environmental Policy }{51}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Environmental Markets: Carbon Taxes \& Cap-and-Trade}{61}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}The Theory of Carbon Pricing}{61}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Carbon Pricing in Practice}{68}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}Unilateral Climate Policy \& Leakage}{79}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Ambient Air Pollution \& Electricity Generation}{90}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Primer on Ambient Air Pollution}{90}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The Case of California: Electricity \& AB-32}{92}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Carbon Pricing \& Environmental Inequality}{94}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Research Design}{98}{subsection.3.4}%
+\contentsline {section}{\numberline {4}A Model of Emissions Pricing \& Environmental Inequality}{99}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Model Summary}{99}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Model Environment}{101}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Equilibrium Behavior in the Generation Phase}{104}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Equilibrium Behavior in the Investment Phase}{110}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Incorporating Air Pollution \& Environmental Inequality}{111}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Pathways from Carbon Pricing to Environmental Inequality}{114}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Carbon Pricing \& Air Pollution Disparities in California}{115}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Data}{115}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Empirical Strategy}{115}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Results}{115}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Diagnostics}{115}{subsection.5.4}%
+\contentsline {section}{Conclusion}{117}{subsection.5.4}%
+\contentsline {section}{References}{118}{subsection.5.4}%
+\contentsline {section}{Appendix}{136}{subsection.5.4}%
