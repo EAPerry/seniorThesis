@@ -26,10 +26,10 @@
 \contentsline {subsection}{\numberline {4.5}Incorporating Air Pollution \& Environmental Inequality}{111}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Pathways from Carbon Pricing to Environmental Inequality}{114}{subsection.4.6}%
 \contentsline {section}{\numberline {5}Carbon Pricing \& Air Pollution Disparities in California}{115}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Data}{115}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Empirical Strategy}{115}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Results}{115}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Diagnostics}{115}{subsection.5.4}%
-\contentsline {section}{Conclusion}{117}{subsection.5.4}%
-\contentsline {section}{References}{118}{subsection.5.4}%
-\contentsline {section}{Appendix}{136}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.1}Empirical Strategy}{115}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Data}{120}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Results}{126}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Diagnostics}{126}{subsection.5.4}%
+\contentsline {section}{Conclusion}{129}{subsection.5.4}%
+\contentsline {section}{References}{130}{subsection.5.4}%
+\contentsline {section}{Appendix}{148}{subsection.5.4}%

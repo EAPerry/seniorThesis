@@ -1,0 +1,98 @@
+\documentclass[letterpaper, 12pt]{article}
+
+% Math formatting necessities
+\usepackage{amsfonts,amssymb,amsmath,amsthm, mathrsfs}
+
+% Page margins
+\usepackage[left=1.5in, right=1in, top=1in, bottom=1in]{geometry}
+
+% Adding some better options with tables
+\usepackage[flushleft]{threeparttable}
+\usepackage{longtable}
+\usepackage{array}
+%\renewcommand{\arraystretch}{1.15}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+% Show section and subsections in the table of contents, but not subsubsections
+\setcounter{tocdepth}{2}
+
+% Custom colors
+\usepackage[dvipsnames]{xcolor}
+\definecolor{good_red}{RGB}{136, 0, 17}
+\definecolor{good_blue}{RGB}{0, 100, 125}
+\definecolor{color1}{RGB}{0, 143, 248}
+\definecolor{color2}{RGB}{151, 165, 52}
+\definecolor{color3}{RGB}{231, 105, 20}
+\definecolor{color4}{RGB}{205, 182, 50}
+\definecolor{color5}{RGB}{25, 102, 137}
+\definecolor{color6}{RGB}{211, 186, 112}
+\definecolor{color7}{RGB}{226, 126, 88}
+
+% Formatting internal and external links
+\usepackage[backref = page]{hyperref} % If you want to see what pages we cite something
+\hypersetup{
+	colorlinks=true,
+	linkcolor= black,
+	citecolor = black,
+	urlcolor = good_blue
+	}
+\urlstyle{same}
+
+% For images and visualizations
+\usepackage{graphicx}
+\usepackage{tikz, pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption, subcaption}
+\usepackage[section]{placeins}
+
+% Citation management
+\usepackage{natbib}
+
+% Other useful packages
+\usepackage{setspace} 
+\usepackage{pdflscape}
+\usepackage{enumitem}
+\usepackage{kpfonts} % For a better font aesthetic
+\usepackage{dsfont}
+
+% Custom commands
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+\newcommand{\fignote}[2][0.8]{\captionsetup{width=#1\linewidth, font=footnotesize, justification=justified, singlelinecheck=false}\caption*{\textit{Note}: #2}}
+\newcommand{\1}{\mathds{1}}
+
+% Formatting requirements RE: font sizes
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\fontsize{14}{15}\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\fontsize{13}{15}\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	{\fontsize{14}{14}\selectfont The Implications of Carbon Pricing for Environmental
+	Inequality}\\
+	\vspace{14em}
+	by\\
+	Evan Perry\\
+	\vspace{10em}
+	Submitted in Partial Fulfillment\\
+	for Graduating with Distinction\\
+	\vspace{6em}
+	The Stead Family Department of Business Administration \& Economics\\
+	\vspace{9em}
+	Coe College\\
+	Cedar Rapids, IA\\
+	April 2023
+\end{titlepage}
+
+% \doublespacing
+% \newpage
+
+% Your thesis continues\ldots
+
+
+
+\end{document}

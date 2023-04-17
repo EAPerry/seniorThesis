@@ -4,7 +4,7 @@
 \addcontentsline{toc}{section}{Appendix}
 
 \subsection*{A.1\quad Appendix to Chapter 1: An Introduction to Climate Change}
-
+\vfill 
 \begin{minipage}{\textwidth}
     \captionof{figure}{Contemporary Climate Models are Highly Accurate \label{cmip6_accuracy}}
     \centering
@@ -12,6 +12,7 @@
     \fignote[1]{Figure from \cite{ipccAR6_model_accuracy}. The figure displays predictions for three common climate variables, near-surface air temperature, precipitation, and sea level pressure, under three different climate models. These three models are the Coupled Model Intercomparison Project Phases 3, 5, and 6. These are the three climate models used in the IPCC's fourth, fifth, and sixth assessment reports. There is no CMIP4 due to re-numbering. The vertical axis is the correlation between the model predicted outcomes the actual, observed outcomes. Clearly these models can predict near-surface air temperatures with near perfect accuracy. Other climate variables, like precipitation and sea levels rise have been more difficult to predict, but are still reasonably accurate. Climate scientists continue to learn more about the physical processes underlying climate, and consequently, these models continue to improve.
     }
 \end{minipage}
+\vfill
 
 \newpage
 \subsection*{A.2\quad Appendix to Chapter 2: Designing Climate Policy}
@@ -45,8 +46,8 @@ Data from \cite{owidoutdoorairpollution}
 
 Despite its quick adoption in the discipline and its continued use, the EKC has largely been discredited \citep{stern2004rise}. \cite{arrow1995economic} importantly note that the usual form of the EKC does not allow for any feedback between the environment and development, implicitly assuming that pollution and other forms of environmental degradation do not hinder economic development. 
 
-\newpage
-\subsection*{A.3\quad Appendix to Chapter 3: Ambient Air Pollution \& Electricity Generation}
+% \newpage
+% \subsection*{A.3\quad Appendix to Chapter 3: Ambient Air Pollution \& Electricity Generation}
 
 
 
@@ -85,8 +86,8 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
     $\rho_i$ & Generator $i$'s heat rate (BTU/kwh) & Endogenous & -- \\
     $\tilde{\delta}$ & Heat rate depreciation rate from the investment phase to the generation phase; $\tilde{\delta} \in (0, 1)$ & Exogenous & (10) \\
     $v_i$ & Generator $i$'s stochastic investment cost shock; $v_i > 0$ for all $i \in \mathcal{N}$ & Exogenous & Chosen \\
-    $\gamma$ & Constant scalar in the investment cost function; $\gamma > 0$ & Exogenous & \\
-    $\alpha$ & Scale parameter in the investment cost function; $\alpha > 0$ & Exogenous & \\
+    $\gamma$ & Constant scalar in the investment cost function; $\gamma > 0$ & Exogenous & (12) \\
+    $\alpha$ & Scale parameter in the investment cost function; $\alpha > 0$ & Exogenous & (12) \\
     $\Gamma (j_i, v_i)$ & Investment costs for generator $i$; a function of generator $i$'s investment choice $j_i$ and $i$' stochastic investment cost shock $v_i$ & Endogenous & -- \\
     $\Gamma (j \mid v)$ & Total investment costs for all generators; a function of the investment profile $j$ given a vector of all generator's stochastic investment cost shocks $v$ & Endogenous & -- \\
     $Q_t^e$ & $R$-dimensional vector of expected quantities demanded of electricity at time $t$ for each region (kWh) & Exogenous & (2)\\
@@ -134,6 +135,8 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
 \fignote[1]{Table summarizes the notation used in Chapter 4. In general, lowercase letters without an index are profiles/vectors, plain-text uppercase letters denote matrices or the size of a set, and uppercase letters in the \texttt{mathcal} font are sets (e.g., $\mathcal{N}$). We denote the equilibrium of any variable as the variable with an asterisk. Derived variables are those that are a deterministic function of entirely exogenous variables. The source key for exogenous variables correspond with the data sources in Table \ref{data_sources}.}
 \end{center}
 
+\newpage
+\subsection*{A.5\quad Appendix to Chapter 5: Carbon Pricing \& Air Pollution Disparities in California}
 
 \begin{center}
     \singlespacing
@@ -165,9 +168,128 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
         (10) & Board of Governors of the Federal Reserve System (US), Market Yield on U.S. Treasury Securities at 10-Year Constant Maturity, Quoted on an Investment Basis [DGS10]. Retrieved: 2023-03-03 from FRED, Federal Reserve Bank of St. Louis. Available at: \url{https://fred.stlouisfed.org/series/DGS10} \\ \\[-3ex]
         \hline \\[-3ex]
         (11) & United States Energy Information Administration. 2022. Carbon Dioxide Emissions Coefficient. Available at: \url{https://www.eia.gov/environment/emissions/co2_vol_mass.php}\\ \\[-3ex]
+        \hline \\[-3ex]
+        Paige, Weber. 2021
+        \\ \\[-3ex]
         \hline\hline
     \end{longtable}
 \end{center}
 
-\newpage
-\subsection*{A.5\quad Appendix to Chapter 5: Carbon Pricing \& Air Pollution Disparities in California}
+%\subsubsection*{Fuel Prices}
+
+\begin{figure}[!hbtp]
+    \centering
+    \caption{Coal Prices by Region}
+    \includegraphics[width = 0.8\textwidth]{figures/chapter5_figures/coal_prices.pdf}
+    \fignote[.8]{Figure displays the average price of coal sold to power plants in current dollars per million British Thermal Units (mmBTU) of states in each region. The series for California ends just before 2015 due to a declining number of coal plants and data confidentiality.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \caption{Natural Gas Prices by Region}
+    \includegraphics[width= 0.8\textwidth]{figures/chapter5_figures/gas_prices.pdf}
+    \fignote[.8]{Figure displays the average price of natural gas sold to power plants in current dollars per million million British Thermal Units (mmBTU) of states in each region. Natural gas markets are generally more volatile than coal, and natural gas is usually more expensive than coal on a per mmBTU basis.}
+\end{figure}
+
+\begin{table}[!htbp] \centering 
+    \caption{Time-Invariant Fuel Prices \label{fuel_prices}} 
+  \begin{tabular}{@{\extracolsep{5pt}} llc} 
+  \\[-1.8ex]\hline 
+  \hline \\[-1.8ex] 
+   Fuel & Region & Price (\$/mmBTU) \\ 
+  \hline \\[-1.8ex] 
+    Coal & California & 3.901 \\ 
+    Coal & Northwest & 1.918 \\ 
+    Coal & Southwest & 2.385 \\ 
+    Gas & California & 5.338 \\ 
+    Gas & Northwest & 4.579 \\ 
+    Gas & Southwest & 3.923 \\ 
+    Oil & California & 11.466 \\ 
+    Oil & Northwest & 11.466 \\ 
+    Oil & Southwest & 11.466 \\ 
+  \hline \\[-1.8ex] 
+  \end{tabular}
+  \fignote[.8]{Table lists the time-invariant fuel prices (\$/mmBTU) used throughout the analysis. Coal prices are the average quarterly price from the most recent three years of data available from each region, gas prices are the average monthly price since 2019, and oil prices are the average monthly price since 2019. Oil prices are identical across regions because I use the national prices as regional prices are unneccessary and not readily available.}
+\end{table}
+
+\subsubsection*{Identifying Disadvantaged Communities (DACs)}
+
+\begin{table}
+    \centering
+    \caption{Disadvantaged Community Index Comparison}
+    \small
+    \begin{tabular}{L{0.2\textwidth} L{0.35\textwidth} L{0.35\textwidth}}
+        \hline\hline \\ [-1.8ex]
+        Index Category & CalEnviroScreen 4.0 Indicators & Replicated Indicators\\
+        \hline
+        Environmental Exposure Indicators & 
+        \begin{itemize}[noitemsep, topsep=0pt]
+            \item Air Quality: Ozone
+            \item Air Quality: PM2.5
+            \item Children's Lead Risk from Housing
+            \item Diesel Particulate Matter
+            \item Drinking Water Contaminants
+            \item Pesticide Use
+            \item Toxic Release from Facilities
+            \item Traffic Impacts 
+        \end{itemize} &
+        \begin{itemize}[noitemsep, topsep=0pt]
+            \item Ozone
+            \item PM2.5
+            \item Lead paint
+            \item Diesel particulate matter
+            \item Air toxics cancer risk
+            \item Air toxics respiratory
+            \item Traffic proximity
+        \end{itemize} \\
+        \hline
+        Environmental Effect Indicators &
+        \begin{itemize}[noitemsep, topsep=0pt]
+            \item Cleanup Sites
+            \item Groundwater Threats
+            \item Hazardous Waste Generators \& Facilities
+            \item Impaired Water Bodies
+            \item Solid Waste Sites \& Facilities
+        \end{itemize} &
+        \begin{itemize}[noitemsep, topsep=0pt]
+            \item Wastewater discharge
+            \item Superfund proximity
+            \item RMP facility proximity
+            \item Hazardous waste proximity
+            \item Underground storage tanks
+        \end{itemize} \\
+        \hline
+        Sensitive Population Indicators & 
+        \begin{itemize}[noitemsep, topsep=0pt]
+            \item Asthma
+            \item Cardiovascular Disease
+            \item Low Birth Weight Infants
+        \end{itemize} & 
+        \begin{itemize}[noitemsep, topsep=0pt]
+            \item \% under age 5
+            \item \% over age 64
+        \end{itemize} \\
+        \hline 
+        Socioeconomic Factor Indicators & 
+        \begin{itemize}[noitemsep, topsep=0pt]
+            \item Educational Attainment
+            \item Housing Burden
+            \item Linguistic Isolation
+            \item Poverty
+            \item Unemployment
+        \end{itemize} & 
+        \begin{itemize}[noitemsep, topsep=0pt]
+            \item \% people of color
+            \item \% low income
+            \item \% less than high school education
+            \item \% linguistically isolated
+            \item Unemployment rate
+            \item Demographic Index
+        \end{itemize} \\
+        \hline
+    \end{tabular}
+    \vspace{1em}
+    \fignote[1]{
+        Table displays the indicators in each of the four subindexes that make up the CalEnviroScreen 4.0 index compared to indicators used in to create the analogous index in the paper. 
+    }
+\end{table}
