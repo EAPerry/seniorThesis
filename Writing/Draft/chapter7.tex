@@ -14,37 +14,37 @@
 \end{minipage}
 \vfill
 
-\newpage
-\subsection*{A.2\quad Appendix to Chapter 2: Designing Climate Policy}
+% \newpage
+% \subsection*{A.2\quad Appendix to Chapter 2: Designing Climate Policy}
 
-\subsubsection*{The Environmental Kuznets Curve}
+% \subsubsection*{The Environmental Kuznets Curve}
 
-The contemporary literature on the relationship between economic standard of living and environmental decay begins with Simon Kuznets, and his work related not to the environment, but inequality. \cite{kuznets1955economic} laid out a empirical relationship between economic development and inequality. Kuznets findings suggest that income inequality rises as countries move from low-income to middle-income, and income inequality falls as countries move from middle-income to high-income. Diagrammatically, this creates an inverted U-shaped path called the Kuznets Curve with GDP per capita on the horizontal axis and measures of inequality (usually the income ratio between the top quintile and bottom quintile of earners) on the vertical axis. Realizing that economic development and environmental degradation follow a similar relationship, \cite{NBERw3914} were the first to formulate the \emph{Environmental} Kuznets Curve (EKC) in an analysis of NAFTA. While the model was not the primary focus of the original paper, it later led to its own published paper, \cite{grossman1995economic} and is now a standard in environmental economics. 
+% The contemporary literature on the relationship between economic standard of living and environmental decay begins with Simon Kuznets, and his work related not to the environment, but inequality. \cite{kuznets1955economic} laid out a empirical relationship between economic development and inequality. Kuznets findings suggest that income inequality rises as countries move from low-income to middle-income, and income inequality falls as countries move from middle-income to high-income. Diagrammatically, this creates an inverted U-shaped path called the Kuznets Curve with GDP per capita on the horizontal axis and measures of inequality (usually the income ratio between the top quintile and bottom quintile of earners) on the vertical axis. Realizing that economic development and environmental degradation follow a similar relationship, \cite{NBERw3914} were the first to formulate the \emph{Environmental} Kuznets Curve (EKC) in an analysis of NAFTA. While the model was not the primary focus of the original paper, it later led to its own published paper, \cite{grossman1995economic} and is now a standard in environmental economics. 
 
-Figure \ref{EKC} displays the Environmental Kuznets Curve. The EKC hypothesizes that low-income economies will have relatively high environmental quality, as these economies may be more agrarian or pastoral. Countries often move from low-income to middle-income through industrialization, and as countries industrialize, their environmental degradation increases. Eventually though, economic development requires countries to move away from manufacturing and into higher human capital industries. When this happens, sectors dependent on high human capital (e.g., finance, engineering, education) tend to be less harsh on the environment. Past the turning point, economic development will decrease environmental degradation. 
+% Figure \ref{EKC} displays the Environmental Kuznets Curve. The EKC hypothesizes that low-income economies will have relatively high environmental quality, as these economies may be more agrarian or pastoral. Countries often move from low-income to middle-income through industrialization, and as countries industrialize, their environmental degradation increases. Eventually though, economic development requires countries to move away from manufacturing and into higher human capital industries. When this happens, sectors dependent on high human capital (e.g., finance, engineering, education) tend to be less harsh on the environment. Past the turning point, economic development will decrease environmental degradation. 
 
-\begin{figure}
-\centering
-\begin{minipage}{0.48 \textwidth}
-\caption{The EKC \label{EKC}}
-\begin{tikzpicture}[scale = 0.6]
-\draw[thick, <->] (0,10) -- (0,0) -- (10,0);
-\draw[thick, color1]  [domain = 1:9] plot (\x, {8.5 - .5*(\x - 5)^2});
-\node [below right] at (7,0) {GDP/Capita};
-\node[rotate=90, above] at (0,7) {Environmental Degradation};
-\draw[dashed] (5,0) -- (5,9.5) node[right]{\footnotesize Turning Point};
-\end{tikzpicture}
-\end{minipage}
-\begin{minipage}{0.48\textwidth}
-\centering 
-\caption{Application of the  EKC}
-\includegraphics[width=0.9\textwidth]{figures/chapter2_figures/ekc.pdf}
-\end{minipage}
-Data from \cite{owidoutdoorairpollution} 
-%https://ourworldindata.org/outdoor-air-pollution#outdoor-air-pollution-tends-to-rise-with-industrialization-before-falling
-\end{figure}
+% \begin{figure}
+% \centering
+% \begin{minipage}{0.48 \textwidth}
+% \caption{The EKC \label{EKC}}
+% \begin{tikzpicture}[scale = 0.6]
+% \draw[thick, <->] (0,10) -- (0,0) -- (10,0);
+% \draw[thick, color1]  [domain = 1:9] plot (\x, {8.5 - .5*(\x - 5)^2});
+% \node [below right] at (7,0) {GDP/Capita};
+% \node[rotate=90, above] at (0,7) {Environmental Degradation};
+% \draw[dashed] (5,0) -- (5,9.5) node[right]{\footnotesize Turning Point};
+% \end{tikzpicture}
+% \end{minipage}
+% \begin{minipage}{0.48\textwidth}
+% \centering 
+% \caption{Application of the  EKC}
+% \includegraphics[width=0.9\textwidth]{figures/chapter2_figures/ekc.pdf}
+% \end{minipage}
+% Data from \cite{owidoutdoorairpollution} 
+% %https://ourworldindata.org/outdoor-air-pollution#outdoor-air-pollution-tends-to-rise-with-industrialization-before-falling
+% \end{figure}
 
-Despite its quick adoption in the discipline and its continued use, the EKC has largely been discredited \citep{stern2004rise}. \cite{arrow1995economic} importantly note that the usual form of the EKC does not allow for any feedback between the environment and development, implicitly assuming that pollution and other forms of environmental degradation do not hinder economic development. 
+% Despite its quick adoption in the discipline and its continued use, the EKC has largely been discredited \citep{stern2004rise}. \cite{arrow1995economic} importantly note that the usual form of the EKC does not allow for any feedback between the environment and development, implicitly assuming that pollution and other forms of environmental degradation do not hinder economic development. 
 
 % \newpage
 % \subsection*{A.3\quad Appendix to Chapter 3: Ambient Air Pollution \& Electricity Generation}
@@ -82,8 +82,8 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
     $\mathcal{J}$ & Set of all investment options & Exogenous & Chosen\\
     $j_i$ & Generator $i$'s investment decision; $j_i \in \mathcal{J}$ & Endogenous & -- \\
     $j$ & Investment profile, $j = (j_1, j_2, \ldots, j_N)$ & Endogenous & -- \\
-    $\rho_i^0$ & Generator $i$'s initial heat rate (BTU/kWh) & Exogenous & (1) \\
-    $\rho_i$ & Generator $i$'s heat rate (BTU/kwh) & Endogenous & -- \\
+    $\rho_i^0$ & Generator $i$'s initial heat rate (Btu/kWh) & Exogenous & (1) \\
+    $\rho_i$ & Generator $i$'s heat rate (Btu/kwh) & Endogenous & -- \\
     $\tilde{\delta}$ & Heat rate depreciation rate from the investment phase to the generation phase; $\tilde{\delta} \in (0, 1)$ & Exogenous & (10) \\
     $v_i$ & Generator $i$'s stochastic investment cost shock; $v_i > 0$ for all $i \in \mathcal{N}$ & Exogenous & Chosen \\
     $\gamma$ & Constant scalar in the investment cost function; $\gamma > 0$ & Exogenous & (12) \\
@@ -99,10 +99,8 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
     $\overline{q}_i$ & Generator $i$'s nameplate capacity (kW); the maximum rated generation of generator $i$ in an hour & Exogenous & (1) \\
     $q_{itr}$ & Generator $i$'s generation to be sold in region $r$'s wholesale electricity market at time $t$ (kWh) & Endogenous & -- \\
     $f_i$ & The primary fuel type of generator $i$; $f_i \in \{\text{Coal}, \text{Natural Gas}, \text{Oil}\}$ & Exogenous &  (1) \\
-    $u_{f_i}$ & Unit cost of generator $i$'s fuel $f_i$ (\$/BTU) & Exogenous & (6), (7), (8)\\
-
-    $e_{f_i}$ & Greenhouse gas emissions intensity of generator $i$'s fuel $f_i$ (tonnes CO$_2$e/BTU) & Exogenous & \\
-
+    $u_{f_i}$ & Unit cost of generator $i$'s fuel $f_i$ (\$/Btu) & Exogenous & (6), (7), (8)\\
+    $e_{f_i}$ & Greenhouse gas emissions intensity of generator $i$'s fuel $f_i$ (tonnes CO$_2$e/Btu) & Exogenous & (1)\\
     $\tau_r$ & Greenhouse gas emissions tax in region $r$ (\$/tonnes CO$_2$e) & Exogenous & (9) \\
     $P_{tr}$ & Price of electricity in region $r$'s wholesale market at time $t$ & Endogenous & -- \\
     $Q_{tr}$ & Quantity of electricity demanded in region $r$'s wholesale market at time $t$ & Exogenous &  (2) \\
@@ -111,7 +109,7 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
     $G(a_t)$ & Generation matrix, $N \times R$; a function of the operating decision profile (vector) $a_t$; element in the $i$th row and $r$th column is $q_{itr}$ or $\overline{q}_i \1(a_{it} = r)$ & Endogenous & --\\
     $\rho^0$ & $N$-dimensional vector of heat rates in the absence of investment; the $i$th element is $\rho_i^0(1 + \tilde{\delta})$ & Endogenous & -- \\
     $D_{\rho^0 - j}$ & Diagonalized $N\times N$ matrix corresponding with the vector $\rho^0 - j$; for elements along the diagonal, the element in the $i$th row and $i$ column is $\rho_i = \rho_i^0(1 + \tilde{\delta}) - j_i$, all elements not along the diagonal are 0 & Endogenous & -- \\
-    $U$ & Unit cost matrix, $N\times R$; the element in the $i$th row and $r$th column is generator $i$'s cost in region $r$ per BTU, $u_{f_i} + e_{f_i}\tau_r$ & Derived & -- \\
+    $U$ & Unit cost matrix, $N\times R$; the element in the $i$th row and $r$th column is generator $i$'s cost in region $r$ per Btu, $u_{f_i} + e_{f_i}\tau_r$ & Derived & -- \\
     $\overline{q}$ & $N$-dimensional vector of nameplate capacities; $\overline{q} = (\overline{q}_1, \overline{q}_2, \ldots, \overline{q}_N)$ & Derived & -- \\
     $D_{\overline{q}}$ & Diagonalized $N\times N$ matrix corresponding with the vector $\overline{q}$; for elements along the diagonal, the element in the $i$th row and $i$th column is $\overline{q}_i$, all elements not along the diagonal are 0 & Derived & -- \\
     $\1(a_t)$ & Operating decisions matrix, $N \times R$; the element in the $i$th row and $r$th column is $\1(a_{it} = r)$ & Endogenous & -- \\
@@ -149,7 +147,7 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
         \hline \\[-3ex]
         (1) & United States Environmental Protection Agency (EPA). 2021. ``Emissions \& Generation Resource Integrated Database (eGRID), 2019" Washington, DC: Office of Atmospheric Protection, Clean Air Markets Division. Available from EPA's eGRID web site: \url{https://www.epa.gov/egrid}.\\ \\[-3ex]
         \hline \\[-3ex]
-        (2) & United States Energy Information Administration (EIA). 2023. ``Hourly Electric Good Monitor'' Region Files. Available at: \url{https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/US48/US48}\\ \\[-3ex]
+        (2) & United States Energy Information Administration (EIA). 2023. ``Hourly Electric Grid Monitor'' Region Files. Available at: \url{https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/US48/US48}\\ \\[-3ex]
         \hline \\[-3ex]
         (3) & United States Environmental Protection Agency. 2021 version. EJScreen. Census Tract-Level US Percentiles. Retrieved: 2023-03-03. Available at: \url{https://gaftp.epa.gov/EJSCREEN/2021/} \\ \\[-3ex]
         \hline \\[-3ex]
@@ -169,34 +167,17 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
         \hline \\[-3ex]
         (11) & United States Energy Information Administration. 2022. Carbon Dioxide Emissions Coefficient. Available at: \url{https://www.eia.gov/environment/emissions/co2_vol_mass.php}\\ \\[-3ex]
         \hline \\[-3ex]
-        Paige, Weber. 2021
-        \\ \\[-3ex]
+        (12) & Paige, Weber. 2021. ``Dynamic responses to carbon pricing in the electricity sector,'' Working paper, University of North Carolina at Chapel Hill.\\ \\[-3ex]
         \hline\hline
     \end{longtable}
 \end{center}
-
-%\subsubsection*{Fuel Prices}
-
-\begin{figure}[!hbtp]
-    \centering
-    \caption{Coal Prices by Region}
-    \includegraphics[width = 0.8\textwidth]{figures/chapter5_figures/coal_prices.pdf}
-    \fignote[.8]{Figure displays the average price of coal sold to power plants in current dollars per million British Thermal Units (mmBTU) of states in each region. The series for California ends just before 2015 due to a declining number of coal plants and data confidentiality.}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \caption{Natural Gas Prices by Region}
-    \includegraphics[width= 0.8\textwidth]{figures/chapter5_figures/gas_prices.pdf}
-    \fignote[.8]{Figure displays the average price of natural gas sold to power plants in current dollars per million million British Thermal Units (mmBTU) of states in each region. Natural gas markets are generally more volatile than coal, and natural gas is usually more expensive than coal on a per mmBTU basis.}
-\end{figure}
 
 \begin{table}[!htbp] \centering 
     \caption{Time-Invariant Fuel Prices \label{fuel_prices}} 
   \begin{tabular}{@{\extracolsep{5pt}} llc} 
   \\[-1.8ex]\hline 
   \hline \\[-1.8ex] 
-   Fuel & Region & Price (\$/mmBTU) \\ 
+   Fuel & Region & Price (\$/MMBtu) \\ 
   \hline \\[-1.8ex] 
     Coal & California & 3.901 \\ 
     Coal & Northwest & 1.918 \\ 
@@ -209,14 +190,118 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
     Oil & Southwest & 11.466 \\ 
   \hline \\[-1.8ex] 
   \end{tabular}
-  \fignote[.8]{Table lists the time-invariant fuel prices (\$/mmBTU) used throughout the analysis. Coal prices are the average quarterly price from the most recent three years of data available from each region, gas prices are the average monthly price since 2019, and oil prices are the average monthly price since 2019. Oil prices are identical across regions because I use the national prices as regional prices are unneccessary and not readily available.}
+  \fignote[.8]{Table lists the time-invariant fuel prices (\$/MMBtu) used throughout the analysis. Coal prices are the average quarterly price from the most recent three years of data available from each region, gas prices are the average monthly price since 2019, and oil prices are the average monthly price since 2019. Oil prices are identical across regions because I use the national prices as regional prices are unneccessary and not readily available.}
 \end{table}
 
-\subsubsection*{Identifying Disadvantaged Communities (DACs)}
+\begin{figure}[!hbtp]
+    \centering
+    \caption{Coal Prices by Region}
+    \includegraphics[width = 0.8\textwidth]{figures/chapter5_figures/coal_prices.pdf}
+    \fignote[.8]{Figure displays the average price of coal sold to power plants in current dollars per million British Thermal Units (MMBtu) of states in each region. The series for California ends just before 2015 due to a declining number of coal plants and data confidentiality.}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \caption{Natural Gas Prices by Region}
+    \includegraphics[width= 0.8\textwidth]{figures/chapter5_figures/gas_prices.pdf}
+    \fignote[.8]{Figure displays the average price of natural gas sold to power plants in current dollars per million million British Thermal Units (MMBtu) of states in each region. Natural gas markets are generally more volatile than coal, and natural gas is usually more expensive than coal on a per MMBtu basis.}
+\end{figure}
 
 \begin{table}
     \centering
-    \caption{Disadvantaged Community Index Comparison}
+    \caption{Power Plant Summary Statistics}
+\begin{tabular}{l c c c c c}
+    \hline\hline
+    Variable & Mean & St. Dev. & Min & Median & Max \\
+    \hline\\[-1.8ex]
+    \textit{Coal} \\
+    \hline
+    Capacity Factor & 0.524 & 0.188 & 0.135 & 0.526 & 0.892 \\ 
+    Capacity (MW) & 730.438 & 691.725 & 1.500 & 525.900 & 2,441.900 \\ 
+    Heat Rate (MMBtu/MWh) & 10.757 & 2.305 & 5.534 & 11.065 & 16.158 \\ 
+    Input Price (\$/MWh) & 22.191 & 5.366 & 10.615 & 21.960 & 37.285 \\ 
+    tonnes CO$_2$e/MWh & 1.042 & 0.226 & 0.527 & 1.075 & 1.580 \\ 
+    kg NO$_x$/MWh & 0.859 & 0.462 & 0.210 & 0.826 & 2.344 \\ 
+    kg SO$_2$/MWh & 1.056 & 2.113 & 0.001 & 0.436 & 10.109 \\ 
+    kg PM2.5/MWh & 0.066 & 0.093 & 0.0001 & 0.039 & 0.522 \\ \\[-1.8ex]
+    \textit{Gas} \\
+    \hline
+    Capacity Factor & 0.350 & 0.299 & 0.0004 & 0.297 & 0.972 \\ 
+    Capacity (MW) & 197.335 & 314.527 & 0.900 & 49.800 & 1,857.000 \\ 
+    Heat Rate (MMBtu/MWh) & 8.933 & 3.261 & 1.033 & 8.184 & 22.107 \\ 
+    Input Price (\$/MWh) & 44.145 & 16.061 & 5.517 & 39.954 & 105.106 \\ 
+    tonnes CO$_2$e/MWh & 0.475 & 0.178 & 0.000 & 0.434 & 1.342 \\ 
+    kg NO$_x$/MWh & 1.410 & 3.323 & 0.000 & 0.154 & 24.725 \\ 
+    kg SO$_2$/MWh & 0.014 & 0.090 & 0.000 & 0.003 & 1.253 \\ 
+    kg PM2.5/MWh & 0.025 & 0.064 & 0.000 & 0.014 & 0.817 \\ \\[-1.8ex]
+    \textit{Oil} \\
+    \hline
+    Capacity Factor & 0.175 & 0.280 & 0.0003 & 0.002 & 0.772 \\ 
+    Capacity (MW) & 67.625 & 76.332 & 11.700 & 27.150 & 223.500 \\ 
+    Heat Rate (MMBtu/MWh) & 19.456 & 13.205 & 8.015 & 17.343 & 48.441 \\ 
+    Input Price (\$/MWh) & 223.093 & 151.417 & 91.903 & 198.863 & 555.443 \\ 
+    tonnes CO$_2$e/MWh & 1.502 & 0.931 & 0.769 & 1.274 & 3.600 \\ 
+    kg NO$_x$/MWh & 11.482 & 12.626 & 0.000 & 7.257 & 38.160 \\ 
+    kg SO$_2$/MWh & 3.763 & 3.908 & 0.000 & 2.817 & 11.101 \\ 
+    kg PM2.5/MWh & 0.723 & 1.277 & 0.023 & 0.121 & 3.682 \\ 
+    \hline \\[-1.8ex] 
+\end{tabular}
+\fignote[1]{$N_\text{Coal} = 40$, $N_\text{Gas} = 433$, $N_\text{Oil} = 8$.}
+\end{table}
+
+\begin{figure}[!hbtp]
+    \centering
+    \caption{Nameplate Capacity Distribution by Generating Group \label{cluster_cap}}
+    \includegraphics[width = 0.8\textwidth]{figures/chapter5_figures/kclusters_capacity.pdf}
+    \fignote[.8]{Figure displays the distribution of the nameplate capacities of power plants in each of the thirty groups that emerges from the $k$-means clustering on set of power plants.}
+\end{figure}
+
+\begin{figure}[!hbtp]
+    \centering
+    \caption{Nameplate Capacity Distribution by Generating Group \label{cluster_hrate}}
+    \includegraphics[width = 0.8\textwidth]{figures/chapter5_figures/kclusters_hrate.pdf}
+    \fignote[.8]{Figure displays the distribution of the heat rates (MMBtu/Mwh) of power plants in each of the thirty groups that emerges from the $k$-means clustering on set of power plants.}
+\end{figure}
+
+
+
+
+
+
+
+\begin{figure}
+    \centering
+    \caption{Hourly Demand \label{hourly_demand}}
+    \includegraphics[width=0.7\textwidth]{figures/chapter5_figures/hourly_demand.pdf}
+    \fignote[.9]{
+        Figure shows the average hourly demand for electricity across he entire Western Interconnection. Demand usually dips to its loweest point around midmorning, and reaches its highest point in the evening.
+    }
+\end{figure}
+
+\begin{figure}
+    \centering
+    \caption{Monthly Demand \label{monthly_demand}}
+    \includegraphics[width=0.7\textwidth]{figures/chapter5_figures/monthly_demand.pdf}
+    \fignote[.9]{
+        Figure shows the average monthly demand for electricity across he entire Western Interconnection. Demand usually dips to its loweest point around May, and reaches its highest point in the around August.
+    }
+\end{figure}
+
+\newpage
+\subsubsection*{Disadvantaged Communities \& Reconstructed EJ Index}
+
+In this subsection I discuss the reconstruction of CalEnviroScreen 4.0 index for all Census tracts in the Western Interconnection. All data used to create the official CalEnviroScreen 4.0 index are available from the California Office of Environmental Health and Hazard Assessment (OEHHA). I begin by taking the raw data and using this to replicate the OEHHA's published index to ensure correct handling of missing data and correct weighting of individual components in the index. 
+
+Each variable in the index belongs to one of four groups: Environmental Exposure Indicators, Environmental Effect Indicators, Sensitive Population Indicators, or Socioeconomic Factor Indicators. The EPA's Environmental Justice screening tool does not contain the exact same variables that go into the CalEnviroScreen index, but these are similar and fall into similar groups. Table \ref{DAC_crosswalk} displays the crosswalk between the variables in the original CalEnviroScreen index and the variables I use from the EPA's Environmental Justice screening tool to reconstruct the index.For each variable, I rank all Census tracts by their value for the variable and calculate the percentile each Census tract belongs to for each variable. Then for each of the four groups of variables, I average the Census tracts' percentile rankings for each the of the variables in the group. This average percentile forms a subindex for each of the four groups of the variables in the index. With these subindexes, I follow the CalEnviroScreen method for calculating the aggregated subindexes:
+\begin{align*}
+    \text{Pollution Burden} &= \tfrac23 \cdot \text{Envrionmental Exposure} + \tfrac13 \cdot \text{Environmental Effect}\\
+    \text{Population Characteristics} &= \tfrac12 \cdot \text{Sensitive Population} + \tfrac12 \cdot \text{Socioeconomic Factor}
+\end{align*}
+Both of these aggregated subindexes, the Pollution Burden subindex and the Population Characteristics subindex, are then rescaled such that they are between 0 and 10 by finding the maximum value for each subindex, dividing all the scores by this value, and then multiplying by 10. Finally, the fully reconstructed index is the product of the rescaled Pollution Burden subindex and the rescaled Population Characteristics subindex. Rescaling the subindexes between 0 and 10 ensures that the full index is between 0 and 100. 
+
+\begin{table}
+    \centering
+    \caption{Disadvantaged Community Index Comparison \label{DAC_crosswalk}}
     \small
     \begin{tabular}{L{0.2\textwidth} L{0.35\textwidth} L{0.35\textwidth}}
         \hline\hline \\ [-1.8ex]
@@ -293,3 +378,66 @@ Despite its quick adoption in the discipline and its continued use, the EKC has 
         Table displays the indicators in each of the four subindexes that make up the CalEnviroScreen 4.0 index compared to indicators used in to create the analogous index in the paper. 
     }
 \end{table}
+
+\begin{figure}
+    \centering
+    \caption{Disadvantaged Communities (DACs) Designation Comparison by Percentiles}
+    \includegraphics[width=1\textwidth]{figures/chapter5_figures/DAC_des_scatter.pdf}
+    \fignote[1]{
+        Figure displays the scatter plot between the percentile ranking of California Census tracts in CalEnviroScreen and the percentile rankings of California Census tracts in the reconstructed or replicated index. Blue dots indicate that a Census tract was identified as a DAC in both CalEnviroScreen and the reconstructed index, red dots indicate that a Census tract was identified as not a DAC in both CalEnviroScreen and the reconstructed index, green dots indicate that a Census tract was identified as a DAC in the reconstructed index but not the official index, and orange dots indicate that a Census tract was identified as a DAC in the official index but not the reconstructed index. There is a strong relationship between rankings in the orginal index and the replicated index.
+    }
+\end{figure}
+
+
+\begin{table}[!htbp] \centering 
+    \caption{Summary Statistics for Census Tracts in the Western Interconnection \label{dac_summary}} 
+    \footnotesize
+  \begin{tabular}{@{\extracolsep{3pt}}lcccccc} 
+  \\[-1.8ex]\hline 
+  \hline \\[-1.8ex] 
+  & \multicolumn{3}{c}{Non-Disadvantaged} & \multicolumn{3}{c}{Disadvantaged} \\
+    \cline{2-4} \cline{5-7}\\
+  Statistic & Median & Mean & St. Dev. & Median & Mean & St. Dev.\\ 
+  \hline \\ [-.8ex] 
+    \emph{Pollution Burden} \\
+    \hline \\[-.8ex]
+    \%-ile Traffic proximity & 51.9 & 51.1 & 29.1 & 74.5 & 65.7 & 30.2 \\ 
+    \%-ile Wastewater discharge & 54.9 & 53.5 & 31.6 & 77.4 & 66.9 & 30.3 \\  
+    \%-ile Superfund proximity & 46.3 & 46.1 & 28.6 & 71.4 & 63.0 & 29.3 \\
+    \%-ile Hazardous waste proximity & 60.9 & 55.8 & 29.1 & 86.4 & 74.7 & 28.5 \\ 
+    \%-ile Ozone & 57.0 & 62.6 & 37.2  & 88.7 & 76.6 & 27.7 \\  
+    \%-ile Particulate Matter 2.5 & 45.4 & 50.2 & 35.9  & 94.5 & 75.9 & 32.6 \\ \\[-.8ex]
+    \emph{Population Characteristics} \\
+    \hline \\[-.8ex]
+    Total Population & 4,538 & 4,869.4 & 2,432.4 & 4,519 & 4,684.4 & 1,903.7 \\ 
+    \% People of color & 33.2 & 37.7 & 23.2 & 80.6 & 72.5 & 24.7 \\  
+    \% Low income & 22.9 & 25.6 & 15.0 & 44.4 & 44.1 & 16.9 \\ 
+    \% Less than HS diploma & 6.9 & 9.3 & 8.6 & 23.6 & 25.2 & 14.4 \\ 
+    \% Under age 5 & 5.4 & 5.5 & 2.6 & 7.0 & 7.1 & 2.6 \\ 
+    \% Over age 64 & 14.7 & 16.4 & 9.8 & 12.1 & 13.4 & 7.3 \\ 
+    Unemployment rate & 4.4 & 5.0 & 3.5 & 6.9 & 7.7 & 4.5 \\ 
+  \hline \\[-1.8ex] 
+  \end{tabular} 
+  \fignote[1]{
+    $N = 15,547$, $N_\text{Disadvantaged} = 4,587$, $N_\text{Non-disadvantaged} = 10,960$. Observations are 2010 Census tracts. All data on these Census tracts come from the EPA's Environmental Justice screening tool. 
+  } 
+\end{table} 
+
+% High cost investment scenario
+\begin{figure}
+    \centering
+    \caption{Power Plants Making Heat Rate Improving Investments---High Cost\label{hc_inv_region}}
+    \includegraphics[width=0.8\textwidth]{figures/chapter5_figures/hc_inv_region.pdf}
+    \fignote[.9]{
+        Figure shows the number of power plants that make heat rate improving investments under each carbon price. These simulations all use a high investment cost scenario, where the investment costs for each power plant have been raised by a factor of ten. All policy scenarios in the figure include a BCA.
+    }
+\end{figure}
+
+\begin{figure}
+    \centering
+    \caption{The EI Gap for SO$_2$ and PM2.5 in California \label{ei_gap_so2_pm25_cal}}
+    \includegraphics[width=\textwidth]{figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf}
+    \fignote[1]{
+        Figure shows the simulated average concentration of SO$_2$ and PM2.5 for DACs and non-DACs across five different carbon prices for the subset of Census tracts in California. The distance between the two series is the EI Gap.
+    }
+\end{figure}

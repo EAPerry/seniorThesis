@@ -416,7 +416,7 @@ pdf("Writing/Draft/figures/chapter5_figures/coal_prices.pdf",
     width = 5, height = 3)
 ggplot(coal_pr, aes(x = Date, y = coal_price, color = region)) + 
   geom_line(lwd = 1.5) + 
-  labs(x = "\nDate", y = "Price per mmBTU\n") + 
+  labs(x = "\nDate", y = "Price per MMBtu\n") + 
   scale_y_continuous(labels = scales::label_dollar()) + 
   theme(legend.title = element_blank())
 dev.off()
@@ -479,7 +479,7 @@ pdf("Writing/Draft/figures/chapter5_figures/gas_prices.pdf",
     width = 5, height = 3)
 ggplot(gas_pr, aes(x = Date, y = fuel_price, color = region)) + 
   geom_line(lwd = 1.5) + 
-  labs(x = "\nDate", y = "Price per mmBTU\n") + 
+  labs(x = "\nDate", y = "Price per MMBtu\n") + 
   scale_y_continuous(labels = scales::label_dollar()) + 
   theme(legend.title = element_blank())
 dev.off()
@@ -524,7 +524,7 @@ plants <- left_join(plants, fuel_pr, by=c("region", "fuel_cat"))
 fuel_pr <- fuel_pr %>% 
   filter(region != "National") %>% 
   mutate(fuel_price = round(fuel_price, 3))
-colnames(fuel_pr) <- c("Fuel", "Region", "Price ($/mmBTU)")
+colnames(fuel_pr) <- c("Fuel", "Region", "Price ($/MMBtu)")
 
 stargazer(
   fuel_pr,
@@ -554,15 +554,16 @@ summ_df <- plants %>%
 # temp <- as.data.frame(temp)
 # 
 # stargazer(temp, summary = TRUE, summary.stat = c("mean", "sd", "min", "median", "max"),
-#           covariate.labels = c("Generator Age (years)",
-#                                "Capacity Factor",
+#           covariate.labels = c("Capacity Factor",
 #                                "Capacity (MW)",
-#                                "Heat Rate (mmBTU/MWh)",
+#                                "Heat Rate (MMBtu/MWh)",
 #                                "Input Price (\\$/MWh)",
-#                                "tonnes CO$2$e/MWh",
+#                                "tonnes CO$_2$e/MWh",
 #                                "kg NO$_x$/MWh",
 #                                "kg SO$_2$/MWh",
 #                                "kg PM2.5/MWh"))
+
+# plants %>% count(fuel_cat)
 
 rm(coal_pr, gas_pr, oil_pr, fuel_pr, nw, sw, summ_df)
 
@@ -615,11 +616,11 @@ demand_sch <- demand_sch %>%
   )
 
 pdf("Writing/Draft/figures/chapter5_figures/residual_demand_region.pdf",
-    width = 4, height = 6)
-ggplot(demand_sch, aes(x= resid_D, fill = Region)) +
-  facet_wrap(facets = ~Region, nrow = 3) + 
-  geom_histogram(color = "white") + 
-  labs(x = "\nResidual Demand (MW)", y = "Frequency\n") + 
+    width = 6, height = 4)
+ggplot(demand_sch, aes(x= resid_D/1000, fill = Region)) +
+  facet_wrap(facets = ~Region, nrow = 2, ncol=2) + 
+  geom_histogram(color = "white", bins = 20) + 
+  labs(x = "\nResidual Demand (1000 MW)", y = "Frequency (# of Hours)\n") + 
   theme(legend.position = "none")
 dev.off()
 
@@ -1103,6 +1104,55 @@ temp <- annual_sim %>%
     annual_gen = sum(annual_gen)
   )
 
+# temp <- temp %>% 
+#   group_by(region, tau) %>% 
+#   summarise(
+#     annual_gen = sum(annual_gen)
+#   )
+# 
+# (65104053 - 70190296)/70190296 * 100
+# (113086551 - 111429787)/(70190296 - 65038932)
+# (187482733 - 183988121)/(70190296 - 65038932)
+
+temp <- temp %>% 
+  group_by(fuel_cat, tau) %>% 
+  summarise(
+    annual_gen = sum(annual_gen)
+  )
+
+temp <- temp %>% 
+  filter(fuel_cat != "Oil")
+
+temp <- temp %>% 
+  mutate(
+    pct_chng = ifelse(
+      fuel_cat == "Gas", (annual_gen - temp$annual_gen[6])/temp$annual_gen[6],
+      (annual_gen - temp$annual_gen[1])/temp$annual_gen[1]
+    )
+  )
+
+# (159705384 - 205902820)/205902820 * 100
+
+pdf("Writing/Draft/figures/chapter5_figures/gen_fuel_bca_pct.pdf",
+    width = 6, height = 4)
+ggplot(temp, aes(x= tau, y=pct_chng, color = fuel_cat)) +
+  geom_line(lwd=2) +  
+  geom_point(color = "white", size = 5) +
+  geom_point(size = 4) +
+  labs(x='\nCalifornia Emissions Price ($/tonne)', 
+       y='% Change in Generation\nFrom Carbon Price\n') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  scale_y_continuous(labels = scales::percent_format()) + 
+  theme(legend.title = element_blank(), legend.position = "right")
+dev.off()
+
+temp <- annual_sim %>% 
+  filter(bca == 1) %>% 
+  group_by(fuel_cat, region, tau) %>% 
+  summarise(
+    annual_gen = sum(annual_gen)
+  )
+
 pdf("Writing/Draft/figures/chapter5_figures/gen_fuel_bca.pdf",
     width = 6, height = 4)
 ggplot(temp, aes(x= tau, y=annual_gen, fill = fuel_cat)) +
@@ -1125,10 +1175,51 @@ ggplot(temp, aes(x= tau, y=annual_gen, fill = region)) +
   theme(legend.title = element_blank())
 dev.off()
 
-### Investment Outcomes ---------------------------------------------------------
+# Without BCA
 
 temp <- annual_sim %>% 
-  filter(bca == 1, inv_choice == 1) %>% 
+  filter(bca == 0) %>% 
+  group_by(fuel_cat, region, tau) %>% 
+  summarise(
+    annual_gen = sum(annual_gen)
+  )
+
+# temp <- temp %>% 
+#   group_by(region, tau) %>% 
+#   summarise(
+#     annual_gen = sum(annual_gen)
+#   )
+
+(70190296 - 58740134)/70190296*100
+
+pdf("Writing/Draft/figures/chapter5_figures/gen_fuel_nobca.pdf",
+    width = 6, height = 4)
+ggplot(temp, aes(x= tau, y=annual_gen, fill = fuel_cat)) +
+  geom_bar(stat = 'identity', position = 'fill') + 
+  labs(x='\nCalifornia Emissions Price ($/tonne)', 
+       y='% of Generation\n') +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+dev.off()
+
+pdf("Writing/Draft/figures/chapter5_figures/gen_region_nobca.pdf",
+    width = 6, height = 4)
+ggplot(temp, aes(x= tau, y=annual_gen, fill = region)) +
+  geom_bar(stat = 'identity', position = 'fill') + 
+  labs(x='\nCalifornia Emissions Price ($/tonne)', 
+       y='% of Generation\n') +
+  scale_y_continuous(labels = scales::percent_format()) +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+dev.off()
+
+
+### Investment Outcomes --------------------------------------------------------
+
+# Normal investment costs
+temp <- annual_sim %>% 
+  filter(bca == 0, inv_choice == 1) %>% 
   group_by(tau, region) %>% 
   summarize(
     count = n()
@@ -1144,11 +1235,12 @@ ggplot(temp, aes(x= tau, y = count, fill = region)) +
   theme(legend.title = element_blank())
 dev.off()
 
+
 ### Emissions Outcomes ---------------------------------------------------------
 
 # With BCA
 
-temp <- annual_sim %>% 
+temp_a <- annual_sim %>% 
   filter(bca == 1) %>% 
   group_by(region, tau) %>% 
   summarise(
@@ -1158,47 +1250,235 @@ temp <- annual_sim %>%
     annual_pm25 = sum(annual_pm25)
   )
 
+temp_b <- temp_a %>% filter(tau == 0) 
+temp_b <- c(
+  "California" = temp_b$annual_co2e[1],
+  "Northwest" = temp_b$annual_co2e[2],
+  "Southwest" = temp_b$annual_co2e[3]
+)
+temp_b <- temp_a %>% 
+  mutate(
+    co2e_changes = annual_co2e - temp_b[region]
+  ) %>% 
+  filter(tau != 0)
+
+
+# (176278756 - 180111618 + 43943627 - 66367657)/(36552761 - 29139031)
+
+# temp <- temp %>% 
+#   group_by(tau) %>% 
+#   summarise(
+#     annual_co2e = sum(annual_co2e),
+#     annual_nox = sum(annual_nox),
+#     annual_so2 = sum(annual_so2),
+#     annual_pm25 = sum(annual_pm25)
+#   )
+# 
+# 
+# (29139031 - 36552761)/36552761
+# (176278756 - 180111618)/180111618
+# (43943627 - 66367657)/66367657
+# (249361415 - 283032035)/283032035
+# 249361415 - 283032035
+# 33670620/4.6
+
+p1 <- ggplot(temp_a, aes(x= tau, y=annual_co2e/10^6, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x='\nCalifornia Emissions \nPrice ($/tonne)', 
+       y='Annual CO2e Emissions \n(Million tonnes)') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
+p2 <- ggplot(temp_b, aes(x= tau, y=co2e_changes/10^6, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x='\nCalifornia Emissions \nPrice ($/tonne)', 
+       y='Annual CO2e Emissions \nReductions (Million tonnes)') +
+  scale_x_continuous(breaks = c(20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
 pdf("Writing/Draft/figures/chapter5_figures/sim_co2e_bca.pdf",
     width = 6, height = 4)
-ggplot(temp, aes(x= tau, y=annual_co2e/10^9, fill = region)) +
-  geom_bar(stat = 'identity', position = 'stack') + 
-  labs(x='\nCalifornia Emissions Price ($/tonne)', 
-       y='Annual CO2e Emissions (Gigatonnes)\n') +
-  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
-  theme(legend.title = element_blank())
+ggpubr::ggarrange(p1, p2, ncol = 2, nrow = 1, labels = c("A","B"), 
+                  common.legend = T)
 dev.off()
 
-pdf("Writing/Draft/figures/chapter5_figures/sim_nox_bca.pdf",
-    width = 6, height = 4)
-ggplot(temp, aes(x= tau, y=annual_nox, fill = region)) +
+# NOx
+
+temp_b <- temp_a %>% filter(tau == 0) 
+temp_b <- c(
+  "California" = temp_b$annual_nox[1],
+  "Northwest" = temp_b$annual_nox[2],
+  "Southwest" = temp_b$annual_nox[3]
+)
+temp_b <- temp_a %>% 
+  mutate(
+    nox_changes = annual_nox - temp_b[region]
+  ) %>% 
+  filter(tau != 0)
+
+p1 <- ggplot(temp_a, aes(x= tau, y=annual_nox/10^3, fill = region)) +
   geom_bar(stat = 'identity', position = 'stack') + 
-  labs(x='\nCalifornia Emissions Price ($/tonne)', 
-       y='Annual NOx Emissions (tonnes)\n') +
+  labs(x="",
+       y='Annual NOx Emissions \n(Thousand tonnes)') +
   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
   theme(legend.title = element_blank())
+
+p2 <- ggplot(temp_b, aes(x= tau, y=nox_changes/10^3, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x="",
+       y='Annual NOx Emissions \nReductions (Thousand tonnes)') +
+  scale_x_continuous(breaks = c(20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
+# pdf("Writing/Draft/figures/chapter5_figures/sim_nox_bca.pdf",
+#     width = 6, height = 4)
+# ggpubr::ggarrange(p1, p2, ncol = 2, nrow = 1, labels = c("A","B"), 
+#                   common.legend = T)
+# dev.off()
+
+# SO2
+
+temp_b <- temp_a %>% filter(tau == 0) 
+temp_b <- c(
+  "California" = temp_b$annual_so2[1],
+  "Northwest" = temp_b$annual_so2[2],
+  "Southwest" = temp_b$annual_so2[3]
+)
+temp_b <- temp_a %>% 
+  mutate(
+    so2_changes = annual_so2 - temp_b[region]
+  ) %>% 
+  filter(tau != 0)
+
+p3 <- ggplot(temp_a, aes(x= tau, y=annual_so2/10^3, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x='', 
+       y='Annual SO2 Emissions \n(Thousand tonnes)') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
+p4 <- ggplot(temp_b, aes(x= tau, y=so2_changes/10^3, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x='', 
+       y='Annual SO2 Emissions \nReductions (Thousand tonnes)') +
+  scale_x_continuous(breaks = c(20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
+# pdf("Writing/Draft/figures/chapter5_figures/sim_so2_bca.pdf",
+#     width = 6, height = 4)
+# ggpubr::ggarrange(p1, p2, p3, p4, ncol = 2, nrow = 2, labels = c("A","B", "C", "D"), 
+#                   common.legend = T, 
+#                   )
+# dev.off()
+
+# PM25
+
+temp_b <- temp_a %>% filter(tau == 0) 
+temp_b <- c(
+  "California" = temp_b$annual_pm25[1],
+  "Northwest" = temp_b$annual_pm25[2],
+  "Southwest" = temp_b$annual_pm25[3]
+)
+temp_b <- temp_a %>% 
+  mutate(
+    pm25_changes = annual_pm25 - temp_b[region]
+  ) %>% 
+  filter(tau != 0)
+
+p5 <- ggplot(temp_a, aes(x= tau, y=annual_pm25/10^3, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x='\nCalifornia Emissions \nPrice ($/tonne)', 
+       y='Annual PM2.5 Emissions \n(Thousand tonnes)') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
+p6 <- ggplot(temp_b, aes(x= tau, y=pm25_changes/10^3, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x='\nCalifornia Emissions \nPrice ($/tonne)', 
+       y='Annual PM2.5 Emissions \nReductions (Thousand tonnes)') +
+  scale_x_continuous(breaks = c(20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
+pdf("Writing/Draft/figures/chapter5_figures/sim_pol_bca.pdf",
+    width = 6, height = 9)
+ggpubr::ggarrange(p1, p2, p3, p4, p5, p6,
+                  ncol = 2, nrow = 3, labels = c("A","B", "C", "D", "E", "F"), 
+                  common.legend = T)
 dev.off()
 
-pdf("Writing/Draft/figures/chapter5_figures/sim_so2_bca.pdf",
-    width = 6, height = 4)
-ggplot(temp, aes(x= tau, y=annual_so2, fill = region)) +
-  geom_bar(stat = 'identity', position = 'stack') + 
-  labs(x='\nCalifornia Emissions Price ($/tonne)', 
-       y='Annual SO2 Emissions (tonnes)\n') +
-  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
-  theme(legend.title = element_blank())
-dev.off()
 
-pdf("Writing/Draft/figures/chapter5_figures/sim_pm25_bca.pdf",
-    width = 6, height = 4)
-ggplot(temp, aes(x= tau, y=annual_pm25, fill = region)) +
-  geom_bar(stat = 'identity', position = 'stack') + 
-  labs(x='\nCalifornia Emissions Price ($/tonne)', 
-       y='Annual PM2.5 Emissions (tonnes)\n') +
-  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
-  theme(legend.title = element_blank())
-dev.off()
+# pdf("Writing/Draft/figures/chapter5_figures/sim_pm25_bca.pdf",
+#     width = 6, height = 4)
+# ggplot(temp, aes(x= tau, y=annual_pm25, fill = region)) +
+#   geom_bar(stat = 'identity', position = 'stack') + 
+#   labs(x='\nCalifornia Emissions Price ($/tonne)', 
+#        y='Annual PM2.5 Emissions (tonnes)\n') +
+#   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+#   theme(legend.title = element_blank())
+# dev.off()
 
 # With no BCA
+
+temp <- annual_sim %>% 
+  filter(bca == 0) %>% 
+  group_by(region, tau) %>% 
+  summarise(
+    annual_co2e = sum(annual_co2e),
+    annual_nox = sum(annual_nox),
+    annual_so2 = sum(annual_so2),
+    annual_pm25 = sum(annual_pm25)
+  )
+
+temp_a <- temp
+
+temp_b <- temp_a %>% filter(tau == 0) 
+temp_b <- c(
+  "California" = temp_b$annual_co2e[1],
+  "Northwest" = temp_b$annual_co2e[2],
+  "Southwest" = temp_b$annual_co2e[3]
+)
+temp_b <- temp_a %>% 
+  mutate(
+    co2e_changes = annual_co2e - temp_b[region]
+  ) %>% 
+  filter(tau != 0)
+
+# temp <- temp %>%
+#   group_by(tau) %>%
+#   summarise(
+#     annual_co2e = sum(annual_co2e),
+#     annual_nox = sum(annual_nox),
+#     annual_so2 = sum(annual_so2),
+#     annual_pm25 = sum(annual_pm25)
+#   )
+# (276222223 - 283032035)/283032035
+# (26028114 - 36552761)/36552761
+# (186771085- 180111618)/180111618
+# (67101854 - 66367657)/66367657
+# (186771085 - 180111618 + 67101854 - 66367657)/(36552761 - 26028114)
+
+
+
+p1 <- ggplot(temp_a, aes(x= tau, y=annual_co2e/10^6, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x='\nCalifornia Emissions \nPrice ($/tonne)', 
+       y='Annual CO2e Emissions \n(Million tonnes)') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
+p2 <- ggplot(temp_b, aes(x= tau, y=co2e_changes/10^6, fill = region)) +
+  geom_bar(stat = 'identity', position = 'stack') + 
+  labs(x='\nCalifornia Emissions \nPrice ($/tonne)', 
+       y='Annual CO2e Emissions \nReductions (Million tonnes)') +
+  scale_x_continuous(breaks = c(20, 40, 60, 80)) +
+  theme(legend.title = element_blank())
+
+pdf("Writing/Draft/figures/chapter5_figures/sim_co2e_nobca.pdf",
+    width = 6, height = 4)
+ggpubr::ggarrange(p1, p2, ncol = 2, nrow = 1, labels = c("A","B"), 
+                  common.legend = T)
+dev.off()
+
 
 temp <- annual_sim %>% 
   filter(bca == 0) %>% 
@@ -1216,7 +1496,7 @@ ggplot(temp, aes(x= tau, y=annual_co2e/10^9, fill = region)) +
   geom_bar(stat = 'identity', position = 'stack') + 
   labs(x='\nCalifornia Emissions Price ($/tonne)', 
        y='Annual CO2e Emissions (Gigatonnes)\n') +
-  scale_x_continuous(breaks = c(0, 20)) +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
   theme(legend.title = element_blank())
 dev.off()
 
@@ -1226,7 +1506,7 @@ ggplot(temp, aes(x= tau, y=annual_nox, fill = region)) +
   geom_bar(stat = 'identity', position = 'stack') + 
   labs(x='\nCalifornia Emissions Price ($/tonne)', 
        y='Annual NOx Emissions (tonnes)\n') +
-  scale_x_continuous(breaks = c(0, 20)) +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
   theme(legend.title = element_blank())
 dev.off()
 
@@ -1236,7 +1516,7 @@ ggplot(temp, aes(x= tau, y=annual_so2, fill = region)) +
   geom_bar(stat = 'identity', position = 'stack') + 
   labs(x='\nCalifornia Emissions Price ($/tonne)', 
        y='Annual SO2 Emissions (tonnes)\n') +
-  scale_x_continuous(breaks = c(0, 20)) +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
   theme(legend.title = element_blank())
 dev.off()
 
@@ -1246,7 +1526,7 @@ ggplot(temp, aes(x= tau, y=annual_pm25, fill = region)) +
   geom_bar(stat = 'identity', position = 'stack') + 
   labs(x='\nCalifornia Emissions Price ($/tonne)', 
        y='Annual PM2.5 Emissions (tonnes)\n') +
-  scale_x_continuous(breaks = c(0, 20)) +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
   theme(legend.title = element_blank())
 dev.off()
 
@@ -1355,13 +1635,14 @@ ggplot(temp, aes(x= tau, y = count, fill = region)) +
   geom_bar(stat = 'identity', position = 'stack') + 
   labs(x='\nCalifornia Emissions Price ($/tonne)', 
        y='# Investing Plants\n') +
-  scale_x_continuous(breaks = c(0, 20)) +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
   theme(legend.title = element_blank())
 dev.off()
 
 rm(cluster_demand, cluster_plants, hc_annual_sim, hc_hourly_sim, 
    hc_sim_gen_hourly, hc_sim_inv, hourly_weights, sim_inv, temp, gen_files, 
    hc_gen_files, hc_inv_files, inv_files, process_hourly_gen, process_inv)
+rm(p1, p2, p3, p4, p5, p6, temp_a, temp_b)
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -1493,7 +1774,7 @@ all_comms <- all_comms %>%
     redo_Pol2 = sum(
       P_PWDIS, P_PNPL, P_PRMP, P_PTSDF, P_UST, na.rm=T)/(5 - na_pol2),
     redo_Pol = ifelse(na_pol < 4,  sum((2/3)*redo_Pol1, (1/3)*redo_Pol2, na.rm=T), NA)
-  ) 
+  )
 
 rescale_10 <- function(x){
   upper_x <- max(x, na.rm = T)
@@ -1505,7 +1786,7 @@ rescale_10 <- function(x){
 all_comms$redo_Pol_scaled <- rescale_10(all_comms$redo_Pol)
 all_comms$redo_Pop_scaled <- rescale_10(all_comms$redo_Pop)
 
-# Create the overal index
+# Create the overall index
 all_comms$DAC_score <- all_comms$redo_Pop_scaled * all_comms$redo_Pol_scaled
 
 # Get Percentiles for the Pollution Score
@@ -1538,6 +1819,7 @@ all_comms <- all_comms %>%
     ),
     DAC_status  = ifelse(is.na(DAC_status), "Non-Disadvantaged", DAC_status)
   )
+
 
 
 sum(all_comms$DAC_status == "Disadvantaged")
@@ -1577,9 +1859,19 @@ temp <- temp %>%
                            DAC_status_og)
   )
 
-ggplot(temp, aes(x=`CES 4.0 Percentile`, y=DAC_score_pctl, 
+
+pdf("Writing/Draft/figures/chapter5_figures/DAC_des_scatter.pdf",
+    width = 7, height = 4)
+ggplot(temp, aes(x=`CES 4.0 Percentile`, y=DAC_score_pctl*100, 
                  color =  paste(DAC_status, DAC_status_og))) +
-  geom_point()
+  geom_point(alpha = 0.15) + 
+  scale_color_discrete(
+    labels = c('DAC : DAC', 'DAC : Non-DAC', 'Non-DAC : DAC', 'Non-DAC : Non-DAC'),
+    name = "Rep. Status : Official Status"
+    ) +
+  labs(x = "\nCalEnviroScreen 4.0 Percentile",
+       y = "Replicated DAC Percentile\n")
+dev.off()
 
 temp$DAC_status_pctl <- ifelse(temp$DAC_score_pctl > 0.75, "Disadvantaged", "Non-disadvantaged")
 
@@ -1601,6 +1893,55 @@ ggplot(temp, aes(x = DAC_status_og, fill=DAC_status_pctl)) +
     axis.title.y = element_blank()
   )
 dev.off()
+
+# st_set_geometry(temp, NULL) %>% count(DAC_status, DAC_status_og)
+
+# summ_df <- st_set_geometry(all_comms, NULL) %>% 
+#   filter(DAC_status == "Non-Disadvantaged") %>% 
+#   mutate(
+#     MINORPCT = MINORPCT*100,
+#     LOWINCPCT = LOWINCPCT*100,
+#     LESSHSPCT = LESSHSPCT*100,
+#     UNDER5PCT = UNDER5PCT*100,
+#     OVER64PCT = OVER64PCT*100,
+#     UNEMPPCT = UNEMPPCT*100
+#   ) %>% 
+#   select(
+#     P_PTRAF,
+#     P_PWDIS,
+#     P_PNPL,
+#     P_PTSDF,
+#     P_OZONE,
+#     P_PM25,
+#     ACSTOTPOP,
+#     MINORPCT,
+#     LOWINCPCT,
+#     LESSHSPCT,
+#     UNDER5PCT,
+#     OVER64PCT,
+#     UNEMPPCT
+#   ) %>% 
+#   as.data.frame()
+# 
+# 
+# stargazer(summ_df, summary = TRUE, 
+#           summary.stat = c("median", "mean", "sd"),
+#           digits = 1,
+#           covariate.labels = c(
+#             '%-ile Traffic proximity',
+#             '%-ile Wastewater discharge',
+#             '%-ile Superfund proximity',
+#             '%-ile Hazardous waste proximity',
+#             '%-ile Ozone',
+#             '%-ile Particulate Matter 2.5',
+#             'Total Population',
+#             '% People of color',
+#             '% Low income',
+#             '% Less than HS dipolma',
+#             '% Under age 5',
+#             '% Over age 64',
+#             'Unemployment rate'
+#           ))
 
 
 # # Trying to Figure Out What California is doing
@@ -1761,17 +2102,20 @@ temp <- ei_gap1 %>%
     annual_pm25 = mean(annual_pm25/ALAND10*2589988)
   )
 
+# NOx
+
 pdf("Writing/Draft/figures/chapter5_figures/ei_gap_bca_nox.pdf",
-    width = 7, height = 4)
+    width = 5, height = 4)
 ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_nox, color = DAC_status)) +
   geom_line(lwd=2) +  
   geom_point(color = "white", size = 5) +
   geom_point(size = 4) +
   labs(x='\nCalifornia Emissions Price ($/tonne)', 
-       y='Tonnes NOx per sq. mi\n') +
+       y='Tonnes NOx per sq. mile\n') +
   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
-  theme(legend.title = element_blank(), legend.position = "right")
+  theme(legend.title = element_blank(), legend.position = "top")
 dev.off()
+
 
 pdf("Writing/Draft/figures/chapter5_figures/ei_gap_nobca_nox.pdf",
     width = 7, height = 4)
@@ -1780,12 +2124,110 @@ ggplot(temp %>% filter(bca == 0), aes(x= tau, y=annual_nox, color = DAC_status))
   geom_point(color = "white", size = 5) +
   geom_point(size = 4) +
   labs(x='\nCalifornia Emissions Price ($/tonne)', 
-       y='Tonnes NOx per sq. mi\n') +
+       y='Tonnes NOx per sq. mile\n') +
   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
-  theme(legend.title = element_blank(), legend.position = "right")
+  theme(legend.title = element_blank(), legend.position = "top")
 dev.off()
 
+wecc_tracts$DAC_status
 
+stwecc_tracts %>%
+  group_by(STATEFP10) %>% 
+  summarize(
+    prop_dis = sum(DAC_status == "Disadvantaged")
+  )
+
+
+
+
+
+
+
+
+
+# SO2
+
+# pdf("Writing/Draft/figures/chapter5_figures/ei_gap_bca_so2.pdf",
+#     width = 5, height = 4)
+# ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_so2, color = DAC_status)) +
+#   geom_line(lwd=2) +  
+#   geom_point(color = "white", size = 5) +
+#   geom_point(size = 4) +
+#   labs(x='\nCalifornia Emissions Price ($/tonne)', 
+#        y='Tonnes SO2 per sq. mile\n') +
+#   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+#   theme(legend.title = element_blank(), legend.position = "top")
+# dev.off()
+# 
+
+# pdf("Writing/Draft/figures/chapter5_figures/ei_gap_nobca_so2.pdf",
+#     width = 5, height = 4)
+# ggplot(temp %>% filter(bca == 0), aes(x= tau, y=annual_so2, color = DAC_status)) +
+#   geom_line(lwd=2) +  
+#   geom_point(color = "white", size = 5) +
+#   geom_point(size = 4) +
+#   labs(x='\nCalifornia Emissions Price ($/tonne)', 
+#        y='Tonnes SO2 per sq. mile\n') +
+#   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+#   theme(legend.title = element_blank(), legend.position = "top")
+# dev.off()
+
+
+# SO2
+
+# pdf("Writing/Draft/figures/chapter5_figures/ei_gap_bca_pm25.pdf",
+#     width = 5, height = 4)
+# ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_pm25, color = DAC_status)) +
+#   geom_line(lwd=2) +  
+#   geom_point(color = "white", size = 5) +
+#   geom_point(size = 4) +
+#   labs(x='\nCalifornia Emissions Price ($/tonne)', 
+#        y='Tonnes PM2.5 per sq. mile\n') +
+#   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+#   theme(legend.title = element_blank(), legend.position = "top")
+# dev.off()
+# 
+
+# pdf("Writing/Draft/figures/chapter5_figures/ei_gap_nobca_pm25.pdf",
+#     width = 5, height = 4)
+# ggplot(temp %>% filter(bca == 0), aes(x= tau, y=annual_pm25, color = DAC_status)) +
+#   geom_line(lwd=2) +  
+#   geom_point(color = "white", size = 5) +
+#   geom_point(size = 4) +
+#   labs(x='\nCalifornia Emissions Price ($/tonne)', 
+#        y='Tonnes PM2.5 per sq. mile\n') +
+#   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+#   theme(legend.title = element_blank(), legend.position = "top")
+# dev.off()
+
+
+p1 <- ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_so2, 
+                                            color = DAC_status)) +
+  geom_line(lwd=2) +  
+  geom_point(color = "white", size = 5) +
+  geom_point(size = 4) +
+  labs(x='\nCalifornia Emissions Price \n($/tonne)', 
+       y='Tonnes SO2 per sq. mile\n') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank(), legend.position = "top")
+
+p2 <- ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_pm25, 
+                                            color = DAC_status)) +
+  geom_line(lwd=2) +  
+  geom_point(color = "white", size = 5) +
+  geom_point(size = 4) +
+  labs(x='\nCalifornia Emissions Price \n($/tonne)', 
+       y='Tonnes PM2.5 per sq. mile\n') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank(), legend.position = "top")
+
+pdf("Writing/Draft/figures/chapter5_figures/ei_gap_so2_pm25.pdf",
+    width = 6, height = 4)
+ggpubr::ggarrange(p1, p2, ncol = 2, nrow = 1, labels = c("A","B"), 
+                  common.legend = T)
+dev.off()
+
+# Just California things hahahha
 temp <- ei_gap1 %>% 
   filter(STATEFP10 == "06") %>% 
   group_by(DAC_status, scenario, bca, tau) %>% 
@@ -1796,31 +2238,70 @@ temp <- ei_gap1 %>%
   )
 
 pdf("Writing/Draft/figures/chapter5_figures/ei_gap_bca_nox_cal.pdf",
-    width = 7, height = 4)
+    width = 5, height = 4)
 ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_nox, color = DAC_status)) +
   geom_line(lwd=2) +  
   geom_point(color = "white", size = 5) +
   geom_point(size = 4) +
   labs(x='\nCalifornia Emissions Price ($/tonne)', 
-       y='Tonnes NOx per sq. mi\n') +
+       y='Tonnes NOx per sq. mile\n') +
   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
-  theme(legend.title = element_blank(), legend.position = "right")
+  theme(legend.title = element_blank(), legend.position = "top")
 dev.off()
 
-pdf("Writing/Draft/figures/chapter5_figures/ei_gap_nobca_nox_cal.pdf",
-    width = 7, height = 4)
-ggplot(temp %>% filter(bca == 0), aes(x= tau, y=annual_nox, color = DAC_status)) +
+# pdf("Writing/Draft/figures/chapter5_figures/ei_gap_nobca_nox_cal.pdf",
+#     width = 7, height = 4)
+# ggplot(temp %>% filter(bca == 0), aes(x= tau, y=annual_nox, color = DAC_status)) +
+#   geom_line(lwd=2) +  
+#   geom_point(color = "white", size = 5) +
+#   geom_point(size = 4) +
+#   labs(x='\nCalifornia Emissions Price ($/tonne)', 
+#        y='Tonnes NOx per sq. mi\n') +
+#   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+#   theme(legend.title = element_blank(), legend.position = "right")
+# dev.off()
+
+p1 <- ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_so2, 
+                                            color = DAC_status)) +
   geom_line(lwd=2) +  
   geom_point(color = "white", size = 5) +
   geom_point(size = 4) +
-  labs(x='\nCalifornia Emissions Price ($/tonne)', 
-       y='Tonnes NOx per sq. mi\n') +
+  labs(x='\nCalifornia Emissions Price \n($/tonne)', 
+       y='Tonnes SO2 per sq. mile\n') +
   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
-  theme(legend.title = element_blank(), legend.position = "right")
+  theme(legend.title = element_blank(), legend.position = "top")
+
+p2 <- ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_pm25, 
+                                            color = DAC_status)) +
+  geom_line(lwd=2) +  
+  geom_point(color = "white", size = 5) +
+  geom_point(size = 4) +
+  labs(x='\nCalifornia Emissions Price \n($/tonne)', 
+       y='Tonnes PM2.5 per sq. mile\n') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank(), legend.position = "top")
+
+pdf("Writing/Draft/figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf",
+    width = 6, height = 4)
+ggpubr::ggarrange(p1, p2, ncol = 2, nrow = 1, labels = c("A","B"), 
+                  common.legend = T)
 dev.off()
 
 
-
+# table_test <- st_join(annual_sim_sf %>% filter(tau == 0, bca == 1),
+#                       wecc_tracts %>% select(GEOID10, DAC_status))
+# table_test <- st_set_geometry(table_test, NULL)
+# 
+# entry_1 <- table_test %>% filter(DAC_status == "Non-Disadvantaged") %>% 
+#   group_by(region) %>% 
+#   summarise(annual_gen = sum(annual_gen))
+# 
+# 53666799/(53666799 + 154538239 + 55743529)
+# 16523497/(16523497 + 29151151 + 55337023)
+# 
+# entry_1 <- table_test %>% filter(DAC_status == "Disadvantaged")
+# mean(entry_1$co2e_mmbtu)
+# hist(entry_1$co2e_mmbtu * entry_1$hrate)
 
 
 

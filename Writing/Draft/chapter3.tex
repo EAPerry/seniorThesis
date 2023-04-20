@@ -3,108 +3,82 @@
 
 The previous two chapters have focused on preparing a broad base of knowledge on climate economics---the first chapter by reviewing the physical science of climate change and the second chapter by reviewing the economics of climate policy design. This chapter continues to build background, but focuses instead on providing context specific to the modeling and empirical work done in the two chapters that follow it. 
 
-To motivate these proceeding chapters, this chapter begins by discussing ambient air pollution with particular emphasis on the impacts of ambient air pollution and air pollution disparities. As alluded to earlier, the ultimate goal is to model and simulate these air pollution disparities that result from the implementation of a carbon tax on the electric power industry in California. Keeping this in mind, the discussion on air pollution is followed by an overview of wholesale electricity markets and Assembly Bill 32 (AB-32), the California statute that creates an emissions trading program across the state. Finally, I review the body of literature immediately adjacent to this research. The related literature serves both to establish what we already know about the implications of carbon pricing for environmental inequality and to motivate the specific goals of the research in this paper. This chapter concludes by describing the overall research design that unfolds in the next two chapters. The description of this design is outlines both the research design choices I make in these later chapters and the motivation for these design choices. 
+To motivate these proceeding chapters, this chapter begins by discussing ambient air pollution with particular emphasis on the impacts of ambient air pollution and air pollution disparities. As alluded to earlier, the ultimate goal is to model and simulate these air pollution disparities that result from the implementation of a carbon tax on the electric power industry in California. % Keeping this in mind, the discussion on air pollution is followed by an overview of wholesale electricity markets and Assembly Bill 32 (AB-32), the California statute that creates an emissions trading program across the state. 
+I then review the body of literature immediately adjacent to this research. The related literature serves both to establish what we already know about the implications of carbon pricing for environmental inequality and to motivate the specific goals of the research in this paper. 
+%This chapter concludes by describing the overall research design that unfolds in the next two chapters. The description of this design is outlines both the research design choices I make in these later chapters and the motivation for these design choices. 
 
 \subsection{Primer on Ambient Air Pollution}
 
-\noindent Introduction
-\begin{itemize}
-    \item What is ambient air pollution? 
-    \item What are the most common air pollutants?
-\end{itemize}
+Previous sections have focused on greenhouse gas emissions. Greenhouse gases like carbon dioxide, methane, and nitrous oxide are global air pollutants in that they have global consequences for the climate, but usually do not create problems. The impact of these emissions is largely independent of their spatial distribution. In this section, I focus instead on air pollutants that have primarily local consequences and for which their impacts are not independent of their spatial distribution. These are known as ambient air pollutants.\footnote{The terms local air pollutants, criteria air pollutants, and ambient air pollutants are often used interchangeably.} Under the Clean Air Act, the US Environmental Protection Agency (EPA) is required to set air quality standards for and monitor six of the nations most common ambient air pollutants: surface-level ozone (O$_3$), particulate matter (PM), carbon monoxide (CO), lead (Pb), sulfur dioxide (SO$_2$), and nitrogen dioxide (NO$_2$). For the remainder of the text, I focus primarily on nitrogen oxides (NO$_x$), sulfur dioxide, and fine particulate matter (PM2.5).\footnote{Here, nitrogen oxides is a general term used to refer to chemicals with the form NO$_x$, where $x$ is a natural number, most commonly either NO or NO$_2$. The 2.5 in PM2.5 denotes that the maximum width of these particles is 2.5 microns (1 micron = 10$^{-6}$ meters).}
 
-Ambient air pollution exposure comes with many negative consequences, but the most striking of these is the effect of ambient air pollution on human health and mortality. \textbf{Talk about the mechanisms using \cite{aguilar2022air}}.
-
-The World Health Organization (WHO) estimates that ambient air pollution caused over 4.2 million premature deaths in 2019, making ambient air pollution one of the leading global health stressors \citep{who_factsheet}. Around the world, 99\% of people live in environments that do not meet the WHO's air quality guidelines. Understandably, the vast majority (89\%) of these premature deaths are in low- and middle-income countries, but ambient air pollution remains a serious health threat even in wealthy nations, including the US. \cite{lelieveld2019effects} uses atmospheric models alongside a global exposure mortality model---a model that maps air pollutant concentrations into mortalities---to study excess mortalities attributable to anthropogenic air pollution emissions. They find that ambient air pollutants from anthropogenic sources (primarily the burning od fossil fuels) result in 230,000 excess deaths annually in the US.\footnote{
+Ambient air pollution exposure comes with many negative consequences, but the most striking of these is the effect of ambient air pollution on human health and mortality. The World Health Organization (WHO) estimates that ambient air pollution caused over 4.2 million premature deaths in 2019, making ambient air pollution one of the leading global health stressors \citep{who_factsheet}. Around the world, 99\% of people live in environments that do not meet the WHO's air quality guidelines. Understandably, the vast majority (89\%) of these premature deaths are in low- and middle-income countries, but ambient air pollution remains a serious health threat even in wealthy nations, including the US. \cite{lelieveld2019effects} uses atmospheric models alongside a global exposure mortality model---a model that maps air pollutant concentrations into mortalities---to study excess mortalities attributable to anthropogenic air pollution emissions. They find that ambient air pollutants from anthropogenic sources (primarily the burning od fossil fuels) result in 230,000 excess deaths annually in the US.\footnote{
     The 95\% confidence interval around these estimates is 184,000--276,000 excess deaths---a wide interval, but an interval where even the minimum of the interval warrants serious concern.
 } 
 
 Apart from the devastating effects of air pollution on human health, the other primary effect of air pollution exposure is reduced cognitive performance and decision making. \cite{fonken2011air} find physical changes in the brains of mice who have been exposed to fine particulate matter at concentrations and durations comparable to Beijing. Namely, they find that neurons in the hippocampus---an area of the brain devoted to memory and learning---have shorter and less dense dendrites. These dendrites are responsible for receiving signals from other neurons, and the reduced length and density of these neurons is correlated with poorer memory \citep{weir2012smog}.Additionally, the mice exposed to particulate matter display depressive-like symptoms, giving up earlier in forced swimming tests and eating less. 
 
-These physiological findings in mice correspond with a wealth of evidence on the effects of air pollution on human learning and cognition. \cite{aguilar2022air} provides the best review of these effects and their implications for human capital formation and labor economics more broadly. 
+These physiological findings in mice correspond with a wealth of evidence on the effects of air pollution on human learning and cognition. \cite{aguilar2022air} provides the best review of these effects and their implications for human capital formation and labor economics more broadly. There is evidence that air pollution induces risky behaviors including crime \citep{burkhardt2019effect, bondy2020crime}, and evidence that air pollution makes depresses mood for large populations \citep{zheng2019air}.
 
-\noindent Education/Human Capital Development \& Labor Implications
-\begin{itemize}
-    \item \cite{zhang2018impact}
-    \item \cite{currie2014we}
-    \item \cite{aguilar2022air}
-    \item \cite{currie2009does}
-    \item \cite{ebenstein2016long}
-    \item \cite{chang2016particulate}
-\end{itemize}
-
-
+% \noindent Education/Human Capital Development \& Labor Implications
+% \begin{itemize}
+%     \item \cite{zhang2018impact}
+%     \item \cite{currie2014we}
+%     \item \cite{aguilar2022air}
+%     \item \cite{currie2009does}
+%     \item \cite{ebenstein2016long}
+%     \item \cite{chang2016particulate}
+% \end{itemize}
 
 
-\noindent Crime
-\begin{itemize}
-    \item \cite{bondy2020crime}
-    \item \cite{burkhardt2019effect}
-\end{itemize}
+% \noindent Crime
+% \begin{itemize}
+%     \item \cite{bondy2020crime}
+%     \item \cite{burkhardt2019effect}
+% \end{itemize}
 
-\noindent Happiness
-\begin{itemize}
-    \item \cite{zheng2019air}
-\end{itemize}
+% \noindent Happiness
+% \begin{itemize}
+%     \item \cite{zheng2019air}
+% \end{itemize}
 
-Together, the many effects of air pollution add to the popular 
+% Together, the many effects of air pollution add to the popular 
 
+% \noindent Justice/Inequality/Distributional perspectives
+% \begin{itemize}
+%     \item \cite{colmer2020disparities}
+%     \item \cite{hernandez2022decomposing}
+%     \item \cite{currie2023caused}
+%     \item \cite{banzhaf2019environmental}
+%     \item \cite{voorheis2017air}
+% \end{itemize}
 
+% \subsection{The Case of California: Electricity \& AB-32}
 
+% \noindent Wholesale electricity markets: How they work and their ``competitiveness"
+% \begin{itemize}
+%     \item \cite{ferc2020}
+% \end{itemize}
 
+% \noindent Short history of CAISO
+% \begin{itemize}
+%     \item \cite{sweeney2013california}
+%     \item \cite{knittel2005empirical}
+%     \item \cite{borenstein2000diagnosing}
+%     \item \cite{borenstein2015us}
+% \end{itemize}
 
+% \noindent Leakage
+% \begin{itemize}
+%     \item \cite{burtraw2018}
+%     \item \cite{fowlie2009incomplete}
+%     \item \cite{fowlie2021border}
+% \end{itemize}
 
-\noindent Justice/Inequality/Distributional perspectives
-\begin{itemize}
-    \item \cite{colmer2020disparities}
-    \item \cite{hernandez2022decomposing}
-    \item \cite{currie2023caused}
-    \item \cite{banzhaf2019environmental}
-    \item \cite{voorheis2017air}
-\end{itemize}
-
-
-
-
-
-
-\subsection{The Case of California: Electricity \& AB-32}
-
-\begin{figure}
-    \centering
-    \caption{Western Interconnection Subregions \label{wecc_regions}}
-    \includegraphics[width=0.8\textwidth]{figures/chapter3_figures/WECC_map.pdf}
-    \fignote[1]{Figure displays the subregions of the Western Interconnection. These subregions are a unit of geography set by the North American Electric Reliability Council (NERC). NERC determines these regions based off of the connections/boundaries between balancing authorities, the administrative unit of the US power grid. These regions are the California-Mexico Power Area (CAMX), the Northwest Power Pool Area (NWPP), the Rocky Mountain Power Area (RMPA), and the Arizona-New Mexico-Southern Nevada Power Area (AZNM). The EPA reports data for each of the four NERC regions, but the EIA only provides electricity demand data for the NWPP and RMPA together. These two subregions are treated as one throughout the paper, and future chapters will model just the three regional markets displayed: the California market, the Southwest market, and the Northwest market. Shapefiles for the regions come from \cite{HIFLD_nerc}.
-    }
-\end{figure}
-
-
-
-\noindent Wholesale electricity markets: How they work and their ``competitiveness"
-\begin{itemize}
-    \item \cite{ferc2020}
-\end{itemize}
-
-\noindent Short history of CAISO
-\begin{itemize}
-    \item \cite{sweeney2013california}
-    \item \cite{knittel2005empirical}
-    \item \cite{borenstein2000diagnosing}
-    \item \cite{borenstein2015us}
-\end{itemize}
-
-\noindent Leakage
-\begin{itemize}
-    \item \cite{burtraw2018}
-    \item \cite{fowlie2009incomplete}
-    \item \cite{fowlie2021border}
-\end{itemize}
-
-\noindent Effect of AB-32 on Electricity
-\begin{itemize}
-    \item \url{https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program/cap-and-trade-
-    regulation}
-\end{itemize}
+% \noindent Effect of AB-32 on Electricity
+% \begin{itemize}
+%     \item \url{https://ww2.arb.ca.gov/our-work/programs/cap-and-trade-program/cap-and-trade-
+%     regulation}
+% \end{itemize}
 
 \subsection{Carbon Pricing \& Environmental Inequality}
 
@@ -115,17 +89,13 @@ As discussed in Chapter 2, the primary appeal of carbon pricing for economists i
     ``A carbon tax offers the most cost-effective lever to reduce carbon emissions at the scale and speed that is necessary. By correcting a well-known market failure, a carbon tax will send a powerful price signal that harnesses the invisible hand of the marketplace to steer economic actors towards a low-carbon future." 
 \end{quote}
 
-
-
-
 It is also relevant to note that the signing economists address how the revenue generated from the carbon price should be distributed---an aspect that if done poorly could create major inequality concerns. The statement's fifth and final policy recommendation reads: 
 \begin{quote}
     ``To maximize the fairness and political viability of a rising carbon tax, all the revenue should be returned directly to U.S. citizens through equal lump-sum rebates. The majority of American families, including the most vulnerable, will benefit financially by receiving more in `carbon dividends' than they pay in increased energy prices."
 \end{quote}
 Together the policy recommendations in the statement provide a brief but clear strategy for reducing greenhouse gas emissions in a manner that is both efficient and progressive in the sense that tax revenue would flow towards those at the bottom end of the income distribution. 
 
-Despite the carbon-pricing fervor of economists, many in the climate policy community remain skepitcal of proposals that rely heavily on carbon pricing for decarbonization. There are a number of arguments against carbon pricing that critique the efficacy of these programs relative to their alternatives, but these concerns are not new and generally struggle to make a strong case.\footnote{Chapter 2 describes arguments against carbon pricing that critique the efficacy of these programs. This discussion comes to four primary conclusions. First, there is a need for additional research that measures the ex-post effect of carbon pricing on emissions reductions. Second, many jurisdictions with carbon pricing programs have chosen to rely on other regulations to attain emissions targets. That is, the implicit price on emissions from other regulations is often higher than the market price of emissions, which can make the effect of emissions pricing appear weak relative to other regulations. Third, in situations where policymakers rely primarily on carbon pricing more so than other regulations, carbon pricing does appear to be the more cost-effective policy. This difference appears to be small though, especially in the electricity market where the strong correlation between the merit order of generation and emissions intensity mean that clean energy standards perform only negligibly worse carbon pricing. Fourth, there are likely tangible improvements to emissions trading programs that can be made, such as reforming or eliminating the use of emissions offsets. 
-} Instead, more recent criticism of these policies has centered around their potential to perpetuate environmental inequality. Because global air pollutants (i.e., greenhouse gases) are often released at the same time as local air pollutants (i.e., criteria air pollutants, including PM, NO$_x$, SO$_2$), carbon pricing has the potential to shift the distribution of ambient air pollution. In this context, the less-regulated local air pollutants are often called copollutants. The concern is that even if environmental markets can induce abatement efficiently, the ``invisible hand'' economists celebrate might just shift the burden of air pollution towards already disadvantaged communities. Raising this possibility is entirely fair. After all, the decentralized nature of market means there is no specific mechanism to prevent this from happening. The most vulnerable in society may already feel disenfranchised by market-systems, so the resistance to a cap-and-trade program---a market-based policy instrument---is not entirely surprising. 
+Despite the carbon-pricing fervor of economists, many in the climate policy community remain skepitcal of proposals that rely heavily on carbon pricing for decarbonization. There are a number of arguments against carbon pricing that critique the efficacy of these programs relative to their alternatives, but these concerns are not new and generally struggle to make a strong case.\footnote{See section 2.4 for a review of carbon pricing in practice and the arguments surrounding the efficacy of carbon pricing policies.} Instead, more recent criticism of these policies has centered around their potential to perpetuate environmental inequality. Because global air pollutants (i.e., greenhouse gases) are often released at the same time as local air pollutants (i.e., criteria air pollutants, including PM, NO$_x$, SO$_2$), carbon pricing has the potential to shift the distribution of ambient air pollution. In this context, the less-regulated local air pollutants are often called co-pollutants. The concern is that even if environmental markets can induce abatement efficiently, the ``invisible hand'' economists celebrate might just shift the burden of air pollution towards already disadvantaged communities. Raising this possibility is entirely fair. After all, the decentralized nature of market means there is no specific mechanism to prevent this from happening. The most vulnerable in society may already feel disenfranchised by market-systems, so the resistance to a cap-and-trade program---a market-based policy instrument---is not entirely surprising. 
 
 Many Californians have expressed concerns about the potential for California's cap-and-trade program to redistribute the air pollution burden towards communities with already poor environmental quality and economic status. In fact, the first question on the ``Frequently Asked Questions'' page of California's cap-and-trade program's website reads: ``Does the cap-and-trade program lead to increases of air pollution in environmental justice communities burdened with air pollution?'' \citep{carb_FAQ}. This was not a major concern when AB-32 was originally passed in 2006, but nearly ended California's cap-and-trade program when it needed to be reauthorized ten years later in 2016 \citep{johnson2020cap}. 
 
@@ -185,8 +155,19 @@ The previously mentioned literature studying the effects of carbon pricing on ai
 
 \subsection{Research Design}
 
+The remainder of the text focuses on extending the model and empirical techniques used in \cite{weber2021dynamic} into the context of an open economy with flexible imports and exports of electricity. Although this may seem to be an unnecessary generalization of the model, the incomplete nature of California's unilateral carbon pricing scheme opens up wider channels for co-pollutant redistribution. In context, the incompleteness of the carbon market is important as carbon pricing policies have the potential to not only redistribute co-pollutants within California, but to increase and redistribute co-pollutants outside the State as well. The case of California electricity is especially interesting as much of the electricity generation that occurs outside of the state is ``dirty” relative to California power. 
+%Weber diligently notes that emissions leakage is not a significant concern in California's electricity market, an assumption that has since been corroborated \citep{burtraw2018}. 
+The extension of the model into the context of an incomplete carbon market is valuable not just for electricity in California but elsewhere as this can be a substantial concern for other emissions-intensive, trade-exposed goods like cement, aluminum, and steel \citep{fowlie2022mitigating}. Consequently, this research is pertinent to a broader literature concerned with how carbon pricing and could reinforce cross-jurisdictional environmental inequalities. 
 
+The model largely follows from \cite{weber2021dynamic}, but with two primary additions.\footnote{Weber's model is itself mostly based on the models in \cite{cullen2015} and \cite{cullen2017}.} First, the model places environmental inequality implications at the forefront of the analysis by explicitly incorporating a measure of disparities in air pollution concentrations. Second, the model considers these implications in a broader geographic scope, including neighboring jurisdictions in the Western US power gird (the Western Interconnection). This allows the model to speak to mechanisms that have the potential to exacerbate inequalities outside of California, a dimension that has not been studied in the literature.
 
+The model in \cite{weber2021dynamic} focuses on generator-level investment and production decisions. In an initial period, each generator has the opportunity to make an investment that will improve its efficiency. The efficiency of the generator influences the marginal costs of generation both by reducing fuel costs and reducing the cost from the carbon tax. In all subsequent periods, the generator must decide whether or not it will operate. This decision is complicated by ramping costs---the extra cost incurred when operating a generator that was not operating in the previous period. Generation is sold on the wholesale electricity market, which is assumed to be competitive. Demand is completely inelastic as end-users will not observe prices in the wholesale market, but is unknown to the generators in advance. Leveraging a result from \cite{cullen2015}, Weber establishes that the solution to the dynamic problem corresponds with a cost-minimization problem. 
+
+With this model, Weber establishes two channels for carbon pricing to change the spatial distribution of co-pollutants: (1) by changing the relative order of generators along the supply curve, and (2) by changing the co-pollutant intensity of generators by inducing efficiency-improving investments. While these same two channels are present in my own version of the model---the second channel being inconsequential---the model in this text allows for the redistribution of co-pollutants attributable to the incompleteness of the carbon market.
+
+% To incorporate an open economy and allow for cross-jurisdictional redistribution, I will employ elements from other models of emissions leakage in California's electricity sector. This is closest to the model in \cite{fowlie2021border}. \cite{fowlie2009incomplete} may also be useful, although this model considers a wholesale electricity market with market power. 
+
+% Using the model, I will focus on characterizing the channels through which co-pollutant redistribution can occur. Different from Weber, this characterization will explicitly model disparities in air pollution exposure. This model will clarify how the carbon pricing scheme leads to the redistribution of air pollutants, and hopefully develop some guidelines that describe when we should expect carbon pricing to exacerbate existing disparities in air pollution exposure. 
 
 % \subsection{A Perfectly Competitive Model of Leakage}
 
