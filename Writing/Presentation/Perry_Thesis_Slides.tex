@@ -20,6 +20,9 @@
 
 \pgfplotsset{compat=1.18}
 
+\usepackage{dsfont}
+\newcommand{\1}{\mathds{1}}
+
 \title[Carbon Pricing \& Environmental Inequality]{The Implications of Carbon Pricing\\ for Environmental Inequality}
 % \subtitle{Senior Thesis Defense}
 \author{Evan Perry}
@@ -34,13 +37,13 @@
 \begin{itemize}
     \item Thank yous and apologies
     \vfill
-    \item Revisions (based on feedback) since 2023-04-20:
-    \begin{itemize}
-        \item Copyediting
-        \item Acknowledgements
-        \item 5.3 \quad Results --- expanded discussion of EI Gap
-        \item 5.4 \quad Diagnostics \& Limitations
-    \end{itemize}
+    \item Revision updates
+    % \begin{itemize}
+    %     \item Copyediting
+    %     \item Acknowledgements
+    %     \item 5.3 \quad Results --- expanded discussion of EI Gap
+    %     \item 5.4 \quad Diagnostics \& Limitations
+    % \end{itemize}
     \vfill
     \item Slides \& replication project available
 \end{itemize}
@@ -333,8 +336,155 @@ Market for Emissions \\
 \end{frame}
 
 
-\begin{frame}{}
+\begin{frame}{Action 1: Investment Decision}
+
+\emph{Heat Rate}: How efficiently can a generator turn combustion into electricity?
+\begin{itemize}
+    \item $\rho_i$ : Power plant $i$'s heat rate (Btu/kWh)
+    \item Affects both costs and emissions
+\end{itemize}
+
+\vfill
+Action 1: Power plant $i$ chooses a level of investment $j_i$ to decrease its heat rate
+\begin{itemize}
+    \item Decrease generation costs in future periods
+    \item Incurs a current cost for investment of $\Gamma(j_i)$
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Action 2: Operating Decision(s)}
     
+Action 2: Power plant $i$ chooses whether or not to operate in period $t$, and if so, what regional wholesale market to sell its electricity on
+\vfill 
+
+\begin{equation}
+    q_{itr} = \overline{q}_i \cdot \mathds{1}(r = a_{it})
+\end{equation}
+\vfill
+
+Endogenous:
+\begin{itemize}
+    \item $a_{it}$ : Power plant $i$'s operating decision in time $t$, $a_{it} \in \{0, 1, \ldots, R\}$
+\end{itemize}
+Exogenous:
+\begin{itemize}
+    \item $\overline{q}_i$ : Power plant $i$'s nameplate capacity (maximum generation) (kW)
+\end{itemize}
+
+\end{frame}
+
+
+
+
+\begin{frame}{Marginal Costs}
+    
+\begin{equation}
+    mc_{ir} = \rho_i(u_{f_i} + e_{f_i} \tau_r) = \underbrace{\rho_i u_{f_i}}_{\text{Fuel Cost}} + \underbrace{\rho_i e_{f_i} \tau_r}_{\text{Emissions Cost}}
+\end{equation}
+
+\vfill
+Endogenous:
+\begin{itemize}
+    \item $\rho_i$ : Power plant $i$'s heat rate (Btu/kWh)
+\end{itemize}
+Exogenous:
+\begin{itemize}
+    \item $u_{f_i}$ : Power plant $i$'s unit fuel cost (\$/Btu)
+    \item $e_{f_i}$ : Power plant $i$'s CO$_2$e emissions intensity (tonnes CO$_2$e/Btu)
+    \item $\tau_r$ : Emissions price in region $r$ (\$/tonne CO$_2$e)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Equilibrium Generation in Period $t$}
+    
+\begin{align}
+    \begin{split} \label{C_star}
+        C^*(j\mid \text{Demand}_t) = &\min_{a_t}  \left\{ C(a_t\mid j)\right\} \\
+        &\text{s.t.} ~~\begin{cases}
+            \quad \text{Market Clearing Constraints}\\
+            \quad \text{Transmission Constraints}\\
+        \end{cases}
+    \end{split}
+\end{align}
+
+\vfill
+Given the profile of investment decisions $j$, choose the profile of operating decisions that minimizes total costs $C(a_t \mid j)$ in period $t$
+
+\end{frame}
+
+
+\begin{frame}{Equilibrium Investment in Period $0$}
+    
+\begin{equation}
+    j^* = \arg\min_{j \in \mathcal{J}^N} \biggl\{ 
+    \underbrace{\Gamma (j)}_{\substack{\text{Investment}\\ \text{Phase Costs}}} + \underbrace{\sum_{t=0}^T \delta^t C^*(j\mid \text{Demand}_t^e)}_{\text{Generation Phase Costs}}  \biggr\}
+\end{equation}
+
+\vfill
+Choose the profile of investment decisions $j$ that minimizes the sum of investment costs and discounted equilibrium generation costs. 
+
+\end{frame}
+
+
+\begin{frame}{Generation Outcomes $\to$ Air Pollution Concentration Disparities}
+    
+For air pollutant $w$, power plant $i$'s period $t$ emissions are:
+\begin{equation}
+    w_{it}^* = e_i^w \rho_i^* q_{it}^*
+\end{equation}
+
+\vfill
+Endogenous:
+\begin{itemize}
+    \item $\rho_i^*$ : Power plant $i$'s equilibrium heat rate (Btu/kWh)
+    \item $q_{it}^*$ : Power plant $i$'s equilibrium generation in period $t$ (kWh)
+\end{itemize}
+Exogenous:
+\begin{itemize}
+    \item $e_i^w$ : Power plant $i$'s emissions intensity for pollutant $w$ (tonnes $w$/Btu)
+\end{itemize}
+
+\vfill
+Create a nondescript function that maps power plant $i$'s generation in period $t$ to changes in the concentration of $w$ in all communities
+
+\end{frame}
+
+
+\begin{frame}{The Environmental Inequality Gap (EI Gap)}
+    
+Divide $M$ communities into two groups: Disadvantaged communities (DAC) and Non-Disadvantaged Communities (non-DAC)
+
+\vfill
+\begin{block}{The EI Gap}
+    Let $\Phi_w^A(T)$ denote the average equilibrium concentration of air pollutant $w$ in a group of communities $A$ after $T$ periods. Then the EI Gap for pollutant $w$ after $T$ periods is defined by:
+    \begin{equation}
+        \text{EIGap}_w = \Phi_w^\text{DAC}(T) - \Phi_w^\text{non-DAC}(T).
+    \end{equation}
+\end{block}
+
+\end{frame}
+
+
+\begin{frame}{Model Takeaways}
+
+Everything goes back to marginal costs:
+\begin{equation*}
+    mc_{ir} = \rho_i(u_{f_i} + e_{f_i} \tau_r)
+\end{equation*}
+
+\vfill
+Apart from small changes due to investment, we only get redistribution of generation and emissions through relative changes along the supply curve (marginal costs)
+
+\vfill
+\begin{enumerate}
+    \item $\Delta e_f$  :  $\uparrow \tau_r ~~\Rightarrow ~~ \uparrow \Delta e_f \tau_r ~~\Rightarrow ~~ \uparrow \Delta mc$
+    \item $\Delta \tau_r$  :  $\uparrow \tau_r ~~\Rightarrow ~~ \uparrow \Delta \tau_r ~~\Rightarrow ~~ \uparrow \Delta mc$ \hfill (New!)
+\end{enumerate}
+
 \end{frame}
 
 
@@ -342,7 +492,7 @@ Market for Emissions \\
 \sectiontocslide{Empirical Strategy \& Data}
 
 
-\begin{frame}{Empirical Strategy: Simulation}
+\begin{frame}{Simulation Environment}
     
 \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -362,7 +512,7 @@ Market for Emissions \\
 \end{frame}
 
 
-\begin{frame}{Empirical Strategy: Policy Scenarios}
+\begin{frame}{Simulation Policy Scenarios}
     
     \begin{columns}
         \begin{column}{0.5\textwidth}
@@ -396,7 +546,7 @@ Market for Emissions \\
 \end{frame}
 
 
-\begin{frame}{Empirical Strategy: $k$-Means Clustering}
+\begin{frame}{$k$-Means Clustering}
     
 \begin{itemize}
     \item Problem: Constrained optimization problems are too large
@@ -416,29 +566,58 @@ Market for Emissions \\
 \end{frame}
 
 
-\begin{frame}{Empirical Strategy: Generation $\to$ Pollutant Concentrations}
-    
+\begin{frame}{Generation $\to$ Pollutant Concentrations}
+
+\begin{itemize}
+    \item Most basic measure of concentration: tonnes of pollutant $w$ per square mile
+    \vfill 
+    \item EI Gap implementation:
+    \begin{equation}\footnotesize
+        \text{EIGap}_w = \text{Mean}_\text{DAC}\left[ \frac{\text{Annual Emissions}}{\text{Area}}\right] - \text{Mean}_\text{non-DAC}\left[ \frac{\text{Annual Emissions}}{\text{Area}}\right]
+    \end{equation}
+    \vfill
+
+    \item Forthcoming: Census tracts + buffer zones
+\end{itemize}
+
 \end{frame}
 
 
-
-\begin{frame}{Data: Power Plant}
+\begin{frame}{Generation Data}
     
+    Power Plants
     \begin{itemize}
         \item 2019 Emissions \& Generation Resource Integrated Database (eGRID) from the EPA
-        \item 
+        \item All power plants with capacity $\geq 1$ MW
+        \item Initial heat rates, emissions factors, locations, fuel types
+    \end{itemize}
+
+    \vfill
+    Electricity Demand
+    \begin{itemize}
+        \item 2019--2021 EIA's Hourly Electric Grid Monitor Regional Files
+        \item Regional demand at every hour and generation by fuel type
+        \item Compute residual demand for each hour
     \end{itemize}
 
 \end{frame}
 
 
-\begin{frame}{Data: Electricity Demand}
-    
-\end{frame}
+\begin{frame}{Disadvantaged Communities}
 
+Disadvantaged Communities in California:   
+\begin{itemize}
+    \item California SB 535 requires Census tracts to be designated as ``Disadvantaged'' or not to allocate revenue generated by the cap-and-trade program
+    \item State develops a metric called CalEnviroScreen and set of criteria to make designations
+\end{itemize}
 
-\begin{frame}{Data: Disadvantaged Communities}
-    
+\vfill
+Disadvantaged Communities outside of California:
+\begin{itemize}
+    \item Must define for the analysis
+    \item Use data from EPA's Environmental Justice Screening tool to create similar metric and designate Census tracts with the analogous criteria
+\end{itemize}
+
 \end{frame}
 
 
@@ -447,33 +626,114 @@ Market for Emissions \\
 
 
 \begin{frame}{Generation}
-    
+
+\centering
+\includegraphics[width = 0.8\textwidth]{figures/chapter5_figures/gen_fuel_bca_pct.pdf}
+
 \end{frame}
 
 
 \begin{frame}{Greenhouse Gas Emissions}
     
+\centering
+\includegraphics[width = 0.8\textwidth]{figures/chapter5_figures/sim_co2e_bca.pdf}
+
+\end{frame}
+
+\begin{frame}{Total NO$_x$ Emissions}
+
+\centering
+\includegraphics[width = 0.7\textwidth]{figures/chapter5_figures/sim_nox_bca.pdf}
+
+\end{frame}
+
+% \begin{frame}{Total PM2.5 Emissions}
+
+% \centering
+% \includegraphics[width = 0.7\textwidth]{figures/chapter5_figures/sim_pm25_bca.pdf}
+        
+% \end{frame}
+
+
+\begin{frame}{The EI Gap (NO$_x$)}
+
+\centering
+\includegraphics[width = 0.7\textwidth]{figures/chapter5_figures/ei_gap_bca_nox.pdf}
+
 \end{frame}
 
 
-\begin{frame}{Local Air Pollutant Emissions}
+\begin{frame}{The EI Gap (NO$_x$) in California}
+
+\centering
+\includegraphics[width = 0.7\textwidth]{figures/chapter5_figures/ei_gap_bca_nox_cal.pdf}
+
+\end{frame}
+
+
+\begin{frame}{Unpacking the EI Gap (NO$_x$)}
     
+Overall EI Gap (\$0 $\to$ \$80 per tonne):
+\begin{itemize}
+    \item NO$_x$ Concentration in DACs: $\uparrow 26.4\%$
+    \item NO$_x$ Concentration in non-DACs: $\downarrow 5.3\%$
+    \item EI Gap: $\uparrow 416\%$
+\end{itemize}
+
+\vfill
+California EI Gap (\$0 $\to$ \$80 per tonne):
+\begin{itemize}
+    \item NO$_x$ Concentration in DACs: $\downarrow 0.3\%$
+    \item NO$_x$ Concentration in non-DACs: $\downarrow 10.1\%$
+    \item EI Gap: $\uparrow 36.2\%$
+\end{itemize}
+
+
 \end{frame}
 
 
-\begin{frame}{The EI Gap}
+\begin{frame}{EI Gap (Others)}
 
-    \centering
-    \includegraphics[width = 0.7\textwidth]{figures/chapter5_figures/ei_gap_bca_nox.pdf}
+\centering
+\includegraphics[width = 0.8\textwidth]{figures/chapter5_figures/ei_gap_so2_pm25.pdf}
 
 \end{frame}
-
 
 
 \sectiontocslide{Takeaways \& Discussion}
 
 
+\begin{frame}{Simulation Upshots}
 
+\begin{enumerate}
+    \item Carbon pricing \emph{does} have the potential to exacerbate disparities in air pollution concentrations 
+    \vfill
+    \item Need more research that grapples with more intricate policy scenarios---namely combinations of cap-and-trade and localized pollution controls
+    \vfill 
+    \item Accounting for redistribution outside of the regulated jurisdiction matters
+\end{enumerate}
+    
+\end{frame}
+
+
+\begin{frame}{Limitations \& Future Work}
+
+What is next for me:
+\begin{itemize}
+    \item Copyediting
+    \item Diagnostics
+    \item Alternative concentration measurements
+    \item Expanding discussion of results
+\end{itemize}
+
+\vfill
+What would be ideal:
+\begin{itemize}
+    \item Better modeling of air pollution concentrations
+    \item Simulate more nuanced policies/more accurate counterfactuals
+\end{itemize}
+
+\end{frame}
 
 
 \begin{frame}[allowframebreaks]{References}
@@ -481,6 +741,28 @@ Market for Emissions \\
 
 \bibliography{references}
 
+\end{frame}
+
+
+\begin{frame}{Greenhouse Gas Emissions Intensities}
+
+\centering
+\includegraphics[width = 0.9\textwidth]{figures/chapter5_figures/EI_region_violin.pdf}
+    
+\end{frame}
+
+\begin{frame}{Local Pollutant Emissions Intensities}
+
+    \centering
+    \includegraphics[width = 0.9\textwidth]{figures/chapter5_figures/local_poll_EI.pdf}
+        
+\end{frame}
+
+\begin{frame}{Total SO$_2$ Emissions}
+
+    \centering
+    \includegraphics[width = 0.7\textwidth]{figures/chapter5_figures/sim_so2_bca.pdf}
+        
 \end{frame}
 
 
