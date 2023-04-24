@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Introduction \& Motivation}{5}{0}{1}
+\beamer@sectionintoc {2}{Modeling Carbon Pricing \& Environmental Inequality}{11}{0}{2}
+\beamer@sectionintoc {3}{Empirical Strategy \& Data}{14}{0}{3}
+\beamer@sectionintoc {4}{Simulation Results}{22}{0}{4}
+\beamer@sectionintoc {5}{Takeaways \& Discussion}{27}{0}{5}

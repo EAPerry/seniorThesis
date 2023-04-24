@@ -1,0 +1,260 @@
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CoeCollege1 Style File
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath, amsfonts, amscd, amssymb, amsthm, mathrsfs, mathtools}
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+\bibliographystyle{aer}
+\usepackage{natbib}
+\setbeamertemplate{theorems}[numbered]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting Colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Primary Colors
+\definecolor{EAPviolet}{RGB}{86, 63, 70}
+\definecolor{EAPgreen}{RGB}{88, 140, 126}
+\definecolor{EAPyellow}{RGB}{242, 174, 114}
+
+\definecolor{EAPred}{RGB}{136, 0, 17}
+\definecolor{EAPblue}{RGB}{0, 100, 125}
+
+\definecolor{EAPlightgray}{RGB}{192, 192, 192}
+\definecolor{EAPdarkgray}{RGB}{128, 128, 128}
+
+% Coe Colors
+\definecolor{crimson}{RGB}{136, 0, 17}
+\definecolor{gold}{RGB}{211, 144, 47}
+\definecolor{darkcrimson}{RGB}{133, 0, 0}
+\definecolor{lightgray}{RGB}{192, 192, 192}
+\definecolor{darkgray}{RGB}{128, 128, 128}
+\definecolor{teal}{RGB}{0, 100, 125}
+\definecolor{plum}{RGB}{92, 13, 52}
+\definecolor{lightblue}{RGB}{105, 167, 196}
+\definecolor{darkblue}{RGB}{38, 54, 92}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Creating the ``Palettes"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor*{palette primary}{fg = white, bg = EAPgreen}    % primary color palette
+\setbeamercolor*{palette secondary}{fg = white, bg = EAPgreen}  % second color palette
+\setbeamercolor*{palette tertiary}{fg = white, bg = EAPgreen}   % third color palette
+\setbeamercolor*{palette quaternary}{fg = white, bg = EAPgreen} % fourth color palette
+
+% If your theme of choice uses sidebars you can mess with these
+
+\setbeamercolor*{sidebar}{fg = EAPviolet, bg = EAPlightgray}
+\setbeamercolor*{palette sidebar primary}{fg = EAPgreen}
+\setbeamercolor*{palette sidebar secondary}{fg = white}
+\setbeamercolor*{palette sidebar tertiary}{fg = EAPviolet}
+\setbeamercolor*{palette sidebar quaternary}{fg = lightgray}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor{block title}{fg = white, bg = EAPgreen}
+\setbeamercolor{block body}{bg = black!10!}
+
+\setbeamercolor{block title alerted}{bg = EAPred, fg = white}
+\setbeamercolor{block body alerted}{bg = black!10!}
+
+\setbeamercolor{block title example}{bg = EAPyellow, fg = white}
+\setbeamercolor{block body example}{bg = black!10!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Miscellaneous Coloring and Formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Itemize, Enumerate, and Description Environment
+\setbeamercolor{item}{fg = EAPgreen}                     
+\setbeamercolor{subitem}{fg = EAPyellow}            
+\setbeamercolor{subsubitem}{fg = black}
+\setbeamercolor{enumerate subitem}{fg = EAPgreen}
+\setbeamercolor{description item}{fg = EAPgreen}
+
+% Caption options
+\setbeamertemplate{caption}[numbered]
+\setbeamercolor{caption}{fg = black}
+\setbeamercolor{caption name}{fg = black}
+\setbeamerfont{caption}{series=\scshape}
+
+% Alerted Text
+\setbeamercolor{alerted text}{fg = EAPred}
+
+% Text color
+\setbeamercolor{normal text}{fg = black}      
+
+% My preferred inner theme
+\useinnertheme{rounded}
+
+% Nobody uses these, so take them out
+\setbeamertemplate{navigation symbols}{}
+
+% Adjusts margins (I think the Madrid theme has terrible margins)
+\setbeamersize{text margin left=15mm,text margin right=15mm}
+
+% If you don't like the default font
+%\usefonttheme{serif}
+
+% NOTE: Change background slide color under the title setup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Different Section Header Slides
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Creates section slide
+% 1st parameter = section title, 2nd parameter = subheading
+\newcommand{\sectionslide}[2]{
+ \setbeamercolor{background canvas}{bg = EAPgreen}
+ 	\section{#1}
+	\begin{frame}[plain]
+	\Large\color{white}\textbf{#1}
+
+        \normalsize\color{white}{#2}
+	\end{frame}
+	\setbeamercolor{background canvas}{bg = white}
+}
+
+% Same thing as \sectionslide but without making a section
+% => (No Table of Contents Entry)
+\newcommand{\transitionslide}[2]{
+ \setbeamercolor{background canvas}{bg = EAPgreen}
+	\begin{frame}[plain]
+	\Large\color{white}\textbf{#1}
+	
+        \normalsize\color{white}{#2}
+	\end{frame}
+	\setbeamercolor{background canvas}{bg = white}
+}
+
+\newcommand{\sectiontocslide}[1]
+{
+	\section{#1}
+	
+	\setbeamercolor{section in toc}{fg = white, bg =EAPgreen}
+	\setbeamercolor{section in toc shaded}{fg=gray}
+	\setbeamercolor{section number projected}{bg=EAPgreen,fg=EAPgreen}
+	\setbeamerfont{section number projected}{size=\large}
+	\setbeamerfont{section in toc}{series = \bfseries}
+	\setbeamerfont{section in toc shaded}{series = \mdseries}
+	\setbeamertemplate{section in toc}[square]
+	
+	\setbeamercolor{subsection in toc}{fg = white, bg = EAPgreen}
+	\setbeamercolor{subsection number projected}{bg=white,fg=EAPgreen}
+	\setbeamercolor{subsection in toc shaded}{fg = gray}
+	\setbeamerfont{subsection number projected}{size=\normalsize}
+	\setbeamertemplate{subsection in toc}[triangle]
+	
+	\setbeamertemplate{itemize item}[circle]
+	\setbeamertemplate{itemize subitem}[triangle]
+	\setbeamertemplate{itemize subsubitem}[square]
+	\setbeamertemplate{enumerate items}[default]
+	
+	 \setbeamercolor*{background canvas}{fg=EAPgreen, bg=EAPgreen}
+    \begin{frame}
+    \bf
+        \tableofcontents[hideallsubsections, currentsection]
+    \end{frame}
+    \setbeamercolor{background canvas}{fg=black,bg=white}        	% Reset colors
+    
+    \setbeamercolor{section in toc}{fg = black, bg = white}
+	\setbeamercolor{section number projected}{bg=white,fg=EAPviolet}
+	\setbeamerfont{section number projected}{size=\large}
+	\setbeamertemplate{section in toc}[square]
+	
+	\setbeamercolor{subsection in toc}{fg = black, bg = EAPviolet}
+	\setbeamercolor{subsection number projected}{bg=white,fg=EAPviolet}
+	\setbeamerfont{subsection number projected}{size=\normalsize}
+	\setbeamertemplate{subsection in toc}[triangle]
+	
+	\setbeamertemplate{itemize item}[circle]
+	\setbeamertemplate{itemize subitem}[triangle]
+	\setbeamertemplate{itemize subsubitem}[square]
+	\setbeamertemplate{enumerate items}[default]
+}
+
+% Table of Contents
+\setbeamercolor{section in toc}{fg = black, bg = white}
+\setbeamercolor{section number projected}{bg=white,fg=EAPviolet}
+\setbeamerfont{section number projected}{size=\large}
+\setbeamertemplate{section in toc}[square]
+
+\setbeamercolor{subsection in toc}{fg = black, bg = white}
+\setbeamercolor{subsection number projected}{bg=white,fg=EAPviolet}
+\setbeamerfont{subsection number projected}{size=\normalsize}
+\setbeamertemplate{subsection in toc}[triangle]
+
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[square]
+\setbeamertemplate{enumerate items}[default]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Title Slide Formating & Coloring
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamerfont{frametitle}{series=\bfseries}        % Bold the title
+\setbeamerfont{title}{series=\bfseries}             % Bold frame titles
+
+\setbeamercolor{background canvas}{fg=black,bg=white}
+
+\setbeamercolor{titlelike}{fg=EAPviolet,bg=white}                         % Color for title slide
+\setbeamercolor{frametitle}{fg=EAPviolet, bg=white}                        % Color for slide titles
+
+\institute{Coe College}
+
+\setbeamertemplate{frametitle}
+{
+    \nointerlineskip
+    \begin{beamercolorbox}[sep=0.3cm,ht=1.8em,wd=\paperwidth]{frametitle}
+        \vbox{}\vskip-2ex%
+        \strut\insertframetitle\strut \\
+        %\vskip-0.8ex
+        \hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}% <-- calculation of left margin width
+    	{\color{EAPgreen}\rule[0.5\baselineskip]{1.2\paperwidth}{3pt}}%
+        \vskip-2.7ex%
+    \end{beamercolorbox}
+}
+
+
+\newcommand{\maketitlepage}{%
+    \setbeamercolor*{background canvas}{fg=white,bg=EAPgreen} % Background color
+    \begin{frame}[plain]
+
+	\vfill    
+    
+    {\Large \textbf{\textcolor{white}{\inserttitle}}}
+    
+    \vspace{.25cm} 
+    {\large \textbf{\textcolor{white}{\insertsubtitle}}}
+    \vspace{.25cm} 
+    
+    \begin{tikzpicture}
+        \fill[EAPviolet] (0,0) rectangle (\textwidth,0.2);
+    \end{tikzpicture}
+    
+    
+    \vspace{.7cm}
+    \textcolor{white}{\insertauthor}    
+    
+	\vspace{.35cm}
+     \textcolor{white}{\insertinstitute}
+    
+	\vspace{.35cm}
+    \textcolor{white}{\insertdate}
+    
+    \vfill
+    
+    \end{frame}
+    \setbeamercolor{background canvas}{fg=black,bg=white}        % Reset colors
+}
+
+\mode
+<all>

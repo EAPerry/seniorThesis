@@ -1,0 +1,192 @@
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CoeCollege1 Style File
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usetheme{Madrid}
+
+\usepackage{amsmath, amsfonts, amscd, amssymb, amsthm, mathrsfs, mathtools}
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+
+\bibliographystyle{aer}
+\usepackage{natbib}
+\setbeamertemplate{theorems}[numbered]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Setting Colors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Primary Colors
+\definecolor{crimson}{RGB}{136, 0, 17}
+\definecolor{gold}{RGB}{211, 144, 47}
+
+% Secondary Colors
+\definecolor{darkcrimson}{RGB}{133, 0, 0}
+\definecolor{lightgray}{RGB}{192, 192, 192}
+\definecolor{darkgray}{RGB}{128, 128, 128}
+
+% Tertiary Colors
+\definecolor{teal}{RGB}{0, 100, 125}
+\definecolor{plum}{RGB}{92, 13, 52}
+\definecolor{lightblue}{RGB}{105, 167, 196}
+\definecolor{darkblue}{RGB}{38, 54, 92}
+
+% Colors from other themes
+\definecolor{EAPviolet}{RGB}{86, 63, 70}
+\definecolor{EAPgreen}{RGB}{88, 140, 126}
+\definecolor{EAPyellow}{RGB}{242, 174, 114}
+
+\definecolor{EAPred}{RGB}{136, 0, 17}
+\definecolor{EAPblue}{RGB}{0, 100, 125}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Creating the ``Palettes"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor*{palette primary}{fg = crimson, bg = lightgray}       	% primary color palette
+\setbeamercolor*{palette secondary}{fg = crimson, bg = gold}            % second color palette
+\setbeamercolor*{palette tertiary}{fg = white, bg = crimson}            	% third color palette
+\setbeamercolor*{palette quaternary}{fg = crimson, bg = lightgray}	% fourth color palette
+
+% If your theme of choice uses sidebars you can mess with these
+
+\setbeamercolor*{sidebar}{fg = crimson, bg = lightgray}
+\setbeamercolor*{palette sidebar primary}{fg = crimson}
+\setbeamercolor*{palette sidebar secondary}{fg = white}
+\setbeamercolor*{palette sidebar tertiary}{fg = crimson}
+\setbeamercolor*{palette sidebar quaternary}{fg = lightgray}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Blocks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor{block title}{fg = white, bg = gold}
+\setbeamercolor{block body}{bg = gold!20!}
+
+\setbeamercolor{block title example}{bg = teal, fg = white}
+\setbeamercolor{block body example}{bg = black!10!}
+
+\setbeamercolor{block title alerted}{bg = plum, fg = white}
+\setbeamercolor{block body alerted}{bg = black!10!}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Miscellaneous Coloring and Formatting
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Itemize, Enumerate, and Description Environment
+\setbeamercolor{item}{fg = gold}                     
+\setbeamercolor{subitem}{fg = gold}            
+\setbeamercolor{subsubitem}{fg = teal}
+\setbeamercolor{enumerate item}{fg = black}
+\setbeamercolor{enumerate subitem}{fg = gold}
+\setbeamercolor{description item}{fg = gold}
+\setbeamerfont{description item}{series = \bf}
+
+% Caption options
+\setbeamertemplate{caption}[numbered]
+\setbeamercolor{caption}{fg = black}
+\setbeamercolor{caption name}{fg = black}
+\setbeamerfont{caption}{series=\scshape}
+
+% Alerted Text
+\setbeamercolor{alerted text}{fg = crimson}
+
+% Text color
+\setbeamercolor{normal text}{fg = black}      
+
+% My preferred inner theme
+\useinnertheme{rounded}
+
+% Nobody uses these, so take them out
+\setbeamertemplate{navigation symbols}{}
+
+% Adjusts margins (I think the Madrid theme has terrible margins)
+\setbeamersize{text margin left=15mm,text margin right=15mm}
+
+% If you don't like the default font
+%\usefonttheme{serif}
+
+% NOTE: Change background slide color under the title setup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Different Section Header Slides
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Creates section slide
+% 1st parameter = section title, 2nd parameter = subheading
+\newcommand{\sectionslide}[2]{
+ \setbeamercolor{background canvas}{bg = gold}
+ 	\section{#1}
+	\begin{frame}[plain]
+	\Large\color{white}\textbf{#1}
+
+        \normalsize\color{white}{#2}
+	\end{frame}
+	\setbeamercolor{background canvas}{bg = white}
+}
+
+% Same thing as \sectionslide but without making a section
+% => (No Table of Contents Entry)
+\newcommand{\transitionslide}[2]{
+ \setbeamercolor{background canvas}{bg = gold}
+	\begin{frame}[plain]
+	\Large\color{white}\textbf{#1}
+	
+        \normalsize\color{white}{#2}
+	\end{frame}
+	\setbeamercolor{background canvas}{bg = white}
+}
+
+\newcommand{\sectiontocslide}[1]
+{
+	\section{#1}
+	
+	 \setbeamercolor*{background canvas}{fg=gold, bg=white}
+    \begin{frame}
+    \bf
+        \tableofcontents[hideallsubsections, currentsection]
+    \end{frame}
+    \setbeamercolor{background canvas}{fg=black,bg=white}        	% Reset colors
+}
+
+
+
+% Table of Contents
+\setbeamercolor{section in toc}{fg = black, bg = white}
+\setbeamercolor{section number projected}{bg=white,fg=crimson}
+\setbeamerfont{section number projected}{size=\large}
+\setbeamertemplate{section in toc}[square]
+
+\setbeamercolor{subsection in toc}{fg = black, bg = crimson}
+\setbeamercolor{subsection number projected}{bg=white,fg=crimson}
+\setbeamerfont{subsection number projected}{size=\normalsize}
+\setbeamertemplate{subsection in toc}[triangle]
+
+\setbeamertemplate{itemize item}[circle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[square]
+\setbeamertemplate{enumerate items}[default]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Title Slide Formating & Coloring
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor{background canvas}{fg=black,bg=white}
+
+\setbeamercolor{titlelike}{fg=white,bg=crimson}                        		% Color for title slide
+\setbeamercolor{frametitle}{fg=white,bg=crimson}                       	% Color for slide titles
+
+\institute[Coe College]{\includegraphics[width = 1in]{CoeLogo.jpg}}
+
+\newcommand{\maketitlepage}{%
+    \setbeamercolor*{background canvas}{fg=black,bg=white} 			% Background color
+    \begin{frame}[plain]
+    \titlepage                                                   												% Basic layout
+    \end{frame}
+    \setbeamercolor{background canvas}{fg=black,bg=white}        		% Reset colors
+}
+
+\mode
+<all>

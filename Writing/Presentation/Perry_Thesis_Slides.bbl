@@ -1,0 +1,34 @@
+
+
+% Bibstyle aea.bst version 2009.05.20
+
+\begin{thebibliography}{xx}
+
+\harvarditem[Cushing et~al.]{Lara Cushing, Dan Blaustein-Rejto, Madeline
+  Wander, Manuel Pastor, James Sadd, Allen Zhu \harvardand\ Rachel
+  Morello-Frosch}{2018}{cushing2018carbon}
+{\bf Cushing, Lara, Dan Blaustein-Rejto, Madeline Wander, Manuel Pastor, James
+  Sadd, Allen Zhu, and Rachel Morello-Frosch.} 2018. ``Carbon trading,
+  co-pollutants, and environmental equity: Evidence from California's
+  cap-and-trade program (2011--2015).'' {\em PLoS medicine}, 15(7):~e1002604.
+
+\harvarditem[Hernández-Cortés \harvardand\ Meng]{Danae Hernández-Cortés
+  \harvardand\ Kyle Meng}{2023}{hernandez2023environmental}
+{\bf Hernández-Cortés, Danae, and Kyle Meng.} 2023. ``Do environmental
+  markets cause environmental injustice? Evidence from California's carbon
+  market.'' {\em Journal of Public Economics}, 217:~104786.
+
+\harvarditem[Pastor et~al.]{Manuel Pastor, Michael Ash, Lara Cushing, Rachel
+  Morello-Frosch, Edward-Michael Mu{\~n}a \harvardand\ James
+  Sadd}{2022}{pastor2022up}
+{\bf Pastor, Manuel, Michael Ash, Lara Cushing, Rachel Morello-Frosch,
+  Edward-Michael Mu{\~n}a, and James Sadd.} 2022. ``Up in the Air: Revisiting
+  Equity Dimensions of California's Cap-and-Trade System.'' {\em USC Dornsife
+  Equity Research Institute}.
+
+\harvarditem[Weber]{Paige Weber}{2021}{weber2021dynamic}
+{\bf Weber, Paige.} 2021. ``Dynamic responses to carbon pricing in the
+  electricity sector.'' {\em Working paper, University of North Carolina at
+  Chapel Hill}.
+
+\end{thebibliography}

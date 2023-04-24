@@ -1,26 +1,55 @@
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-# Data Cleaning: Senior Thesis -------------------------------------------------
+# Senior Thesis Script ---------------------------------------------------------
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 # 
 # Contributor(s) : Evan Perry
-# Last Revised : 2023-03-03
-# Version : 1
+# Last Revised : 2023-04-22
+# Version : 2
 # 
 # Purpose : 
 # 
+# This file reads, cleans, and analyzes all data and simulation work for Evan
+# Perry's senior thesis, titled ``The Implications of Carbon Pricing For 
+# Environmental Inequality."
 # 
-# 
-# Inputs :
-#
-# 
-# 
-# Outputs : 
-# 
-# 
+# NOTE: This script will run the power grid simulations, but does so by calling
+# the Python program ``simulation.py". Because this program takes some time to
+# run (about 3 hours), it is commented out in this script. Run the program by
+# just uncommenting that portion of the script.
 # 
 # Outline: (Crtl + Shift + O)
-#
-#
+# 
+#   1. Code to Change When Replicating
+#   2. Setup
+#   3. Build Generator Sample
+#       a. Generators & Emissions
+#       b. Fuel Prices
+#   4. Demand
+#   5. K-Means Clustering
+#       a. K-Means on Generators
+#       b. K-Means on Demand
+#   6. Run the Simulation (uncomment to run the simulation)
+#   7. Process Main Simulation
+#       a. Find the data
+#       b. Hourly Generation
+#       c. Generation Outcomes
+#       d. Investment Outcomes
+#       e. Emissions Outcomes
+#   8. Process the High-Cost Simulation
+#   9. Disadvantaged Communities
+#   10. Environmental Inequality Gap
+#   11. Reference Data & Figures
+# 
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+## Code to Change When Replicating ---------------------------------------------
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+# Setting working directory
+setwd("C:/Users/eaper/Senior Thesis/seniorThesis")
+
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
@@ -40,12 +69,8 @@ library(stargazer)
 library(reticulate)
 options(tigris_use_cache = TRUE)
 
-# Setting working directory
-setwd("C:/Users/eaper/Senior Thesis/seniorThesis")
-
 # Remove scientific notation
 options(scipen = 999)
-
 
 # ggplot styling
 theme_set(theme_bw())
@@ -84,10 +109,7 @@ pm25 <- read_excel("Data/main/eGRID/eGRID2020 DRAFT PM Emissions.xlsx",
                    sheet = "2019 PM Plant-level Data", 
                    skip = 1)
 
-pm25 <- pm25 %>% 
-  select(
-    ORISPL, PLPM25RA
-  )
+pm25 <- pm25 %>%  select(ORISPL, PLPM25RA)
 
 egrid_plant <- left_join(egrid_plant, pm25, by="ORISPL")
 
@@ -96,11 +118,13 @@ egrid_plant <- left_join(egrid_plant, pm25, by="ORISPL")
 emis_coefs <- read_csv("Data/main/eGRID/eGRID2019 Table C-1.csv") %>% 
   select(-c("Fuel Type", "Source"))
 colnames(emis_coefs) <- c("PLPRMFL", "co2_mmbtu", "ch4_mmbtu", "n2o_mmbtu")
+
 # Clean these up so that they are in the proper units:
 #   > tons CO2/MMBTU --> tonnes CO2/MMBTU   (GWP = 1)
 #   > lbs CH4/MMBTU --> tonnes CH4/MMBTU    (GWP = 27.9)
 #   > lbs N2O MMBTU --> tonnes N2O/MMBTU    (GWP = 273)
 # GWP from the table in Section 1.2
+
 emis_coefs <- emis_coefs %>% 
   mutate(
     co2_mmbtu = 0.907185*co2_mmbtu,
@@ -232,13 +256,6 @@ colnames(plants) <- c(
   "hrate", "co2e_mmbtu", "nox_mmbtu", "so2_mmbtu", "pm25_mmbtu"
 )
 
-# Tables & Figures to Make Here:
-#   1. Summary stats of the generators by fuel category                 
-#   2. Map of the regions with generator locations?                     
-#   3. Distribution of heat rates and emissions factors by fuel type    X
-#   4. Distribution of generators by region                             X
-#   5. Distribution of capacity by region                               X
-
 pdf("Writing/Draft/figures/chapter5_figures/EI_region_violin.pdf",
     width = 6, height = 3.5)
 ggplot(plants) + 
@@ -274,13 +291,6 @@ temp <- temp %>%
       T ~ "AAA"
     )
   )
-
-
-# ggplot(temp, aes(x=hrate, y=fuel_cat, fill=fuel_cat)) + 
-#   geom_boxplot() + 
-#   ylab("") +
-#   xlab('\nmmBTU/MWh') +
-#   theme(legend.title = element_blank(), legend.position = "none")
 
 
 p1 <- ggplot(temp %>% filter(pollutant=="NOx"), 
@@ -861,7 +871,7 @@ cluster_plants$gen_group <- 1:30
 
 # The actual simulation is coded in a separate Python script. This next line 
 # just calls this script and runs it. Note that these simulations take some time
-# to execute (about 2.5 hours). 
+# to execute (about 3 hours). 
 
 # py_run_file("Code/main/simulation.py")
 
@@ -1189,8 +1199,7 @@ temp <- annual_sim %>%
 #   summarise(
 #     annual_gen = sum(annual_gen)
 #   )
-
-(70190296 - 58740134)/70190296*100
+# (70190296 - 58740134)/70190296*100
 
 pdf("Writing/Draft/figures/chapter5_figures/gen_fuel_nobca.pdf",
     width = 6, height = 4)
@@ -2044,6 +2053,8 @@ gc()
 ## Environmental Inequality Gap ------------------------------------------------
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
+# Metric 1: No Buffer ----------------------------------------------------------
+
 temp <- st_set_geometry(wecc_tracts, NULL) %>% 
   select(GEOID10, DAC_status, STATEFP10, COUNTYFP10, ALAND10) %>% 
   # Just to avoid an issue
@@ -2129,21 +2140,13 @@ ggplot(temp %>% filter(bca == 0), aes(x= tau, y=annual_nox, color = DAC_status))
   theme(legend.title = element_blank(), legend.position = "top")
 dev.off()
 
-wecc_tracts$DAC_status
-
-stwecc_tracts %>%
-  group_by(STATEFP10) %>% 
-  summarize(
-    prop_dis = sum(DAC_status == "Disadvantaged")
-  )
-
-
-
-
-
-
-
-
+# wecc_tracts$DAC_status
+# 
+# stwecc_tracts %>%
+#   group_by(STATEFP10) %>% 
+#   summarize(
+#     prop_dis = sum(DAC_status == "Disadvantaged")
+#   )
 
 # SO2
 
@@ -2287,6 +2290,143 @@ ggpubr::ggarrange(p1, p2, ncol = 2, nrow = 1, labels = c("A","B"),
                   common.legend = T)
 dev.off()
 
+rm(p1, p2, plants_sf, temp, temp_spt)
+gc()
+
+# Metric 2: X-Mile Buffer Zones
+
+plant_coords <- st_as_sf(
+    x = plants,
+    coords = c("lon", "lat"),
+    crs =  "WGS84") %>%
+  st_transform(crs = st_crs(wecc_tracts))
+
+
+ei_with_buffers <- function(X){
+  
+  buffer_WECC <- st_buffer(wecc_tracts, dist = 1000*X*0.621371)
+  buffer_WECC$buffer_areas <- st_area(buffer_WECC)
+  
+  temp <- st_set_geometry(buffer_WECC, NULL) %>% 
+    select(GEOID10, DAC_status, STATEFP10, COUNTYFP10, buffer_areas)
+  
+  ei_gap2 <- st_join(plant_coords, buffer_WECC)
+  ei_gap2 <- st_set_geometry(ei_gap2, NULL) %>% 
+    select(plantID, GEOID10)
+  ei_gap2 <- merge(annual_sim, ei_gap2, by="plantID")
+  
+  ei_gap2 <- ei_gap2 %>% 
+    group_by(GEOID10, scenario, bca, tau) %>% 
+    summarise(
+      annual_nox = sum(annual_nox), 
+      annual_so2 = sum(annual_so2), 
+      annual_pm25 = sum(annual_pm25)
+    )
+  
+  temp_spt <- split(ei_gap2, ei_gap2$scenario)
+  ei_gap2 <- lapply(
+    temp_spt, 
+    function (x) {
+      y = merge(temp, x, by = "GEOID10", all.x = T)
+      my_scenario = unique(x$scenario)
+      my_bca = unique(x$bca)
+      my_tau = unique(x$tau)
+      y$scenario = rep(my_scenario, nrow(y))
+      y$bca = rep(my_bca, nrow(y))
+      y$tau = rep(my_tau, nrow(y))
+      return(y)
+    }
+  )
+  
+  ei_gap2 <- bind_rows(ei_gap2)
+  ei_gap2 <- ei_gap2 %>% 
+    mutate_at(vars('annual_nox', 'annual_so2', 'annual_pm25'), 
+              ~replace(., is.na(.), 0)) %>% 
+    mutate(buffer_areas = units::drop_units(buffer_areas))
+  
+  temp <- ei_gap2 %>% 
+    group_by(DAC_status, scenario, bca, tau) %>% 
+    summarise(
+      annual_nox = mean(annual_nox/buffer_areas*2589988),
+      annual_so2 = mean(annual_so2/buffer_areas*2589988),
+      annual_pm25 = mean(annual_pm25/buffer_areas*2589988)
+    )
+  temp$buffer_dist <- rep(X, nrow(temp))
+  
+  return(temp)
+  
+}
+
+sample_dist <- list(0, 5, 10, 15)
+ei_gap_buffered <- lapply(sample_dist, ei_with_buffers)
+ei_gap_buffered <- bind_rows(ei_gap_buffered)
+
+
+temp <- ei_gap_buffered %>% 
+  filter(bca == 1) %>% 
+  pivot_wider(names_from = DAC_status, values_from = 5:7) %>% 
+  mutate(
+    nox_diff = annual_nox_Disadvantaged - `annual_nox_Non-Disadvantaged`,
+    so2_diff = annual_so2_Disadvantaged - `annual_so2_Non-Disadvantaged`,
+    pm25_diff = annual_pm25_Disadvantaged - `annual_pm25_Non-Disadvantaged`
+  )
+
+
+p1 <- ggplot(temp, aes(x= tau, y=nox_diff, color = as.factor(buffer_dist))) +
+  geom_line(lwd=2) +  
+  geom_point(color = "white", size = 5) +
+  geom_point(size = 4) +
+  labs(x='\nCalifornia Emissions Price ($/tonne)', 
+       y='Tonnes NOx per sq. mile\n') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank(), legend.position = "top")
+
+p2 <- ggplot(temp, aes(x= tau, y=so2_diff, color = as.factor(buffer_dist))) +
+  geom_line(lwd=2) +  
+  geom_point(color = "white", size = 5) +
+  geom_point(size = 4) +
+  labs(x='\nCalifornia Emissions Price ($/tonne)', 
+       y='Tonnes SO2 per sq. mile\n') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank(), legend.position = "top")
+
+p3 <- ggplot(temp, aes(x= tau, y=pm25_diff, color = as.factor(buffer_dist))) +
+  geom_line(lwd=2) +  
+  geom_point(color = "white", size = 5) +
+  geom_point(size = 4) +
+  labs(x='\nCalifornia Emissions Price ($/tonne)', 
+       y='Tonnes PM2.5 per sq. mile\n') +
+  scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+  theme(legend.title = element_blank(), legend.position = "top")
+
+pdf("Writing/Draft/figures/chapter5_figures/ei_gap_buffers.pdf",
+    width = 5, height = 9)
+ggpubr::ggarrange(p1, p2, p3, ncol = 1, nrow = 3, labels = c("A","B","C"), 
+                  common.legend = T)
+dev.off()
+
+
+# # NOx
+# 
+# pdf("Writing/Draft/figures/chapter5_figures/ei_gap_bca_nox.pdf",
+#     width = 5, height = 4)
+# ggplot(temp %>% filter(bca == 1), aes(x= tau, y=annual_nox, color = DAC_status)) +
+#   geom_line(lwd=2) +  
+#   geom_point(color = "white", size = 5) +
+#   geom_point(size = 4) +
+#   labs(x='\nCalifornia Emissions Price ($/tonne)', 
+#        y='Tonnes NOx per sq. mile\n') +
+#   scale_x_continuous(breaks = c(0, 20, 40, 60, 80)) +
+#   theme(legend.title = element_blank(), legend.position = "top")
+# dev.off()
+# 
+# 
+
+
+# ex_buffer <- st_buffer(wecc_tracts[20,], dist = 1000*30*0.621371)
+# ex_buffer$buffer_area <- paste(
+#   "Area =", round(ex_buffer$buffer_area/2589988, digits=0), "mi2"
+#   )
 
 # table_test <- st_join(annual_sim_sf %>% filter(tau == 0, bca == 1),
 #                       wecc_tracts %>% select(GEOID10, DAC_status))
@@ -2302,8 +2442,6 @@ dev.off()
 # entry_1 <- table_test %>% filter(DAC_status == "Disadvantaged")
 # mean(entry_1$co2e_mmbtu)
 # hist(entry_1$co2e_mmbtu * entry_1$hrate)
-
-
 
 
 ### Metric 2: The buffer 

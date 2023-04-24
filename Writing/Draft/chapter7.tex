@@ -65,13 +65,13 @@
     \hline \\[-1.8ex]
     \multicolumn{4}{l}{\emph{Indices \& Model Environment}}\\
     \hline 
-    $i$ & Generator identifier & -- & -- \\
+    $i$ & Power plant identifier & -- & -- \\
     $r$ & Region identifier & -- & -- \\
     $\ell$ & Transmission line identifier & -- & -- \\
     $m$ & Subregion or community identifier & -- & --\\ 
-    $N$ & The number of generators & Exogenous & (1) \\
-    $\mathcal{N}$ & Set of all generators; $\mathcal{N} = \{1, \ldots, N\}$ & Exogenous & (1) \\
-    $\mathcal{N}_r$ & Set of all generators in region $r$ & Exogenous &  (1) \\
+    $N$ & The number of power plants & Exogenous & (1) \\
+    $\mathcal{N}$ & Set of all power plants; $\mathcal{N} = \{1, \ldots, N\}$ & Exogenous & (1) \\
+    $\mathcal{N}_r$ & Set of all power plants in region $r$ & Exogenous &  (1) \\
     $R$ & The number of regions & Exogenous &  (1) \\
     $\mathcal{L}$ & Set of all transmission lines & Exogenous &  (5) \\
     $M$ & Number of subregions or communities & Exogenous &  (3), (4)\\
@@ -80,27 +80,27 @@
     \multicolumn{4}{l}{\emph{Investment Phase}}\\
     \hline 
     $\mathcal{J}$ & Set of all investment options & Exogenous & Chosen\\
-    $j_i$ & Generator $i$'s investment decision; $j_i \in \mathcal{J}$ & Endogenous & -- \\
+    $j_i$ & Power plant $i$'s investment decision; $j_i \in \mathcal{J}$ & Endogenous & -- \\
     $j$ & Investment profile, $j = (j_1, j_2, \ldots, j_N)$ & Endogenous & -- \\
-    $\rho_i^0$ & Generator $i$'s initial heat rate (Btu/kWh) & Exogenous & (1) \\
-    $\rho_i$ & Generator $i$'s heat rate (Btu/kwh) & Endogenous & -- \\
+    $\rho_i^0$ & Power plant $i$'s initial heat rate (Btu/kWh) & Exogenous & (1) \\
+    $\rho_i$ & Power plant $i$'s heat rate (Btu/kwh) & Endogenous & -- \\
     $\tilde{\delta}$ & Heat rate depreciation rate from the investment phase to the generation phase; $\tilde{\delta} \in (0, 1)$ & Exogenous & (10) \\
-    $v_i$ & Generator $i$'s stochastic investment cost shock; $v_i > 0$ for all $i \in \mathcal{N}$ & Exogenous & Chosen \\
+    $v_i$ & Power plant $i$'s stochastic investment cost shock; $v_i > 0$ for all $i \in \mathcal{N}$ & Exogenous & Chosen \\
     $\gamma$ & Constant scalar in the investment cost function; $\gamma > 0$ & Exogenous & (12) \\
     $\alpha$ & Scale parameter in the investment cost function; $\alpha > 0$ & Exogenous & (12) \\
-    $\Gamma (j_i, v_i)$ & Investment costs for generator $i$; a function of generator $i$'s investment choice $j_i$ and $i$' stochastic investment cost shock $v_i$ & Endogenous & -- \\
-    $\Gamma (j \mid v)$ & Total investment costs for all generators; a function of the investment profile $j$ given a vector of all generator's stochastic investment cost shocks $v$ & Endogenous & -- \\
+    $\Gamma (j_i, v_i)$ & Investment costs for power plant $i$; a function of power plant $i$'s investment choice $j_i$ and $i$' stochastic investment cost shock $v_i$ & Endogenous & -- \\
+    $\Gamma (j \mid v)$ & Total investment costs for all power plants; a function of the investment profile $j$ given a vector of all power plants' stochastic investment cost shocks $v$ & Endogenous & -- \\
     $Q_t^e$ & $R$-dimensional vector of expected quantities demanded of electricity at time $t$ for each region (kWh) & Exogenous & (2)\\
     \\[-1.8ex]
     \multicolumn{4}{l}{\emph{Generation Phase}}\\
     \hline 
-    $a_{it}$ & Operating decision of generator $i$ in period $t$; $a_{it} \in \{0, 1, \ldots, R\}$ where $a_{it} = r$ indicates that generator $i$ operates in period $t$ to sell its generation in region $r$ and $a_{it} = 0$ indicates that generator $i$ does not operate in period $t$ & Endogenous & -- \\
+    $a_{it}$ & Operating decision of power plant $i$ in period $t$; $a_{it} \in \{0, 1, \ldots, R\}$ where $a_{it} = r$ indicates that power plant $i$ operates in period $t$ to sell its generation in region $r$ and $a_{it} = 0$ indicates that power plant $i$ does not operate in period $t$ & Endogenous & -- \\
     $a_t$ & Profile of operating decisions in period $t$; $a_t = (a_{1t}, a_{2t}, \ldots, a_{Nt})$ & Endogenous & -- \\
-    $\overline{q}_i$ & Generator $i$'s nameplate capacity (kW); the maximum rated generation of generator $i$ in an hour & Exogenous & (1) \\
-    $q_{itr}$ & Generator $i$'s generation to be sold in region $r$'s wholesale electricity market at time $t$ (kWh) & Endogenous & -- \\
-    $f_i$ & The primary fuel type of generator $i$; $f_i \in \{\text{Coal}, \text{Natural Gas}, \text{Oil}\}$ & Exogenous &  (1) \\
-    $u_{f_i}$ & Unit cost of generator $i$'s fuel $f_i$ (\$/Btu) & Exogenous & (6), (7), (8)\\
-    $e_{f_i}$ & Greenhouse gas emissions intensity of generator $i$'s fuel $f_i$ (tonnes CO$_2$e/Btu) & Exogenous & (1)\\
+    $\overline{q}_i$ & Power plant $i$'s nameplate capacity (kW); the maximum rated generation of power plant $i$ in an hour & Exogenous & (1) \\
+    $q_{itr}$ & Power plant $i$'s generation to be sold in region $r$'s wholesale electricity market at time $t$ (kWh) & Endogenous & -- \\
+    $f_i$ & The primary fuel type of power plant $i$; $f_i \in \{\text{Coal}, \text{Natural Gas}, \text{Oil}\}$ & Exogenous &  (1) \\
+    $u_{f_i}$ & Unit cost of power plant $i$'s fuel $f_i$ (\$/Btu) & Exogenous & (6), (7), (8)\\
+    $e_{f_i}$ & Greenhouse gas emissions intensity of power plant $i$'s fuel $f_i$ (tonnes CO$_2$e/Btu) & Exogenous & (1)\\
     $\tau_r$ & Greenhouse gas emissions tax in region $r$ (\$/tonnes CO$_2$e) & Exogenous & (9) \\
     $P_{tr}$ & Price of electricity in region $r$'s wholesale market at time $t$ & Endogenous & -- \\
     $Q_{tr}$ & Quantity of electricity demanded in region $r$'s wholesale market at time $t$ & Exogenous &  (2) \\
@@ -109,7 +109,7 @@
     $G(a_t)$ & Generation matrix, $N \times R$; a function of the operating decision profile (vector) $a_t$; element in the $i$th row and $r$th column is $q_{itr}$ or $\overline{q}_i \1(a_{it} = r)$ & Endogenous & --\\
     $\rho^0$ & $N$-dimensional vector of heat rates in the absence of investment; the $i$th element is $\rho_i^0(1 + \tilde{\delta})$ & Endogenous & -- \\
     $D_{\rho^0 - j}$ & Diagonalized $N\times N$ matrix corresponding with the vector $\rho^0 - j$; for elements along the diagonal, the element in the $i$th row and $i$ column is $\rho_i = \rho_i^0(1 + \tilde{\delta}) - j_i$, all elements not along the diagonal are 0 & Endogenous & -- \\
-    $U$ & Unit cost matrix, $N\times R$; the element in the $i$th row and $r$th column is generator $i$'s cost in region $r$ per Btu, $u_{f_i} + e_{f_i}\tau_r$ & Derived & -- \\
+    $U$ & Unit cost matrix, $N\times R$; the element in the $i$th row and $r$th column is power plant $i$'s cost in region $r$ per Btu, $u_{f_i} + e_{f_i}\tau_r$ & Derived & -- \\
     $\overline{q}$ & $N$-dimensional vector of nameplate capacities; $\overline{q} = (\overline{q}_1, \overline{q}_2, \ldots, \overline{q}_N)$ & Derived & -- \\
     $D_{\overline{q}}$ & Diagonalized $N\times N$ matrix corresponding with the vector $\overline{q}$; for elements along the diagonal, the element in the $i$th row and $i$th column is $\overline{q}_i$, all elements not along the diagonal are 0 & Derived & -- \\
     $\1(a_t)$ & Operating decisions matrix, $N \times R$; the element in the $i$th row and $r$th column is $\1(a_{it} = r)$ & Endogenous & -- \\
@@ -122,9 +122,9 @@
     \hline 
     $d$ & $M$-dimensional vector of communities' disadvantaged status; the $m$th element is 1 is $m$ is a disadvantaged community and 0 otherwise & Exogenous & (3), (4)\\
     $w$ & Local air pollutant identifier & -- & -- \\
-    $e_i^w$ & Generator $i$'s emissions intensity of air pollutant $w$ (pounds/kWh) & Exogenous & (1)\\
-    $w_{it}$ & Generator $i$'s emissions of air pollutant $w$ (lbs) & Endogenous & -- \\
-    $\phi_w(w_{it}\mid i, t)$ & $M$-dimensional vector of the changes in the concentration of air pollutant $w$ across all $M$ communities resulting from $w_{it}$, the emissions of air pollutant $w$ from generator $i$ in time $t$ & Endogenous & -- \\
+    $e_i^w$ & Power plant $i$'s emissions intensity of air pollutant $w$ (pounds/kWh) & Exogenous & (1)\\
+    $w_{it}$ & Power plant $i$'s emissions of air pollutant $w$ (lbs) & Endogenous & -- \\
+    $\phi_w(w_{it}\mid i, t)$ & $M$-dimensional vector of the changes in the concentration of air pollutant $w$ across all $M$ communities resulting from $w_{it}$, the emissions of air pollutant $w$ from power plant $i$ in time $t$ & Endogenous & -- \\
     $\Phi_w^1(T)$ & Average change in the concentration of pollutant $w$ for disadvantaged communities (elements of $d$ equal to 1) after $T$ periods & Endogenous & -- \\
     $\Phi_w^0(T)$ & Average change in the concentration of pollutant $w$ for non-disadvantaged communities (elements of $d$ equal to 0) after $T$ periods & Endogenous & -- \\
     $\text{EIGap}_w(T)$ & The environmental inequality gap after $T$ periods & Endogenous & -- \\
