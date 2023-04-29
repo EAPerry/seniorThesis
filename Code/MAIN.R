@@ -1539,6 +1539,93 @@ ggplot(temp, aes(x= tau, y=annual_pm25, fill = region)) +
   theme(legend.title = element_blank())
 dev.off()
 
+### Generation Diagnostics -----------------------------------------------------
+
+# i.e. Does the model actually do a good job at predicting this thing?
+
+egrid_2019 <- read_excel("Data/main/eGRID/egrid2019_data.xlsx", 
+                        sheet="PLNT19",
+                        skip = 1)
+egrid_2019 <- egrid_2019 %>% filter(ORISPL %in% plants$plantID) %>% 
+  select(ORISPL, PLNGENAN)
+
+egrid_2020 <- read_excel("Data/main/eGRID/eGRID2020_Data_v2.xlsx", 
+                         sheet="PLNT20",
+                         skip = 1)
+egrid_2020 <- egrid_2020 %>% filter(ORISPL %in% plants$plantID) %>% 
+  select(ORISPL, PLNGENAN)
+
+egrid_2021 <- read_excel("Data/main/eGRID/eGRID2021_data.xlsx", 
+                         sheet="PLNT21",
+                         skip = 1)
+egrid_2021 <- egrid_2021 %>% filter(ORISPL %in% plants$plantID) %>% 
+  select(ORISPL, PLNGENAN)
+
+egrid_ave <- list(egrid_2019, egrid_2020, egrid_2021)
+egrid_ave <- bind_rows(egrid_ave)
+egrid_ave <- egrid_ave %>% 
+  group_by(ORISPL) %>% 
+  summarise(ave_annual_gen = mean(PLNGENAN))
+
+diag_df <- merge(annual_sim, egrid_ave, by.x="plantID", by.y="ORISPL", all.x = T)
+
+diag_list <- split(diag_df, diag_df$scenario)
+
+# for (i in 1:length(diag_list)){
+#   
+#   df <- diag_list[[i]]
+#   mod <- lm('ave_annual_gen ~ annual_gen', data = df)
+#   mod <- summary(mod)
+#   diag_list[[i]] <- mod 
+#   
+# }
+# 
+# # l <- diag_list[[1]]$coefficients
+# 
+# temp <- data.frame(
+#   scenario = unique(annual_sim$scenario),
+#   mod_coef = unlist(lapply(diag_list, function (x) x$coefficients[2,1])),
+#   mod_fit = unlist(lapply(diag_list, function (x) x$r.squared))
+# )
+# 
+# ggplot(diag_df %>% filter(scenario == "a")) +
+#   geom_abline(slope = 1, intercept = 0, 
+#               lwd = 2, col = natparks.pals(name = "Charmonix", n=1)) +
+#   geom_point(aes(x = annual_gen, y = ave_annual_gen)) + 
+#   scale_x_sqrt() + 
+#   scale_y_sqrt()
+
+df <- diag_df %>% filter(scenario == "g")
+
+df$sim_mkt_shr <- df$annual_gen / sum(df$annual_gen) * 10^3
+df$emp_mkt_shr <- df$ave_annual_gen / sum(df$ave_annual_gen, na.rm = T) * 10^3
+
+summ_table <- data.frame()
+
+t1 = t.test(df$sim_mkt_shr, df$emp_mkt_shr, 
+            paired = TRUE, alternative = "two.sided")
+t2 = t.test(df$sim_mkt_shr, df$emp_mkt_shr, 
+            paired = TRUE, alternative = "less")
+t3 = t.test(df$sim_mkt_shr, df$emp_mkt_shr, 
+            paired = TRUE, alternative = "greater")
+
+summ_table <- list(t1, t2, t3)
+summ_table <- lapply(summ_table, function (x) data.frame(broom::tidy(x)))
+summ_table <- bind_rows(summ_table)
+stargazer(summ_table, summary = F, rownames = F)
+
+
+pdf("Writing/Draft/figures/chapter5_figures/scatter_mkt_share.pdf",
+    width = 6, height = 4)
+ggplot(df) +
+  geom_abline(slope = 1, intercept = 0,
+              lwd = 1, col = natparks.pals(name = "Charmonix", n=4)[4]) +
+  geom_point(aes(x = sim_mkt_shr, y = emp_mkt_shr, color = fuel_cat), shape = 3) +
+  labs(x = bquote('\nSimulated Market Share'~(x10^3)), 
+       y = bquote('Empirical Market Share'~(x10^3))) +
+  theme(legend.title = element_blank())
+dev.off()
+
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 

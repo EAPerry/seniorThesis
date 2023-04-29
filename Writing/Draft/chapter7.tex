@@ -14,7 +14,86 @@
 \end{minipage}
 \vfill
 
-% \newpage
+\newpage
+
+\begin{landscape}
+	\begin{figure}
+	\centering
+	\caption{Classification of Major Environmental Policies \label{policies}}
+	\begin{tikzpicture}[grow = down, scale = 1, semithick, scale = .9]
+		\footnotesize
+		\tikzstyle{level 1}=[level distance=20mm,sibling distance=9cm]
+		\tikzstyle{level 2}=[level distance=5cm,sibling distance=4.5cm]
+		\tikzstyle{level 3}=[level distance=4.5cm,sibling distance=4.5cm]
+			
+		\tikzstyle{s1}=[rectangle, rounded corners, text width=3.5cm, draw, inner sep = 5, fill = white, semithick,fill opacity = 0,text opacity = 1, minimum height = 4cm]
+		\tikzstyle{s1-mod}=[rectangle, rounded corners, text width=3.5cm, draw, inner sep = 5, fill = white, semithick,fill opacity = 0,text opacity = 0, draw opacity=0, minimum height = 4cm]
+		\tikzstyle{s2}=[rectangle, rounded corners, text width=6cm, draw, inner sep = 5, fill = white, semithick,fill opacity = 0,text opacity = 1]
+		\tikzstyle{s3}=[rectangle, rounded corners, text width=6cm, draw, inner sep = 5, fill = white, semithick,fill opacity = 0,text opacity = 1]
+		\tikzstyle{s4}=[rectangle, rounded corners, text width=4cm, draw, inner sep = 5, fill = white, semithick,fill opacity = 0,text opacity = 1]
+		
+		
+		\node[s3, text centered]{Major Environmental Policy Options}
+			child{node[s2, text centered]{Market-Based Policies}
+				child{node[s1]{Price Tools
+					\begin{itemize}
+						\item Carbon taxes
+						\item Border carbon adjustments
+						\item Clean energy subsidies
+					\end{itemize}
+				}
+					edge from parent node[]{}}
+				child{node[s1]{Quantity Tools
+					\begin{itemize}
+						\item Cap-and-trade
+						\item Individual fishing quotas
+						\item Wetland mitigation banking
+					\end{itemize}							
+				}
+					edge from parent node[]{}}
+				child{node[s1-mod]{I}
+					edge from parent node[]{}}
+				edge from parent node[]{}}
+			child{node[s2, text centered]{Command-and-Control Policies}
+				child{node[s1]{Information Tools
+					\begin{itemize}
+						\item Eco-labelling programs
+						\item Green building certification
+						\item Emissions reporting
+					\end{itemize}
+				}
+					edge from parent node{}}
+				child{node[s4]{Standard Setting}
+						child{node[s1]{Performance-Based
+								\begin{itemize}
+									\item Minimum vehicle fuel efficiency standards
+									\item Minimum ambient air quality standards
+								\end{itemize}
+							}
+							edge from parent node[]{}}
+						child{node[s1]{Technology-Based
+								\begin{itemize}
+									\item Clean electricity portfolio standard
+									\item Smokestack scrubber requirements
+								\end{itemize}
+							}
+							edge from parent node[]{}}
+					edge from parent node[]{}}
+				child{node[s1]{Prohibition/Permission
+					\begin{itemize}
+						\item Endangered species protection
+						\item Conservation land
+						\item Drilling rights on public land
+					\end{itemize}							
+				}
+					edge from parent node[]{}}
+				edge from parent node[]{}};
+	\end{tikzpicture}
+	\vspace{.25cm}
+	\fignote[1]{Classifications and examples primarily developed from \cite{keohane2016markets}. This chart is not intended to be comprehensive, but illustrates a simple way for classifying common types of environmental policy that makes for a useful reference later in the paper.}
+	\end{figure}
+\end{landscape}
+
 % \subsection*{A.2\quad Appendix to Chapter 2: Designing Climate Policy}
 
 % \subsubsection*{The Environmental Kuznets Curve}
@@ -133,7 +212,7 @@
 \fignote[1]{Table summarizes the notation used in Chapter 4. In general, lowercase letters without an index are profiles/vectors, plain-text uppercase letters denote matrices or the size of a set, and uppercase letters in the \texttt{mathcal} font are sets (e.g., $\mathcal{N}$). We denote the equilibrium of any variable as the variable with an asterisk. Derived variables are those that are a deterministic function of entirely exogenous variables. The source key for exogenous variables correspond with the data sources in Table \ref{data_sources}.}
 \end{center}
 
-\newpage
+
 \subsection*{A.5\quad Appendix to Chapter 5: Carbon Pricing \& Air Pollution Disparities in California}
 
 \begin{center}

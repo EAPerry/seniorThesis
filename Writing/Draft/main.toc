@@ -1,33 +1,34 @@
-\contentsline {section}{Preface}{3}{Doc-Start}%
-\contentsline {section}{\numberline {1}An Introduction to Climate Change}{5}{section.1}%
-\contentsline {subsection}{\numberline {1.1}The Earth is Warming (and it's Our Fault)}{5}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Greenhouse Gas Emissions: Structure \& Trends}{12}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Risks \& Impacts of Climate Change}{19}{subsection.1.3}%
-\contentsline {subsubsection}{\numberline {1.3.1}Representative Key Risks}{20}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.2}Integrated Assessment Models \& the Social Cost of Carbon }{30}{subsubsection.1.3.2}%
-\contentsline {section}{\numberline {2}Designing Climate Policy}{38}{section.2}%
-\contentsline {subsection}{\numberline {2.1}A Case for Economic Analysis in Climate Policy Design }{38}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}An Economic Motivation for Climate Policy }{44}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The Structure \& Scope of Environmental Policy }{52}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Environmental Markets: Carbon Taxes \& Cap-and-Trade}{62}{subsection.2.4}%
-\contentsline {subsubsection}{\numberline {2.4.1}The Theory of Carbon Pricing}{62}{subsubsection.2.4.1}%
-\contentsline {subsubsection}{\numberline {2.4.2}Carbon Pricing in Practice}{69}{subsubsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.5}Unilateral Climate Policy \& Leakage}{80}{subsection.2.5}%
-\contentsline {section}{\numberline {3}Ambient Air Pollution \& Electricity Generation}{91}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Primer on Ambient Air Pollution}{91}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Carbon Pricing \& Environmental Inequality}{93}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Research Design}{97}{subsection.3.3}%
-\contentsline {section}{\numberline {4}A Model of Emissions Pricing \& Environmental Inequality}{99}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Model Summary}{99}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Model Environment}{101}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Equilibrium Behavior in the Generation Phase}{104}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Equilibrium Behavior in the Investment Phase}{110}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Incorporating Air Pollution \& Environmental Inequality}{112}{subsection.4.5}%
-\contentsline {subsection}{\numberline {4.6}Pathways from Carbon Pricing to Environmental Inequality}{114}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Carbon Pricing \& Air Pollution Disparities in California}{118}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Empirical Strategy}{118}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Data}{125}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Results}{135}{subsection.5.3}%
-\contentsline {section}{Conclusion}{146}{figure.caption.39}%
-\contentsline {section}{References}{148}{figure.caption.39}%
-\contentsline {section}{Appendix}{164}{figure.caption.39}%
+\contentsline {section}{Preface}{5}{Doc-Start}%
+\contentsline {section}{\numberline {1}An Introduction to Climate Change}{8}{section.1}%
+\contentsline {subsection}{\numberline {1.1}The Earth is Warming (and it's Our Fault)}{8}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Greenhouse Gas Emissions: Structure \& Trends}{15}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Risks \& Impacts of Climate Change}{23}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}Representative Key Risks}{23}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}Integrated Assessment Models \& the Social Cost of Carbon }{35}{subsubsection.1.3.2}%
+\contentsline {section}{\numberline {2}Designing Climate Policy}{42}{section.2}%
+\contentsline {subsection}{\numberline {2.1}A Case for Economic Analysis in Climate Policy Design }{42}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}An Economic Motivation for Climate Policy }{48}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The Structure \& Scope of Environmental Policy }{57}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Environmental Markets: Carbon Taxes \& Cap-and-Trade}{66}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}The Theory of Carbon Pricing}{66}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}Carbon Pricing in Practice}{74}{subsubsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.5}Unilateral Climate Policy \& Leakage}{85}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Ambient Air Pollution \& Electricity Generation}{98}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Primer on Ambient Air Pollution}{98}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Carbon Pricing \& Environmental Inequality}{100}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Research Design}{104}{subsection.3.3}%
+\contentsline {section}{\numberline {4}A Model of Emissions Pricing \& Environmental Inequality}{107}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Model Summary}{107}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Model Environment}{109}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Equilibrium Behavior in the Generation Phase}{113}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Equilibrium Behavior in the Investment Phase}{119}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Incorporating Air Pollution \& Environmental Inequality}{120}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Pathways from Carbon Pricing to Environmental Inequality}{123}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Carbon Pricing \& Air Pollution Disparities in California}{127}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Empirical Strategy}{127}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Data}{134}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Results}{145}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Model Assessment \& Limitations}{156}{subsection.5.4}%
+\contentsline {section}{Conclusion}{161}{figure.caption.40}%
+\contentsline {section}{References}{166}{figure.caption.40}%
+\contentsline {section}{Appendix}{183}{figure.caption.40}%

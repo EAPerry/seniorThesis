@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.3)  23 APR 2023 17:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.3)  28 APR 2023 13:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -935,11 +935,11 @@ LaTeX Font Info:    ... okay on input line 78.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(108.405pt, 433.62001pt, 72.26999pt)
+* h-part:(L,W,R)=(108.405pt, 397.485pt, 108.405pt)
 * v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=433.62001pt
+* \textwidth=397.485pt
 * \textheight=650.43001pt
 * \oddsidemargin=36.13501pt
 * \evensidemargin=36.13501pt
@@ -993,7 +993,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 [1
 
-{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
+{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [0] (./main.toc
 LaTeX Font Info:    Trying to load font information for U+jkpsya on input line 3.
  (c:/texlive/2022/texmf-dist/tex/latex/kpfonts/ujkpsya.fd
 File: ujkpsya.fd 2006/08/15 v1.0
@@ -1014,337 +1014,462 @@ LaTeX Font Info:    Trying to load font information for U+jkpsyc on input line 3
  (c:/texlive/2022/texmf-dist/tex/latex/kpfonts/ujkpsyc.fd
 File: ujkpsyc.fd 2006/08/15 v1.0
 )
-Overfull \hbox (0.93071pt too wide) detected at line 22
- []\OT1/jkp/m/n/10.95 101
+Overfull \hbox (0.93071pt too wide) detected at line 18
+ []\OT1/jkp/m/n/10.95 100
  []
 
 
-Overfull \hbox (0.93071pt too wide) detected at line 23
+Overfull \hbox (0.93071pt too wide) detected at line 19
  []\OT1/jkp/m/n/10.95 104
  []
 
 
+Overfull \hbox (0.93071pt too wide) detected at line 21
+ []\OT1/jkp/m/n/10.95 107
+ []
+
+
+Overfull \hbox (0.93071pt too wide) detected at line 22
+ []\OT1/jkp/m/n/10.95 109
+ []
+
+
+Overfull \hbox (0.93071pt too wide) detected at line 23
+ []\OT1/jkp/m/n/10.95 113
+ []
+
+
 Overfull \hbox (0.93071pt too wide) detected at line 24
- []\OT1/jkp/m/n/10.95 110
+ []\OT1/jkp/m/n/10.95 119
  []
 
 
 Overfull \hbox (0.93071pt too wide) detected at line 25
- []\OT1/jkp/m/n/10.95 112
+ []\OT1/jkp/m/n/10.95 120
  []
 
 
 Overfull \hbox (0.93071pt too wide) detected at line 26
- []\OT1/jkp/m/n/10.95 114
+ []\OT1/jkp/m/n/10.95 123
  []
 
 
 Overfull \hbox (0.93071pt too wide) detected at line 28
- []\OT1/jkp/m/n/10.95 118
+ []\OT1/jkp/m/n/10.95 127
  []
 
 
 Overfull \hbox (0.93071pt too wide) detected at line 29
- []\OT1/jkp/m/n/10.95 125
+ []\OT1/jkp/m/n/10.95 134
  []
 
 
 Overfull \hbox (0.93071pt too wide) detected at line 30
- []\OT1/jkp/m/n/10.95 135
+ []\OT1/jkp/m/n/10.95 145
  []
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 ...ction}{Conclusion}{146}{figure.caption.39}
-                                                  % [1])
+l.31 ...sment \& Limitations}{156}{subsection.5.4}
+                                                  % [1]
+Overfull \hbox (0.93071pt too wide) detected at line 31
+ []\OT1/jkp/m/n/10.95 156
+ []
+
+)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- (./chapter0.tex [2] [3]
-Overfull \hbox (3.9578pt too wide) in paragraph at lines 22--23
-[]\OT1/jkp/m/n/10.95 The ob-jec-tive of this pa-per is to an-a-lyze the im-pli-ca-tions of these car-bon pric-ing schemes
- []
-
-) (./chapter1.tex [4]
-<figures/chapter1_figures/ipcc_fig1.png, id=184, 586.44093pt x 451.6875pt>
+ (./chapter0.tex [2] [3] [4] [5] [6]) (./chapter1.tex [7]
+<figures/chapter1_figures/ipcc_fig1.png, id=206, 586.44093pt x 451.6875pt>
 File: figures/chapter1_figures/ipcc_fig1.png Graphic file (type png)
 <use figures/chapter1_figures/ipcc_fig1.png>
 Package pdftex.def Info: figures/chapter1_figures/ipcc_fig1.png  used on input line 17.
-(pdftex.def)             Requested size: 260.17465pt x 200.39034pt.
- [5] [6 <./figures/chapter1_figures/ipcc_fig1.png>] [7] [8]
-<figures/chapter1_figures/co2_noaa.jpg, id=246, 1053.9375pt x 834.86906pt>
+(pdftex.def)             Requested size: 238.49342pt x 183.69057pt.
+ [8] [9 <./figures/chapter1_figures/ipcc_fig1.png>] [10] [11]
+<figures/chapter1_figures/co2_noaa.jpg, id=267, 1053.9375pt x 834.86906pt>
 File: figures/chapter1_figures/co2_noaa.jpg Graphic file (type jpg)
 <use figures/chapter1_figures/co2_noaa.jpg>
 Package pdftex.def Info: figures/chapter1_figures/co2_noaa.jpg  used on input line 48.
-(pdftex.def)             Requested size: 303.53267pt x 240.43701pt.
-<figures/chapter1_figures/ipcc_radiative_forcing.png, id=250, 512.1534pt x 288.8391pt>
+(pdftex.def)             Requested size: 278.23828pt x 220.39847pt.
+ [12] [13 <./figures/chapter1_figures/co2_noaa.jpg>]
+<figures/chapter1_figures/ipcc_radiative_forcing.png, id=283, 512.1534pt x 288.8391pt>
 File: figures/chapter1_figures/ipcc_radiative_forcing.png Graphic file (type png)
 <use figures/chapter1_figures/ipcc_radiative_forcing.png>
 Package pdftex.def Info: figures/chapter1_figures/ipcc_radiative_forcing.png  used on input line 59.
-(pdftex.def)             Requested size: 433.62001pt x 244.55798pt.
- [9] [10 <./figures/chapter1_figures/co2_noaa.jpg>] [11 <./figures/chapter1_figures/ipcc_radiative_forcing.png>]
+(pdftex.def)             Requested size: 397.485pt x 224.17853pt.
+ [14 <./figures/chapter1_figures/ipcc_radiative_forcing.png>]
 LaTeX Font Info:    Trying to load font information for TS1+jkp on input line 70.
  (c:/texlive/2022/texmf-dist/tex/latex/kpfonts/ts1jkp.fd
 File: ts1jkp.fd 2007/08/30 Fontinst v1.928 font definitions for TS1/jkp.
-) [12] [13]
-<figures/chapter1_figures/ghg_stacked.pdf, id=292, 433.62pt x 216.81pt>
+) [15] [16]
+<figures/chapter1_figures/ghg_stacked.pdf, id=314, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_stacked.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_stacked.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_stacked.pdf  used on input line 109.
-(pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
- [14 <./figures/chapter1_figures/ghg_stacked.pdf>]
-<figures/chapter1_figures/ghg_economic.pdf, id=307, 433.62pt x 216.81pt>
+(pdftex.def)             Requested size: 397.485pt x 198.75302pt.
+ [17 <./figures/chapter1_figures/ghg_stacked.pdf>]
+<figures/chapter1_figures/ghg_economic.pdf, id=331, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_economic.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_economic.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_economic.pdf  used on input line 120.
-(pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
- [15 <./figures/chapter1_figures/ghg_economic.pdf>]
-<figures/chapter1_figures/ghg_inventory.pdf, id=322, 433.62pt x 216.81pt>
+(pdftex.def)             Requested size: 397.485pt x 198.75302pt.
+ [18 <./figures/chapter1_figures/ghg_economic.pdf>]
+<figures/chapter1_figures/ghg_inventory.pdf, id=345, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_inventory.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_inventory.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_inventory.pdf  used on input line 129.
-(pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
- [16 <./figures/chapter1_figures/ghg_inventory.pdf>] [17]
-<figures/chapter1_figures/ghg_global.pdf, id=348, 433.62pt x 216.81pt>
+(pdftex.def)             Requested size: 397.485pt x 198.75302pt.
+ [19 <./figures/chapter1_figures/ghg_inventory.pdf>] [20]
+<figures/chapter1_figures/ghg_global.pdf, id=370, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_global.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_global.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_global.pdf  used on input line 173.
-(pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
- [18 <./figures/chapter1_figures/ghg_global.pdf>]
-<figures/chapter1_figures/ghg_cap.pdf, id=364, 433.62pt x 216.81pt>
+(pdftex.def)             Requested size: 397.485pt x 198.75302pt.
+<figures/chapter1_figures/ghg_cap.pdf, id=374, 433.62pt x 216.81pt>
 File: figures/chapter1_figures/ghg_cap.pdf Graphic file (type pdf)
 <use figures/chapter1_figures/ghg_cap.pdf>
 Package pdftex.def Info: figures/chapter1_figures/ghg_cap.pdf  used on input line 184.
 (pdftex.def)             Requested size: 390.2544pt x 195.12718pt.
- [19 <./figures/chapter1_figures/ghg_cap.pdf>] [20] [21] [22] [23] [24]
-<figures/chapter1_figures/cil_mortal.png, id=488, 540.51938pt x 395.22656pt>
+ [21] [22 <./figures/chapter1_figures/ghg_global.pdf> <./figures/chapter1_figures/ghg_cap.pdf>] [23] [24]
+Overfull \hbox (2.56163pt too wide) in paragraph at lines 228--231
+\OT1/jkp/m/n/10.95 much like other el-e-ments of the built en-vi-ron-ment are vul-ner-a-ble to cli-mate change.
+ []
+
+[25] [26] [27] [28]
+<figures/chapter1_figures/cil_mortal.png, id=517, 540.51938pt x 395.22656pt>
 File: figures/chapter1_figures/cil_mortal.png Graphic file (type png)
 <use figures/chapter1_figures/cil_mortal.png>
 Package pdftex.def Info: figures/chapter1_figures/cil_mortal.png  used on input line 242.
-(pdftex.def)             Requested size: 433.62001pt x 317.06818pt.
- [25] [26 <./figures/chapter1_figures/cil_mortal.png>] [27] [28] [29] [30] [31] [32] [33] [34] [35] [36]) (./chapter2.tex [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50] [51] [52] [53]
+(pdftex.def)             Requested size: 397.485pt x 290.64784pt.
+ [29] [30 <./figures/chapter1_figures/cil_mortal.png>] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40]) (./chapter2.tex [41] [42] [43] [44] [45] [46] [47] [48] [49]
+Overfull \hbox (6.54428pt too wide) in paragraph at lines 69--70
+[]\OT1/jkp/m/n/10.95 Outside of the mar-ket though, the pro-duc-tion and con-sump-tion of the emissions-
+ []
 
-LaTeX Warning: Float too large for page by 24.22208pt on input line 256.
+[50] [51] [52] [53] [54] [55]
+Overfull \hbox (0.59059pt too wide) in paragraph at lines 125--126
+\OT1/jkp/m/n/10.95 Os-trom fa-mously de-tailed in-stances from around the world where non-government
+ []
 
-[54] [55
+[56] [57] [58] [59] [60] [61]
+Overfull \hbox (16.49565pt too wide) in paragraph at lines 190--192
+[]\OT1/jkp/m/n/10.95 There are of course poli-cies that are best un-der-stood as a com-bi-na-tion of command-
+ []
+
+[62]
+Overfull \hbox (8.32693pt too wide) in paragraph at lines 197--198
+[]\OT1/jkp/m/n/10.95 Despite the mer-its of market-based ap-proaches to pub-lic pol-icy com-monly touted
+ []
+
+[63]
+Overfull \hbox (5.6244pt too wide) in paragraph at lines 201--202
+[]\OT1/jkp/m/n/10.95 In sit-u-a-tions where en-force-ment is in-cred-i-bly costly, it may be more cost-effective
+ []
+
+[64]
+Overfull \hbox (0.74388pt too wide) in paragraph at lines 205--206
+\OT1/jkp/m/n/10.95 based pol-icy re-sults in the welfare-maximizing al-lo-ca-tion of an en-vi-ron-men-tal good
+ []
+
+[65] [66] [67] [68] [69] [70] [71] [72] [73]
+Overfull \hbox (4.74625pt too wide) in paragraph at lines 325--326
+[]\OT1/jkp/m/n/10.95 These ad-di-tional costs from the command-and-control il-lus-trate why economists
+ []
 
 
-] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68] [69]
-<figures/chapter3_figures/cap_programs.pdf, id=964, 433.62pt x 252.945pt>
+Overfull \hbox (4.24783pt too wide) in paragraph at lines 330--331
+\OT1/jkp/m/n/10.95 Conventional eco-nomic the-ory sug-gests that car-bon pric-ing is the most cost-effective
+ []
+
+[74]
+<figures/chapter3_figures/cap_programs.pdf, id=1005, 433.62pt x 252.945pt>
 File: figures/chapter3_figures/cap_programs.pdf Graphic file (type pdf)
 <use figures/chapter3_figures/cap_programs.pdf>
-Package pdftex.def Info: figures/chapter3_figures/cap_programs.pdf  used on input line 427.
-(pdftex.def)             Requested size: 433.62001pt x 252.95595pt.
- [70 <./figures/chapter3_figures/cap_programs.pdf>] [71] [72] [73]
-<figures/chapter3_figures/allowance_prices.pdf, id=1015, 433.62pt x 216.81pt>
+Package pdftex.def Info: figures/chapter3_figures/cap_programs.pdf  used on input line 339.
+(pdftex.def)             Requested size: 397.485pt x 231.87854pt.
+ [75] [76 <./figures/chapter3_figures/cap_programs.pdf>] [77] [78] [79]
+<figures/chapter3_figures/allowance_prices.pdf, id=1061, 433.62pt x 216.81pt>
 File: figures/chapter3_figures/allowance_prices.pdf Graphic file (type pdf)
 <use figures/chapter3_figures/allowance_prices.pdf>
-Package pdftex.def Info: figures/chapter3_figures/allowance_prices.pdf  used on input line 473.
-(pdftex.def)             Requested size: 433.62001pt x 216.81938pt.
- [74] [75 <./figures/chapter3_figures/allowance_prices.pdf>] [76] [77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89]) (./chapter3.tex [90] [91] [92] [93] [94] [95] [96] [97]) (./chapter4.tex [98] [99] [100] [101] [102]
+Package pdftex.def Info: figures/chapter3_figures/allowance_prices.pdf  used on input line 385.
+(pdftex.def)             Requested size: 397.485pt x 198.75302pt.
+ [80] [81 <./figures/chapter3_figures/allowance_prices.pdf>] [82] [83] [84] [85]
+Overfull \hbox (6.32289pt too wide) in paragraph at lines 430--431
+\OT1/jkp/m/n/10.95 spec-tives: the pol-lu-tion haven hy-poth-e-sis and the Porter Hy-poth-e-sis ([][][]Deche-zlepr[]etre
+ []
+
+[86] [87]
+Overfull \hbox (18.2092pt too wide) in paragraph at lines 480--484
+ [][] 
+ []
+
+[88] [89] [90] [91] [92] [93]
+Overfull \hbox (20.62598pt too wide) in paragraph at lines 554--558
+ [][] 
+ []
+
+[94] [95] [96]) (./chapter3.tex [97] [98] [99] [100] [101]
+Overfull \hbox (3.9102pt too wide) in paragraph at lines 123--124
+\OT1/jkp/m/n/10.95 ex-actly that: re-dis-tributed air pol-lu-tion to-wards dis-ad-van-taged com-mu-ni-ties. [][][]Cush-
+ []
+
+[102] [103] [104] [105]) (./chapter4.tex [106] [107] [108] [109] [110]
 LaTeX Font Info:    Trying to load font information for U+dsrom on input line 47.
  (c:/texlive/2022/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-) [103] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114] [115] [116]) (./chapter5.tex [117]
-<figures/chapter3_figures/WECC_map.pdf, id=1498, 361.35pt x 289.08pt>
+) [111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122] [123] [124] [125]) (./chapter5.tex [126]
+<figures/chapter3_figures/WECC_map.pdf, id=1553, 361.35pt x 289.08pt>
 File: figures/chapter3_figures/WECC_map.pdf Graphic file (type pdf)
 <use figures/chapter3_figures/WECC_map.pdf>
 Package pdftex.def Info: figures/chapter3_figures/WECC_map.pdf  used on input line 13.
-(pdftex.def)             Requested size: 346.89732pt x 277.51805pt.
- [118] [119 <./figures/chapter3_figures/WECC_map.pdf>] [120] [121] [122] [123] [124]
-<figures/chapter5_figures/regional_gens.pdf, id=1560, 505.89pt x 289.08pt>
+(pdftex.def)             Requested size: 317.98921pt x 254.39117pt.
+ [127] [128 <./figures/chapter3_figures/WECC_map.pdf>] [129]
+Overfull \hbox (8.9415pt too wide) in paragraph at lines 50--51
+[]\OT1/jkp/m/n/10.95 Similarly, I use $\OML/jkp/m/it/10.95 k$\OT1/jkp/m/n/10.95 -means clus-ter-ing to clus-ter power plants into gen-er-at-ing groups.
+ []
+
+[130] [131] [132] [133] [134]
+<figures/chapter5_figures/regional_gens.pdf, id=1619, 505.89pt x 289.08pt>
 File: figures/chapter5_figures/regional_gens.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/regional_gens.pdf>
 Package pdftex.def Info: figures/chapter5_figures/regional_gens.pdf  used on input line 82.
-(pdftex.def)             Requested size: 433.62001pt x 247.7879pt.
- [125] [126 <./figures/chapter5_figures/regional_gens.pdf>]
-<figures/chapter5_figures/EI_region_violin.pdf, id=1582, 433.62pt x 252.945pt>
+(pdftex.def)             Requested size: 397.485pt x 227.14001pt.
+ [135] [136 <./figures/chapter5_figures/regional_gens.pdf>]
+<figures/chapter5_figures/EI_region_violin.pdf, id=1639, 433.62pt x 252.945pt>
 File: figures/chapter5_figures/EI_region_violin.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/EI_region_violin.pdf>
 Package pdftex.def Info: figures/chapter5_figures/EI_region_violin.pdf  used on input line 95.
-(pdftex.def)             Requested size: 346.89732pt x 202.36784pt.
- [127]
-<figures/chapter5_figures/local_poll_EI.pdf, id=1590, 433.62pt x 252.945pt>
+(pdftex.def)             Requested size: 317.98921pt x 185.50128pt.
+<figures/chapter5_figures/local_poll_EI.pdf, id=1641, 433.62pt x 252.945pt>
 File: figures/chapter5_figures/local_poll_EI.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/local_poll_EI.pdf>
 Package pdftex.def Info: figures/chapter5_figures/local_poll_EI.pdf  used on input line 106.
-(pdftex.def)             Requested size: 346.89732pt x 202.36784pt.
- [128 <./figures/chapter5_figures/EI_region_violin.pdf>] [129 <./figures/chapter5_figures/local_poll_EI.pdf>]
-<figures/chapter5_figures/residual_demand_region.pdf, id=1619, 433.62pt x 289.08pt>
+(pdftex.def)             Requested size: 317.98921pt x 185.50128pt.
+ [137] [138 <./figures/chapter5_figures/EI_region_violin.pdf> <./figures/chapter5_figures/local_poll_EI.pdf>]
+Overfull \hbox (10.2047pt too wide) in paragraph at lines 120--121
+\OT1/jkp/m/n/10.95 Regional elec-tric-ity de-mand data come from the EIA's Hourly Elec-tric Grid Monitor---
+ []
+
+[139]
+<figures/chapter5_figures/residual_demand_region.pdf, id=1680, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/residual_demand_region.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/residual_demand_region.pdf>
 Package pdftex.def Info: figures/chapter5_figures/residual_demand_region.pdf  used on input line 127.
-(pdftex.def)             Requested size: 433.62001pt x 289.09251pt.
- [130] [131 <./figures/chapter5_figures/residual_demand_region.pdf>] [132] [133]
-<figures/chapter5_figures/DAC_designation.pdf, id=1664, 361.35pt x 289.08pt>
+(pdftex.def)             Requested size: 397.485pt x 265.00404pt.
+ [140 <./figures/chapter5_figures/residual_demand_region.pdf>] [141] [142]
+<figures/chapter5_figures/DAC_designation.pdf, id=1715, 361.35pt x 289.08pt>
 File: figures/chapter5_figures/DAC_designation.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/DAC_designation.pdf>
 Package pdftex.def Info: figures/chapter5_figures/DAC_designation.pdf  used on input line 159.
-(pdftex.def)             Requested size: 303.53267pt x 242.82553pt.
- [134 <./figures/chapter5_figures/DAC_designation.pdf>] [135]
-<figures/chapter5_figures/gen_fuel_bca_pct.pdf, id=1683, 433.62pt x 289.08pt>
+(pdftex.def)             Requested size: 278.23828pt x 222.59227pt.
+ [143] [144 <./figures/chapter5_figures/DAC_designation.pdf>] [145]
+<figures/chapter5_figures/gen_fuel_bca_pct.pdf, id=1742, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/gen_fuel_bca_pct.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/gen_fuel_bca_pct.pdf>
-Package pdftex.def Info: figures/chapter5_figures/gen_fuel_bca_pct.pdf  used on input line 191.
-(pdftex.def)             Requested size: 346.89732pt x 231.27754pt.
- [136 <./figures/chapter5_figures/gen_fuel_bca_pct.pdf>]
-<figures/chapter5_figures/inv_region.pdf, id=1697, 433.62pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/gen_fuel_bca_pct.pdf  used on input line 178.
+(pdftex.def)             Requested size: 317.98921pt x 212.00146pt.
+ [146 <./figures/chapter5_figures/gen_fuel_bca_pct.pdf>]
+<figures/chapter5_figures/inv_region.pdf, id=1756, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/inv_region.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/inv_region.pdf>
-Package pdftex.def Info: figures/chapter5_figures/inv_region.pdf  used on input line 226.
-(pdftex.def)             Requested size: 346.89732pt x 231.27754pt.
- [137 <./figures/chapter5_figures/inv_region.pdf>] [138]
-<figures/chapter5_figures/sim_co2e_bca.pdf, id=1719, 433.62pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/inv_region.pdf  used on input line 213.
+(pdftex.def)             Requested size: 317.98921pt x 212.00146pt.
+ [147 <./figures/chapter5_figures/inv_region.pdf>] [148]
+<figures/chapter5_figures/sim_co2e_bca.pdf, id=1776, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/sim_co2e_bca.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/sim_co2e_bca.pdf>
-Package pdftex.def Info: figures/chapter5_figures/sim_co2e_bca.pdf  used on input line 245.
-(pdftex.def)             Requested size: 390.25536pt x 260.18282pt.
-<figures/chapter5_figures/sim_co2e_nobca.pdf, id=1720, 433.62pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/sim_co2e_bca.pdf  used on input line 232.
+(pdftex.def)             Requested size: 357.73407pt x 238.50275pt.
+<figures/chapter5_figures/sim_co2e_nobca.pdf, id=1777, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/sim_co2e_nobca.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/sim_co2e_nobca.pdf>
-Package pdftex.def Info: figures/chapter5_figures/sim_co2e_nobca.pdf  used on input line 256.
-(pdftex.def)             Requested size: 346.89732pt x 231.27754pt.
- [139 <./figures/chapter5_figures/sim_co2e_bca.pdf>]
-<figures/chapter5_figures/sim_pol_bca.pdf, id=1735, 433.62pt x 650.43pt>
+Package pdftex.def Info: figures/chapter5_figures/sim_co2e_nobca.pdf  used on input line 243.
+(pdftex.def)             Requested size: 317.98921pt x 212.00146pt.
+ [149 <./figures/chapter5_figures/sim_co2e_bca.pdf>]
+<figures/chapter5_figures/sim_pol_bca.pdf, id=1794, 433.62pt x 650.43pt>
 File: figures/chapter5_figures/sim_pol_bca.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/sim_pol_bca.pdf>
-Package pdftex.def Info: figures/chapter5_figures/sim_pol_bca.pdf  used on input line 271.
-(pdftex.def)             Requested size: 346.89732pt x 520.37448pt.
- [140 <./figures/chapter5_figures/sim_co2e_nobca.pdf>] [141 <./figures/chapter5_figures/sim_pol_bca.pdf>]
-Overfull \hbox (5.26538pt too wide) in paragraph at lines 347--348
-\OT1/jkp/m/n/10.95 dis-ad-van-taged com-mu-ni-ties (DAC) and non-disadvantaged com-mu-ni-ties (non-DAC). Chap-
- []
-
-[142]
-<figures/chapter5_figures/ei_gap_bca_nox.pdf, id=1764, 361.35pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/sim_pol_bca.pdf  used on input line 258.
+(pdftex.def)             Requested size: 317.98921pt x 477.00333pt.
+ [150 <./figures/chapter5_figures/sim_co2e_nobca.pdf>] [151] [152 <./figures/chapter5_figures/sim_pol_bca.pdf>]
+<figures/chapter5_figures/ei_gap_bca_nox.pdf, id=1823, 361.35pt x 289.08pt>
 File: figures/chapter5_figures/ei_gap_bca_nox.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/ei_gap_bca_nox.pdf>
-Package pdftex.def Info: figures/chapter5_figures/ei_gap_bca_nox.pdf  used on input line 354.
-(pdftex.def)             Requested size: 303.53267pt x 242.82553pt.
- [143 <./figures/chapter5_figures/ei_gap_bca_nox.pdf>]
-<figures/chapter5_figures/ei_gap_bca_nox_cal.pdf, id=1774, 361.35pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/ei_gap_bca_nox.pdf  used on input line 338.
+(pdftex.def)             Requested size: 278.23828pt x 222.59227pt.
+<figures/chapter5_figures/ei_gap_bca_nox_cal.pdf, id=1824, 361.35pt x 289.08pt>
 File: figures/chapter5_figures/ei_gap_bca_nox_cal.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/ei_gap_bca_nox_cal.pdf>
-Package pdftex.def Info: figures/chapter5_figures/ei_gap_bca_nox_cal.pdf  used on input line 365.
-(pdftex.def)             Requested size: 303.53267pt x 242.82553pt.
-<figures/chapter5_figures/ei_gap_so2_pm25.pdf, id=1781, 433.62pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/ei_gap_bca_nox_cal.pdf  used on input line 349.
+(pdftex.def)             Requested size: 278.23828pt x 222.59227pt.
+ [153] [154 <./figures/chapter5_figures/ei_gap_bca_nox.pdf> <./figures/chapter5_figures/ei_gap_bca_nox_cal.pdf>]
+<figures/chapter5_figures/ei_gap_so2_pm25.pdf, id=1847, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/ei_gap_so2_pm25.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/ei_gap_so2_pm25.pdf>
-Package pdftex.def Info: figures/chapter5_figures/ei_gap_so2_pm25.pdf  used on input line 377.
-(pdftex.def)             Requested size: 433.62001pt x 289.09251pt.
- [144 <./figures/chapter5_figures/ei_gap_bca_nox_cal.pdf>]) (./chapter6.tex [145 <./figures/chapter5_figures/ei_gap_so2_pm25.pdf>] [146]) [147] (./main.bbl (./main.brf)
+Package pdftex.def Info: figures/chapter5_figures/ei_gap_so2_pm25.pdf  used on input line 360.
+(pdftex.def)             Requested size: 397.485pt x 265.00404pt.
+ [155 <./figures/chapter5_figures/ei_gap_so2_pm25.pdf>]
+<figures/chapter5_figures/scatter_mkt_share.pdf, id=1868, 433.62pt x 289.08pt>
+File: figures/chapter5_figures/scatter_mkt_share.pdf Graphic file (type pdf)
+<use figures/chapter5_figures/scatter_mkt_share.pdf>
+Package pdftex.def Info: figures/chapter5_figures/scatter_mkt_share.pdf  used on input line 398.
+(pdftex.def)             Requested size: 278.23828pt x 185.50018pt.
+ [156] [157 <./figures/chapter5_figures/scatter_mkt_share.pdf>] [158] [159]) (./chapter6.tex [160] [161] [162] [163] [164]) [165] (./main.bbl (./main.brf)
 \tf@brf=\write6
 \openout6 = `main.brf'.
 
- [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
-Underfull \hbox (badness 1377) in paragraph at lines 636--636
-[]\OT1/jkp/b/n/10.95 Myers, Samuel, Matthew Smith, Sarah Guth, Christo-pher Golden, Bapu Vaitla,
+
+Underfull \hbox (badness 4254) in paragraph at lines 13--13
+[]\OT1/jkp/b/n/10.95 Abito, Jose, Christo-pher Knit-tel, Kon-stanti-nos Metax-oglou, and Andr[]e
  []
 
-[158] [159]
-Underfull \hbox (badness 2334) in paragraph at lines 746--746
-[]\OT1/jkp/b/n/10.95 Ramsey, Frank. \OT1/jkp/m/n/10.95 1928. ``A math-e-mat-i-cal the-ory of sav-ing.'' \OT1/jkp/m/it/10.95 The Eco-nomic Jour-nal\OT1/jkp/m/n/10.95 ,
+[166] [167] [168]
+Underfull \hbox (badness 5862) in paragraph at lines 195--195
+[]\OT1/jkp/b/n/10.95 CEA. \OT1/jkp/m/n/10.95 2022. ``The ris-ing costs of ex-treme weather events.'' \OT1/jkp/m/it/10.95 Biden-Harris
  []
 
-[160] [161] [162]) (./chapter7.tex [163]
+[169] [170]
+Underfull \hbox (badness 2368) in paragraph at lines 297--297
+[]\OT1/jkp/b/n/10.95 Enquist, Brian J, Xiao Feng, Brad Boyle, Brian Mait-ner, Er-ica A New-
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 297--297
+\OT1/jkp/b/n/10.95 man, Pe-ter M^^\ller J^^\rgensen, Patrick R Roehrdanz, Bar-bara M Thiers,
+ []
+
+[171] [172] [173] [174] [175]
+Underfull \hbox (badness 1533) in paragraph at lines 542--542
+[]\OT1/jkp/b/n/10.95 Kaufman, Noah. \OT1/jkp/m/n/10.95 2022. ``How the un-equal ef-fects of cli-mate change broke
+ []
+
+[176] [177] [178]
+Underfull \hbox (badness 1264) in paragraph at lines 765--765
+\OT1/jkp/b/n/10.95 William Pizer, Cora King-don, Jor-dan Win-gen-roth, Roger Cooke, Bryan
+ []
+
+[179]
+Underfull \hbox (badness 1442) in paragraph at lines 815--815
+[]\OT1/jkp/b/n/10.95 Sweet, William, Robert Kopp, Christo-pher Weaver, Jayan-tha Obey-sek-era,
+ []
+
+[180] [181]) (./chapter7.tex [182]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 9.
 See the caption package documentation for explanation.
 
-<figures/chapter1_figures/climate_model_accuracy.png, id=2093, 1459.70343pt x 963.6pt>
+<figures/chapter1_figures/climate_model_accuracy.png, id=2219, 1459.70343pt x 963.6pt>
 File: figures/chapter1_figures/climate_model_accuracy.png Graphic file (type png)
 <use figures/chapter1_figures/climate_model_accuracy.png>
 Package pdftex.def Info: figures/chapter1_figures/climate_model_accuracy.png  used on input line 11.
-(pdftex.def)             Requested size: 303.53267pt x 200.36232pt.
-[164 <./figures/chapter1_figures/climate_model_accuracy.png>]
+(pdftex.def)             Requested size: 278.23828pt x 183.67403pt.
+[183 <./figures/chapter1_figures/climate_model_accuracy.png>]
+
+LaTeX Warning: Float too large for page by 27.6344pt on input line 94.
+
+[184]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 60.
+(caption)                particular \caption on input line 139.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (15.52509pt too wide) in alignment at lines 62--132
+Overfull \hbox (26.36569pt too wide) in alignment at lines 141--211
  [] [] [] [] 
  []
 
-[165] [166]
-LaTeX Font Info:    Trying to load font information for OT1+jkptt on input line 133.
+[185
+
+
+] [186]
+LaTeX Font Info:    Trying to load font information for OT1+jkptt on input line 212.
  (c:/texlive/2022/texmf-dist/tex/latex/kpfonts/ot1jkptt.fd
 File: ot1jkptt.fd 2007/01/26 Fontinst v1.928 font definitions for OT1/jkptt.
-) [167]
+) [187]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 142.
+(caption)                particular \caption on input line 221.
 See the caption package documentation for explanation.
 
-[168]
-<figures/chapter5_figures/coal_prices.pdf, id=2135, 361.35pt x 216.81pt>
+[188]
+<figures/chapter5_figures/coal_prices.pdf, id=2264, 361.35pt x 216.81pt>
 File: figures/chapter5_figures/coal_prices.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/coal_prices.pdf>
-Package pdftex.def Info: figures/chapter5_figures/coal_prices.pdf  used on input line 199.
-(pdftex.def)             Requested size: 346.89732pt x 208.13853pt.
-<figures/chapter5_figures/gas_prices.pdf, id=2136, 361.35pt x 216.81pt>
+Package pdftex.def Info: figures/chapter5_figures/coal_prices.pdf  used on input line 278.
+(pdftex.def)             Requested size: 317.98921pt x 190.79338pt.
+<figures/chapter5_figures/gas_prices.pdf, id=2265, 361.35pt x 216.81pt>
 File: figures/chapter5_figures/gas_prices.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/gas_prices.pdf>
-Package pdftex.def Info: figures/chapter5_figures/gas_prices.pdf  used on input line 206.
-(pdftex.def)             Requested size: 346.89732pt x 208.13853pt.
-<figures/chapter5_figures/kclusters_capacity.pdf, id=2137, 433.62pt x 578.16pt>
+Package pdftex.def Info: figures/chapter5_figures/gas_prices.pdf  used on input line 285.
+(pdftex.def)             Requested size: 317.98921pt x 190.79338pt.
+<figures/chapter5_figures/kclusters_capacity.pdf, id=2266, 433.62pt x 578.16pt>
 File: figures/chapter5_figures/kclusters_capacity.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/kclusters_capacity.pdf>
-Package pdftex.def Info: figures/chapter5_figures/kclusters_capacity.pdf  used on input line 255.
-(pdftex.def)             Requested size: 346.89732pt x 462.55508pt.
-<figures/chapter5_figures/kclusters_hrate.pdf, id=2138, 433.62pt x 578.16pt>
+Package pdftex.def Info: figures/chapter5_figures/kclusters_capacity.pdf  used on input line 334.
+(pdftex.def)             Requested size: 317.98921pt x 424.00294pt.
+<figures/chapter5_figures/kclusters_hrate.pdf, id=2267, 433.62pt x 578.16pt>
 File: figures/chapter5_figures/kclusters_hrate.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/kclusters_hrate.pdf>
-Package pdftex.def Info: figures/chapter5_figures/kclusters_hrate.pdf  used on input line 262.
-(pdftex.def)             Requested size: 346.89732pt x 462.55508pt.
-<figures/chapter5_figures/hourly_demand.pdf, id=2139, 433.62pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/kclusters_hrate.pdf  used on input line 341.
+(pdftex.def)             Requested size: 317.98921pt x 424.00294pt.
+<figures/chapter5_figures/hourly_demand.pdf, id=2268, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/hourly_demand.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/hourly_demand.pdf>
-Package pdftex.def Info: figures/chapter5_figures/hourly_demand.pdf  used on input line 275.
-(pdftex.def)             Requested size: 303.53267pt x 202.36343pt.
-<figures/chapter5_figures/monthly_demand.pdf, id=2140, 433.62pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/hourly_demand.pdf  used on input line 354.
+(pdftex.def)             Requested size: 278.23828pt x 185.50018pt.
+<figures/chapter5_figures/monthly_demand.pdf, id=2269, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/monthly_demand.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/monthly_demand.pdf>
-Package pdftex.def Info: figures/chapter5_figures/monthly_demand.pdf  used on input line 284.
-(pdftex.def)             Requested size: 303.53267pt x 202.36343pt.
- [169] [170 <./figures/chapter5_figures/coal_prices.pdf> <./figures/chapter5_figures/gas_prices.pdf>] [171] [172 <./figures/chapter5_figures/kclusters_capacity.pdf>] [173 <./figures/chapter5_figures/kclusters_hrate.pdf>] [174 <./figures/chapter5_figures/hourly_demand.pdf> <./figures/chapter5_figures/monthly_demand.pdf>]
-<figures/chapter5_figures/DAC_des_scatter.pdf, id=2201, 505.89pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/monthly_demand.pdf  used on input line 363.
+(pdftex.def)             Requested size: 278.23828pt x 185.50018pt.
+ [189] [190 <./figures/chapter5_figures/coal_prices.pdf> <./figures/chapter5_figures/gas_prices.pdf>] [191] [192 <./figures/chapter5_figures/kclusters_capacity.pdf>] [193 <./figures/chapter5_figures/kclusters_hrate.pdf>] [194 <./figures/chapter5_figures/hourly_demand.pdf> <./figures/chapter5_figures/monthly_demand.pdf>]
+Overfull \hbox (3.59068pt too wide) detected at line 378
+[]
+ []
+
+[195]
+<figures/chapter5_figures/DAC_des_scatter.pdf, id=2337, 505.89pt x 289.08pt>
 File: figures/chapter5_figures/DAC_des_scatter.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/DAC_des_scatter.pdf>
-Package pdftex.def Info: figures/chapter5_figures/DAC_des_scatter.pdf  used on input line 385.
-(pdftex.def)             Requested size: 433.62001pt x 247.7879pt.
-<figures/chapter5_figures/hc_inv_region.pdf, id=2202, 433.62pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/DAC_des_scatter.pdf  used on input line 464.
+(pdftex.def)             Requested size: 397.485pt x 227.14001pt.
+
+Overfull \hbox (11.60666pt too wide) in paragraph at lines 474--502
+ [][] 
+ []
+
+<figures/chapter5_figures/hc_inv_region.pdf, id=2338, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/hc_inv_region.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/hc_inv_region.pdf>
-Package pdftex.def Info: figures/chapter5_figures/hc_inv_region.pdf  used on input line 430.
-(pdftex.def)             Requested size: 346.89732pt x 231.27754pt.
-<figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf, id=2203, 433.62pt x 289.08pt>
+Package pdftex.def Info: figures/chapter5_figures/hc_inv_region.pdf  used on input line 509.
+(pdftex.def)             Requested size: 317.98921pt x 212.00146pt.
+<figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf, id=2339, 433.62pt x 289.08pt>
 File: figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf Graphic file (type pdf)
 <use figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf>
-Package pdftex.def Info: figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf  used on input line 439.
-(pdftex.def)             Requested size: 433.62001pt x 289.09251pt.
-) [175] [176] [177 <./figures/chapter5_figures/DAC_des_scatter.pdf>] [178 <./figures/chapter5_figures/hc_inv_region.pdf>] [179 <./figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf>] (./main.aux)
+Package pdftex.def Info: figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf  used on input line 518.
+(pdftex.def)             Requested size: 397.485pt x 265.00404pt.
+) [196 <./figures/chapter5_figures/DAC_des_scatter.pdf>] [197] [198 <./figures/chapter5_figures/hc_inv_region.pdf>] [199 <./figures/chapter5_figures/ei_gap_so2_pm25_cal.pdf>] (./main.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.43996pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 183E25883CE0653B9CE0EBD6DBE239D5;6620.
+(rerunfilecheck)             Checksum: A0927D0B7452055C7751AEE4BFD2C1B2;6840.
 Package rerunfilecheck Info: File `main.brf' has not changed.
-(rerunfilecheck)             Checksum: 2DA2F9CB3927C79B11A3D5683A6824D1;13320.
+(rerunfilecheck)             Checksum: B885342B4F715CFB5202159DCF7F7197;13782.
  ) 
 Here is how much of TeX's memory you used:
- 37257 strings out of 476093
- 844201 string characters out of 5795578
+ 37291 strings out of 476093
+ 844800 string characters out of 5795578
  1907787 words of memory out of 5000000
- 56468 multiletter control sequences out of 15000+600000
+ 56477 multiletter control sequences out of 15000+600000
  575071 words of font info for 185 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,22n,91p,2655b,1590s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,22n,91p,2655b,1594s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.45} has been referenced but does not exist, replaced by a fixed one
 
@@ -1481,10 +1606,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/kpfonts/kpfonts-expert.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/doublestroke/dsrom10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpbn8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpbne.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpex.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpexa.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmi.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmia.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmit8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmite.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmn8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpmne.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpsy.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpsyb.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpsyc.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/kpfonts/jkpttmn8a.pfb>
-Output written on main.pdf (180 pages, 3630615 bytes).
+Output written on main.pdf (201 pages, 3673388 bytes).
 PDF statistics:
- 2421 PDF objects out of 2487 (max. 8388607)
- 2118 compressed objects within 22 object streams
- 492 named destinations out of 1000 (max. 500000)
- 420 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2559 PDF objects out of 2984 (max. 8388607)
+ 2232 compressed objects within 23 object streams
+ 516 named destinations out of 1000 (max. 500000)
+ 433 words of extra memory for PDF output out of 10000 (max. 10000000)
 
